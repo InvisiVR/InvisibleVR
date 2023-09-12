@@ -17,12 +17,6 @@ public class FireBulletOnActivate : MonoBehaviour
         grabbable.activated.AddListener(FireBullet);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void FireBullet(ActivateEventArgs arg)
     {   
         GameObject spawnedBullet = Instantiate(bullet);
