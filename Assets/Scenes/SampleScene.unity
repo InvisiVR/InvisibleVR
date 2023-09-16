@@ -5624,7 +5624,7 @@ PrefabInstance:
     - target: {fileID: 3910791348290799694, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_Name
-      value: GUN
+      value: handgun
       objectReference: {fileID: 0}
     - target: {fileID: 8098149712730381531, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
@@ -5675,6 +5675,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8860639043473148236, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: poseTransitionDuration
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
