@@ -7,8 +7,14 @@ public class FireBulletOnActivate : MonoBehaviour
 {
 
     public GameObject bullet;
-    public Transform spawnPoint;
-    public float fireSpeed = 0.01f;
+    public GameObject cartridge;
+    public Transform bulletSpawnPoint;
+    public Transform cartridgeSpawnPoint;
+
+    public Animator anime;
+
+    public float fireSpeed = 20f;
+    public float cartridgeSpeed = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +26,22 @@ public class FireBulletOnActivate : MonoBehaviour
     public void FireBullet(ActivateEventArgs arg)
     {   
         GameObject spawnedBullet = Instantiate(bullet);
-        spawnedBullet.transform.position = spawnPoint.position;
-        spawnedBullet.transform.rotation = spawnPoint.rotation;
-        spawnedBullet.GetComponentInChildren<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+        GameObject spawnedCartridge = Instantiate(cartridge);
+
+        spawnedBullet.transform.position = bulletSpawnPoint.position;
+        spawnedBullet.transform.rotation = bulletSpawnPoint.rotation;
+
+        spawnedCartridge.transform.position = cartridgeSpawnPoint.position;
+        spawnedCartridge.transform.rotation = cartridgeSpawnPoint.rotation;
+
+        anime.SetTrigger("doShot");
+
+        spawnedBullet.GetComponentInChildren<Rigidbody>().velocity = bulletSpawnPoint.forward * fireSpeed;
+        spawnedCartridge.GetComponentInChildren<Rigidbody>().velocity = new Vector3(1, Random.Range(1f, 1.5f), Random.Range(-1.5f, -1f)) * Random.Range(0.5f, 1f);
+
+        
+
         Destroy(spawnedBullet, 5);
+        Destroy(spawnedCartridge, 8);
     }
 }

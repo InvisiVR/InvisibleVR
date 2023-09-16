@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 8242037631685947531}
   - component: {fileID: 3421288646806945885}
   - component: {fileID: 8860639043473148236}
+  - component: {fileID: 1004500491877690590}
   m_Layer: 0
   m_Name: handgun
   m_TagString: Untagged
@@ -113,7 +114,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3910791348290799694}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -166,8 +167,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 7997772096112426112, guid: 050926c031544494a81e1bde06644fbf, type: 3}
-  spawnPoint: {fileID: 4661330682784320045}
-  fireSpeed: 20
+  cartridge: {fileID: 5448624477671794391, guid: bee8ba96264ae2d43b82588da14cf85d,
+    type: 3}
+  bulletSpawnPoint: {fileID: 4661330682784320045}
+  cartridgeSpawnPoint: {fileID: 7719160258372978568}
+  anime: {fileID: 1004500491877690590}
+  fireSpeed: 10
+  cartridgeSpeed: 5
 --- !u!114 &8242037631685947531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensity: 1
-  duration: 0.1
+  duration: 0.3
 --- !u!114 &3421288646806945885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,6 +353,27 @@ MonoBehaviour:
   poseTransitionDuration: 0.2
   leftHandPose: {fileID: 5747455675621081486}
   rightHandPose: {fileID: 2913668408778150277}
+--- !u!95 &1004500491877690590
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910791348290799694}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64c720ccd0b41044b9feb90273f39d48, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6934120638524032130
 GameObject:
   m_ObjectHideFlags: 0
