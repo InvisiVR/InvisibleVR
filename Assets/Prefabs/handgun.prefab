@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &659039777434272047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7719160258372978568}
+  m_Layer: 0
+  m_Name: Cartridge Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7719160258372978568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659039777434272047}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.001, y: 0.0675, z: 0.003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8098149712730381531}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2245967855330665795
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,7 +79,7 @@ GameObject:
   - component: {fileID: 3421288646806945885}
   - component: {fileID: 8860639043473148236}
   m_Layer: 0
-  m_Name: GUN
+  m_Name: handgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,6 +102,7 @@ Transform:
   - {fileID: 3696903765063520036}
   - {fileID: 3688454617870659523}
   - {fileID: 4661330682784320045}
+  - {fileID: 7719160258372978568}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2019026066387498868
@@ -312,6 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea68a740b7a309148ac0bfbe769e8bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poseTransitionDuration: 0.2
   leftHandPose: {fileID: 5747455675621081486}
   rightHandPose: {fileID: 2913668408778150277}
 --- !u!1 &6934120638524032130
@@ -371,7 +404,7 @@ Transform:
   m_GameObject: {fileID: 8311089215250905959}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0654, z: 0.1115}
+  m_LocalPosition: {x: 0, y: 0.063, z: 0.1115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1231,6 +1264,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2340018, guid: 40f85fbf483918e44862a63a0bc4bd2a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 953e7b7d3d9b0e345ab53f3eb82b044f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

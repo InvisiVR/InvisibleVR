@@ -676,6 +676,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1737063070}
     m_Modifications:
+    - target: {fileID: 109434732392105323, guid: 65847589f926b734d9eaed6e25f0046b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 727ebccbb75320540b2c97156a1814cc, type: 2}
     - target: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b,
         type: 3}
       propertyPath: m_Name
@@ -1480,6 +1485,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Hand Model
       objectReference: {fileID: 0}
+    - target: {fileID: 5686134208196863108, guid: 1fd3a7c43c8190f4d8c167ebde694364,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 727ebccbb75320540b2c97156a1814cc, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5503,31 +5513,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1005683973}
     m_Modifications:
+    - target: {fileID: 796366980429507022, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: fireSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3910791348290799694, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_Name
       value: handgun
       objectReference: {fileID: 0}
-    - target: {fileID: 6934120638524032130, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7148118032601209000, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7148118032601209000, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1292542d27bca874483f88140cc6b065, type: 2}
-    - target: {fileID: 7148118032601439178, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 953e7b7d3d9b0e345ab53f3eb82b044f, type: 2}
     - target: {fileID: 8098149712730381531, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5578,10 +5573,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8860639043473148236, guid: 75626972a31180e4aa78fa23a64defae,
+    - target: {fileID: 8242037631685947531, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
-      propertyPath: poseTransitionDuration
-      value: 0.2
+      propertyPath: duration
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
