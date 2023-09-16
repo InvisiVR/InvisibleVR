@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 3421288646806945885}
   - component: {fileID: 8860639043473148236}
   m_Layer: 0
-  m_Name: GUN
+  m_Name: handgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea68a740b7a309148ac0bfbe769e8bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poseTransitionDuration: 0.2
   leftHandPose: {fileID: 5747455675621081486}
   rightHandPose: {fileID: 2913668408778150277}
 --- !u!1 &6934120638524032130
