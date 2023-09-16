@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class GrabHandPose : MonoBehaviour
 {
-    public HandData rightHandPose;
+    private HandData handPose;
+    public HandData leftHandPose;
+    public HandData rightHandPose;//Ãß°¡
 
     private Vector3 startingHandPosition;
     private Vector3 finalHandPosition;
@@ -24,6 +27,7 @@ public class GrabHandPose : MonoBehaviour
         grabInteractable.selectExited.AddListener(UnSetPose);
 
         rightHandPose.gameObject.SetActive(false);
+        leftHandPose.gameObject.SetActive(false);
     }
 
     public void SetupPose(BaseInteractionEventArgs args)
@@ -33,7 +37,10 @@ public class GrabHandPose : MonoBehaviour
             HandData handData = args.interactorObject.transform.GetComponentInChildren<HandData>();
             handData.animator.enabled = false;
 
-            SetHandDataValues(handData, rightHandPose);
+            if (handData.handType == HandData.HandModelType.Left) handPose = leftHandPose; 
+            else if (handData.handType == HandData.HandModelType.Right) handPose = rightHandPose;
+
+            SetHandDataValues(handData, handPose);
             SetHandData(handData, finalHandPosition, finalHandRotation, finalFingerRotations);
         }
     }
