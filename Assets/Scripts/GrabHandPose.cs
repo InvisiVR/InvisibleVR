@@ -4,11 +4,14 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+//#if UNITY_EDITOR
+//using UnityEditor;
+//#endif
+
 public class GrabHandPose : MonoBehaviour
 {
     public float poseTransitionDuration = 0.2f;
 
-    private HandData handPose;
     public HandData leftHandPose;
     public HandData rightHandPose;//Ãß°¡
 
@@ -28,8 +31,8 @@ public class GrabHandPose : MonoBehaviour
         grabInteractable.selectEntered.AddListener(SetupPose);
         grabInteractable.selectExited.AddListener(UnSetPose);
 
-        rightHandPose.gameObject.SetActive(false);
         leftHandPose.gameObject.SetActive(false);
+        rightHandPose.gameObject.SetActive(false);
     }
 
     public void SetupPose(BaseInteractionEventArgs args)
@@ -39,10 +42,15 @@ public class GrabHandPose : MonoBehaviour
             HandData handData = args.interactorObject.transform.GetComponentInChildren<HandData>();
             handData.animator.enabled = false;
 
-            if (handData.handType == HandData.HandModelType.Left) handPose = leftHandPose;
-            else if (handData.handType == HandData.HandModelType.Right) handPose = rightHandPose;
-
-            SetHandDataValues(handData, handPose);
+            if (handData.handType == HandData.HandModelType.Left)
+            {
+                SetHandDataValues(handData, leftHandPose);
+            }
+            else if (handData.handType == HandData.HandModelType.Right)
+            {
+                SetHandDataValues(handData, rightHandPose);
+            }
+            
             //SetHandData(handData, finalHandPosition, finalHandRotation, finalFingerRotations);
             /*added*/
             StartCoroutine(SetHandDataRoutine(handData, finalHandPosition, finalHandRotation, finalFingerRotations, startingHandPosition, startingHandRotation, startingFingerRotations));
@@ -113,4 +121,32 @@ public class GrabHandPose : MonoBehaviour
             yield return null;
         }
     }
+
+//#if UNITY_EDITOR
+//    [MenuItem("Tools/Mirror Selected Right Grab Pose")]
+//    public static void MirrorRightPose()
+//    {
+//        Debug.Log("MIRROR RIGHT POSE");
+//        GrabHandPose handPose = Selection.activeGameObject.GetComponent<GrabHandPose>();
+//        handPose.MirrorPose(handPose.leftHandPose, handPose.rightHandPose);
+//    }
+//#endif
+
+//    public void MirrorPose(HandData postToMirror, HandData poseUsedToMirror)
+//    {
+//        Vector3 mirroredPosition = poseUsedToMirror.root.localPosition;
+//        mirroredPosition.x *= -1;
+
+//        Quaternion mirroredQuaternion = poseUsedToMirror.root.localRotation;
+//        mirroredPosition.y *= -1;
+//        mirroredQuaternion.z *= -1;
+
+//        postToMirror.root.localPosition = mirroredPosition;
+//        postToMirror.root.localRotation = mirroredQuaternion;
+
+//        for (int i = 0; i < poseUsedToMirror.fingerBones.Length; i++)
+//        {
+//            postToMirror.fingerBones[i].localRotation = poseUsedToMirror.fingerBones[i].localRotation;
+//        }
+//    }
 }
