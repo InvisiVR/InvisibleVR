@@ -6,10 +6,15 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class FireBulletOnActivate : MonoBehaviour
 {
 
+    public GameObject smoke;
+
     public GameObject bullet;
     public GameObject cartridge;
+    
     public Transform bulletSpawnPoint;
     public Transform cartridgeSpawnPoint;
+
+    
 
     public Animator anime;
 
@@ -27,6 +32,7 @@ public class FireBulletOnActivate : MonoBehaviour
     {   
         GameObject spawnedBullet = Instantiate(bullet);
         GameObject spawnedCartridge = Instantiate(cartridge);
+        GameObject spawnedSmoke = Instantiate(smoke);
 
         spawnedBullet.transform.position = bulletSpawnPoint.position;
         spawnedBullet.transform.rotation = bulletSpawnPoint.rotation;
@@ -34,12 +40,13 @@ public class FireBulletOnActivate : MonoBehaviour
         spawnedCartridge.transform.position = cartridgeSpawnPoint.position;
         spawnedCartridge.transform.rotation = cartridgeSpawnPoint.rotation;
 
+        spawnedSmoke.transform.position = cartridgeSpawnPoint.position;
+        spawnedSmoke.transform.rotation = cartridgeSpawnPoint.rotation;
+
         anime.SetTrigger("doShot");
 
         spawnedBullet.GetComponentInChildren<Rigidbody>().velocity = bulletSpawnPoint.forward * fireSpeed;
         spawnedCartridge.GetComponentInChildren<Rigidbody>().velocity = new Vector3(1, Random.Range(1f, 1.5f), Random.Range(-1.5f, -1f)) * Random.Range(0.5f, 1f);
-
-        
 
         Destroy(spawnedBullet, 5);
         Destroy(spawnedCartridge, 8);
