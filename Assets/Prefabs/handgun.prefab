@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4964718a138a204c902954612138179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoke: {fileID: 3134113208210582648, guid: 148b54c8a230c914e82e389a4da5fc55, type: 3}
   bullet: {fileID: 7997772096112426112, guid: 050926c031544494a81e1bde06644fbf, type: 3}
   cartridge: {fileID: 5448624477671794391, guid: bee8ba96264ae2d43b82588da14cf85d,
     type: 3}
@@ -1291,10 +1292,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 2340018, guid: 40f85fbf483918e44862a63a0bc4bd2a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 953e7b7d3d9b0e345ab53f3eb82b044f, type: 2}
+    - target: {fileID: 426450, guid: 40f85fbf483918e44862a63a0bc4bd2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474752, guid: 40f85fbf483918e44862a63a0bc4bd2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

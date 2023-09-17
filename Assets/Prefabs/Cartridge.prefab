@@ -104,7 +104,7 @@ PrefabInstance:
     - target: {fileID: 54442994774840424, guid: 642e863bc9f9a4a49a4f4c6bba25fe49,
         type: 3}
       propertyPath: m_Drag
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 54442994774840424, guid: 642e863bc9f9a4a49a4f4c6bba25fe49,
         type: 3}
@@ -114,7 +114,12 @@ PrefabInstance:
     - target: {fileID: 54442994774840424, guid: 642e863bc9f9a4a49a4f4c6bba25fe49,
         type: 3}
       propertyPath: m_AngularDrag
-      value: 0.5
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 54442994774840424, guid: 642e863bc9f9a4a49a4f4c6bba25fe49,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
