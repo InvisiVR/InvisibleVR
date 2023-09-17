@@ -5,12 +5,11 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class FireBulletOnActivate : MonoBehaviour
 {
-
-    public GameObject gunFire;
-
     public GameObject bullet;
     public GameObject cartridge;
-    
+
+    public ParticleSystem MuzzleFlashParticle;
+
     public Transform bulletSpawnPoint;
     public Transform cartridgeSpawnPoint;
 
@@ -18,7 +17,7 @@ public class FireBulletOnActivate : MonoBehaviour
 
     public Animator anime;
 
-    public float fireSpeed = 20f;
+    public float fireSpeed = 400f;
     public float cartridgeSpeed = 5f;
 
     // Start is called before the first frame update
@@ -32,13 +31,11 @@ public class FireBulletOnActivate : MonoBehaviour
     {   
         GameObject spawnedBullet = Instantiate(bullet);
         GameObject spawnedCartridge = Instantiate(cartridge);
-        GameObject spawnedGunFire = Instantiate(gunFire);
 
         spawnedBullet.transform.position = bulletSpawnPoint.position;
         spawnedBullet.transform.rotation = bulletSpawnPoint.rotation;
 
-        spawnedGunFire.transform.position = bulletSpawnPoint.position;
-        spawnedGunFire.transform.rotation = bulletSpawnPoint.rotation;
+        MuzzleFlashParticle.Play();
 
         spawnedCartridge.transform.position = cartridgeSpawnPoint.position;
         spawnedCartridge.transform.rotation = cartridgeSpawnPoint.rotation;
