@@ -35,7 +35,6 @@ public class XROffsetGrabInteractable : XRGrabInteractable
             attachTransform.localPosition = initialLocalPos;
             attachTransform.localRotation = initialLocalRot;
         }
-        
 
         base.OnSelectEntered(args);
     }

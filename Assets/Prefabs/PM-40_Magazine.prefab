@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 9175787198937898940}
   - component: {fileID: 9175787198938991426}
   - component: {fileID: 6327331880756856283}
-  - component: {fileID: 7257904623994467003}
   - component: {fileID: 1366181589049536848}
+  - component: {fileID: 7257904623994467003}
+  - component: {fileID: 5100358962537769482}
   m_Layer: 7
   m_Name: PM-40_Magazine
   m_TagString: Untagged
@@ -97,7 +98,7 @@ Rigidbody:
   m_GameObject: {fileID: 9175787198940992800}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 0.5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -114,7 +115,29 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
+--- !u!64 &1366181589049536848
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9175787198940992800}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 45b08677cbcfc414f937226fbf703901, type: 3}
 --- !u!114 &7257904623994467003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,28 +286,19 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!64 &1366181589049536848
-MeshCollider:
+--- !u!114 &5100358962537769482
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9175787198940992800}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: 45b08677cbcfc414f937226fbf703901, type: 3}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79751aa3d23bae64aade473fd034ed01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletNum: 8
 --- !u!1001 &3717893765757958716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -366,7 +380,7 @@ PrefabInstance:
     - target: {fileID: 7997772096112426112, guid: 050926c031544494a81e1bde06644fbf,
         type: 3}
       propertyPath: m_Name
-      value: Bullet (1)
+      value: Bullet
       objectReference: {fileID: 0}
     - target: {fileID: 7997772096112426112, guid: 050926c031544494a81e1bde06644fbf,
         type: 3}
@@ -394,21 +408,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9175787198940791152}
     m_Modifications:
-    - target: {fileID: 1467683281752380135, guid: 050926c031544494a81e1bde06644fbf,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 1467683281752380135, guid: 050926c031544494a81e1bde06644fbf,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 1467683281752380135, guid: 050926c031544494a81e1bde06644fbf,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 1467683281752380135, guid: 050926c031544494a81e1bde06644fbf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -459,24 +458,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5946496011534179080, guid: 050926c031544494a81e1bde06644fbf,
-        type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 7997772096112426112, guid: 050926c031544494a81e1bde06644fbf,
         type: 3}
       propertyPath: m_Name
       value: Bullet
       objectReference: {fileID: 0}
-    - target: {fileID: 7997772096112426112, guid: 050926c031544494a81e1bde06644fbf,
-        type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1249183942418544496, guid: 050926c031544494a81e1bde06644fbf, type: 3}
-    - {fileID: 8767344943312632517, guid: 050926c031544494a81e1bde06644fbf, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
