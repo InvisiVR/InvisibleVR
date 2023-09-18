@@ -22,23 +22,37 @@ public class FireBulletOnActivate : MonoBehaviour
     public float fireSpeed = 400f;
     public float cartridgeSpeed = 5f;
 
+    [Header("Sounds")]
     public AudioSource source;
     public AudioClip fireSound;
+    public AudioClip reloadSound;
+    public AudioClip noAmmoSound;
+
+    [Header("magazine")]
+    public Magazine magazine;
+    public XRSocketInteractor socketInteractor;
+
 
     // Start is called before the first frame update
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
         grabbable.activated.AddListener(FireBullet);
+
+        socketInteractor.selectEntered.AddListener(AddMagazine);
+        socketInteractor.selectExited.AddListener(RemoveMagazine);
     }
 
     public void FireBullet(ActivateEventArgs arg)
-    {   
-        shotAnime.SetTrigger("doShot");
+    {
+        if (magazine && magazine.bulletNum > 0) shotAnime.SetTrigger("doShot");
+        else source.PlayOneShot(noAmmoSound);
     }
 
     void Shoot()
     {
+        magazine.bulletNum--;
+
         source.PlayOneShot(fireSound);
 
         GameObject spawnedBullet = Instantiate(bullet);
@@ -64,5 +78,22 @@ public class FireBulletOnActivate : MonoBehaviour
         spawnedCartridge.GetComponentInChildren<Rigidbody>().angularVelocity = new Vector3(Random.Range(1f, 1.5f), Random.Range(1f, 1.5f), Random.Range(-1.5f, -1f));
 
         Destroy(spawnedCartridge, 8);
+    }
+
+    public void AddMagazine(SelectEnterEventArgs args)
+    {
+        magazine = args.interactableObject as Magazine;
+        source.PlayOneShot(reloadSound);
+    }
+
+    public void RemoveMagazine(SelectExitEventArgs args)
+    {
+        magazine = null;
+        source.PlayOneShot(reloadSound);
+    }
+
+    public void Slide()
+    {
+
     }
 }
