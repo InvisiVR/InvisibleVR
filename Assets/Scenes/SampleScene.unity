@@ -3020,12 +3020,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 395747384}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &401117893 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1079830355594205626, guid: 75626972a31180e4aa78fa23a64defae,
-    type: 3}
-  m_PrefabInstance: {fileID: 1675804531}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &415052126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7279,26 +7273,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1361928989487604332, guid: 535f942bb23629341ae39105044f189b,
-        type: 3}
-      propertyPath: m_SmoothPosition
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1361928989487604332, guid: 535f942bb23629341ae39105044f189b,
-        type: 3}
-      propertyPath: m_SmoothRotation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1361928989487604332, guid: 535f942bb23629341ae39105044f189b,
-        type: 3}
-      propertyPath: m_AttachTransform
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1361928989487604332, guid: 535f942bb23629341ae39105044f189b,
-        type: 3}
-      propertyPath: m_UseDynamicAttach
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5861847362986030944, guid: 535f942bb23629341ae39105044f189b,
         type: 3}
       propertyPath: m_Name
@@ -7355,8 +7329,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 6016535587735346916, guid: 535f942bb23629341ae39105044f189b, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 535f942bb23629341ae39105044f189b, type: 3}
@@ -11031,11 +11004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1079830355594205626, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1914693493}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75626972a31180e4aa78fa23a64defae, type: 3}
 --- !u!1 &1683473087
@@ -12657,13 +12626,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914693492}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 821.6669, y: -380.83325, z: -1041.4615}
-  m_LocalScale: {x: 833.3331, y: 769.2307, z: 833.3332}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 254319974}
-  m_Father: {fileID: 401117893}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924793931
 GameObject:
@@ -13205,7 +13174,7 @@ PrefabInstance:
     - target: {fileID: 8429981633443581383, guid: 1670dca8ee98f864eb412b51a24c08e1,
         type: 3}
       propertyPath: m_DefaultParameters.m_ApertureSize
-      value: 0.85
+      value: 0.807
       objectReference: {fileID: 0}
     - target: {fileID: 8429981633443581383, guid: 1670dca8ee98f864eb412b51a24c08e1,
         type: 3}
@@ -13225,7 +13194,7 @@ PrefabInstance:
     - target: {fileID: 8429981633443581383, guid: 1670dca8ee98f864eb412b51a24c08e1,
         type: 3}
       propertyPath: m_DefaultParameters.m_FeatheringEffect
-      value: 0.105
+      value: 0.249
       objectReference: {fileID: 0}
     - target: {fileID: 8429981633443581383, guid: 1670dca8ee98f864eb412b51a24c08e1,
         type: 3}
@@ -13300,7 +13269,7 @@ PrefabInstance:
     - target: {fileID: 8429981633443581383, guid: 1670dca8ee98f864eb412b51a24c08e1,
         type: 3}
       propertyPath: m_LocomotionVignetteProviders.Array.data[0].m_OverrideParameters.m_ApertureSize
-      value: 0.797
+      value: 0.725
       objectReference: {fileID: 0}
     - target: {fileID: 8429981633443581383, guid: 1670dca8ee98f864eb412b51a24c08e1,
         type: 3}
@@ -13320,7 +13289,7 @@ PrefabInstance:
     - target: {fileID: 8429981633443581383, guid: 1670dca8ee98f864eb412b51a24c08e1,
         type: 3}
       propertyPath: m_LocomotionVignetteProviders.Array.data[0].m_OverrideParameters.m_FeatheringEffect
-      value: 0.215
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 8429981633443581383, guid: 1670dca8ee98f864eb412b51a24c08e1,
         type: 3}
@@ -14647,5 +14616,6 @@ SceneRoots:
   - {fileID: 1021630689}
   - {fileID: 2005770248}
   - {fileID: 1005683973}
+  - {fileID: 1914693493}
   - {fileID: 1675804531}
   - {fileID: 1197669885}
