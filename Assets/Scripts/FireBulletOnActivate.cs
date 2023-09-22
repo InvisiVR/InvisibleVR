@@ -83,13 +83,7 @@ public class FireBulletOnActivate : MonoBehaviour
 
     public void AddMagazine(SelectEnterEventArgs args)
     {
-        //Magazine potentialMagazine = args.interactableObject as Magazine;
-        //if (potentialMagazine != null)
-        //{
-        //    magazine = potentialMagazine;
-        //    source.PlayOneShot(reloadSound);
-        //}
-        magazine = args.interactableObject as Magazine;
+        magazine = args.interactableObject.transform.GetComponent<Magazine>();
         source.PlayOneShot(reloadInSound);
     }
 

@@ -11107,16 +11107,6 @@ PrefabInstance:
       propertyPath: magazine
       value: 
       objectReference: {fileID: 1221508469}
-    - target: {fileID: 796366980429507022, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      propertyPath: reloadInSound
-      value: 
-      objectReference: {fileID: 8300000, guid: e7632c6401c09437e83de45d33c5858e, type: 3}
-    - target: {fileID: 796366980429507022, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      propertyPath: reloadOutSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 570278a589da66f47affc8364d580659, type: 3}
     - target: {fileID: 3910791348290799694, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_Name

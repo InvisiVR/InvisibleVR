@@ -245,8 +245,8 @@ MonoBehaviour:
   cartridgeSpeed: 5
   source: {fileID: 1304908917340031047}
   fireSound: {fileID: 8300000, guid: 34b439bf70b80a6409eadecc6be92d68, type: 3}
-  reloadInSound: {fileID: 0}
-  reloadOutSound: {fileID: 0}
+  reloadInSound: {fileID: 8300000, guid: e7632c6401c09437e83de45d33c5858e, type: 3}
+  reloadOutSound: {fileID: 8300000, guid: 570278a589da66f47affc8364d580659, type: 3}
   noAmmoSound: {fileID: 8300000, guid: 6973fe7191cc41f479e6cfa18d36916c, type: 3}
   magazine: {fileID: 0}
   socketInteractor: {fileID: 4576590574397482279}
@@ -385,11 +385,11 @@ MonoBehaviour:
   m_TrackPosition: 1
   m_SmoothPosition: 0
   m_SmoothPositionAmount: 20
-  m_TightenPosition: 0.5
+  m_TightenPosition: 1
   m_TrackRotation: 1
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 20
-  m_TightenRotation: 0.5
+  m_TightenRotation: 1
   m_ThrowOnDetach: 1
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
@@ -5778,8 +5778,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 2800
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 4.157613e+21, y: 1.12520376e+24, z: 1.817742e+31,
-    w: 1.8053851e+28}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 3.5e-44, z: 1.1255e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

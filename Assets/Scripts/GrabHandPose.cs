@@ -51,8 +51,6 @@ public class GrabHandPose : MonoBehaviour
                 SetHandDataValues(handData, rightHandPose);
             }
             
-            //SetHandData(handData, finalHandPosition, finalHandRotation, finalFingerRotations);
-            /*added*/
             StartCoroutine(SetHandDataRoutine(handData, finalHandPosition, finalHandRotation, finalFingerRotations, startingHandPosition, startingHandRotation, startingFingerRotations));
         }
     }
@@ -64,8 +62,6 @@ public class GrabHandPose : MonoBehaviour
             HandData handData = args.interactorObject.transform.GetComponentInChildren<HandData>();
             handData.animator.enabled = true;
 
-            //SetHandData(handData, finalHandPosition, finalHandRotation, finalFingerRotations);
-            /*added*/
             StartCoroutine(SetHandDataRoutine(handData, startingHandPosition, startingHandRotation, startingFingerRotations, finalHandPosition, finalHandRotation, finalFingerRotations));
         }
     }
@@ -99,7 +95,6 @@ public class GrabHandPose : MonoBehaviour
         }
     }
 
-    /*added*/
     public IEnumerator SetHandDataRoutine(HandData h, Vector3 newPosition, Quaternion newRotation, Quaternion[] newBonesRotation, Vector3 startingPosition, Quaternion startingRotation, Quaternion[] startingBonesRotation)
     {
         float timer = 0;
@@ -121,32 +116,4 @@ public class GrabHandPose : MonoBehaviour
             yield return null;
         }
     }
-
-//#if UNITY_EDITOR
-//    [MenuItem("Tools/Mirror Selected Right Grab Pose")]
-//    public static void MirrorRightPose()
-//    {
-//        Debug.Log("MIRROR RIGHT POSE");
-//        GrabHandPose handPose = Selection.activeGameObject.GetComponent<GrabHandPose>();
-//        handPose.MirrorPose(handPose.leftHandPose, handPose.rightHandPose);
-//    }
-//#endif
-
-//    public void MirrorPose(HandData postToMirror, HandData poseUsedToMirror)
-//    {
-//        Vector3 mirroredPosition = poseUsedToMirror.root.localPosition;
-//        mirroredPosition.x *= -1;
-
-//        Quaternion mirroredQuaternion = poseUsedToMirror.root.localRotation;
-//        mirroredPosition.y *= -1;
-//        mirroredQuaternion.z *= -1;
-
-//        postToMirror.root.localPosition = mirroredPosition;
-//        postToMirror.root.localRotation = mirroredQuaternion;
-
-//        for (int i = 0; i < poseUsedToMirror.fingerBones.Length; i++)
-//        {
-//            postToMirror.fingerBones[i].localRotation = poseUsedToMirror.fingerBones[i].localRotation;
-//        }
-//    }
 }
