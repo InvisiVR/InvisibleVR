@@ -565,7 +565,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 179007883}
   m_CameraFloorOffsetObject: {fileID: 460997784}
   m_RequestedTrackingOriginMode: 0
-  m_CameraYOffset: 1.7
+  m_CameraYOffset: 1.73
 --- !u!4 &179007886
 Transform:
   m_ObjectHideFlags: 0
@@ -615,7 +615,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.7
+  m_Height: 1.73
   m_Radius: 0.1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
