@@ -305,6 +305,8 @@ MonoBehaviour:
   noAmmoSound: {fileID: 8300000, guid: 6973fe7191cc41f479e6cfa18d36916c, type: 3}
   magazine: {fileID: 0}
   socketInteractor: {fileID: 7128753662364844379}
+  recoilBody: {fileID: 0}
+  recoilBodyOfHand: {fileID: 0}
 --- !u!114 &8242037631685947531
 MonoBehaviour:
   m_ObjectHideFlags: 0
