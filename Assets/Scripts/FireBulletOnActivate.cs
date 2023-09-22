@@ -30,12 +30,17 @@ public class FireBulletOnActivate : MonoBehaviour
     public AudioClip reloadOutSound;
     public AudioClip noAmmoSound;
 
-    [Header("magazine")]
+    [Header("Magazine")]
     public Magazine magazine;
     public XRSocketInteractor socketInteractor;
 
+    [Header("Slide")]
     private bool hasSlide = true;
-    
+
+    [Header("Recoil")]
+    public Rigidbody recoilBody;
+    public Rigidbody recoilBodyOfHand;
+
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
@@ -55,18 +60,48 @@ public class FireBulletOnActivate : MonoBehaviour
 
     void Shoot()
     {
-        magazine.bulletNum--;
+        BulletFire();
+        MuzzleFlash();
+        Rebound();
+    }
 
-        source.PlayOneShot(fireSound);
+    void Rebound()
+    {
+        if(recoilBody != null)
+        {
+            float force = 1f;
+
+            recoilBody.AddForce(-transform.forward * force, ForceMode.Impulse);
+
+            if(recoilBodyOfHand != null)
+            {
+                force *= 0.1f;
+                recoilBodyOfHand.AddForce(-transform.forward, ForceMode.Impulse);
+            }
+            else
+            {
+                recoilBody.transform.localRotation = Quaternion.AngleAxis(-50 * force, Vector3.right);
+            }
+        }
+    }
+
+    void MuzzleFlash()
+    {
+        MuzzleFlashParticle.Play();
+    }
+
+    void BulletFire()
+    {
+        magazine.bulletNum--;
 
         GameObject spawnedBullet = Instantiate(bullet);
 
         spawnedBullet.transform.position = bulletSpawnPoint.position;
         spawnedBullet.transform.rotation = bulletSpawnPoint.rotation;
 
-        MuzzleFlashParticle.Play();
-
         spawnedBullet.GetComponentInChildren<Rigidbody>().velocity = bulletSpawnPoint.forward * fireSpeed;
+
+        source.PlayOneShot(fireSound);
 
         Destroy(spawnedBullet, 5);
     }
