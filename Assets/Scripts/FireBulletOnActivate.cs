@@ -25,6 +25,7 @@ public class FireBulletOnActivate : MonoBehaviour
     [Header("Sounds")]
     public AudioSource source;
     public AudioClip fireSound;
+    public AudioClip reloadSound;
     public AudioClip reloadInSound;
     public AudioClip reloadOutSound;
     public AudioClip noAmmoSound;
@@ -33,8 +34,8 @@ public class FireBulletOnActivate : MonoBehaviour
     public Magazine magazine;
     public XRSocketInteractor socketInteractor;
 
-
-    // Start is called before the first frame update
+    private bool hasSlide = true;
+    
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
@@ -46,8 +47,10 @@ public class FireBulletOnActivate : MonoBehaviour
 
     public void FireBullet(ActivateEventArgs arg)
     {
-        if (magazine && magazine.bulletNum > 0) shotAnime.SetTrigger("doShot");
-        else source.PlayOneShot(noAmmoSound);
+        if (magazine && magazine.bulletNum > 0 && hasSlide)
+            shotAnime.SetTrigger("doShot");
+        else 
+            source.PlayOneShot(noAmmoSound);
     }
 
     void Shoot()
@@ -85,6 +88,7 @@ public class FireBulletOnActivate : MonoBehaviour
     {
         magazine = args.interactableObject.transform.GetComponent<Magazine>();
         source.PlayOneShot(reloadInSound);
+        hasSlide = false;
     }
 
     public void RemoveMagazine(SelectExitEventArgs args)
@@ -95,6 +99,7 @@ public class FireBulletOnActivate : MonoBehaviour
 
     public void Slide()
     {
-
+        hasSlide = true;
+        source.PlayOneShot(reloadSound);
     }
 }

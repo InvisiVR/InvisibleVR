@@ -245,8 +245,9 @@ MonoBehaviour:
   cartridgeSpeed: 5
   source: {fileID: 1304908917340031047}
   fireSound: {fileID: 8300000, guid: 34b439bf70b80a6409eadecc6be92d68, type: 3}
-  reloadInSound: {fileID: 8300000, guid: e7632c6401c09437e83de45d33c5858e, type: 3}
-  reloadOutSound: {fileID: 8300000, guid: 570278a589da66f47affc8364d580659, type: 3}
+  reloadSound: {fileID: 8300000, guid: cef0fa03af5b747f0abe82cde0b2bccc, type: 3}
+  reloadInSound: {fileID: 8300000, guid: 570278a589da66f47affc8364d580659, type: 3}
+  reloadOutSound: {fileID: 8300000, guid: e7632c6401c09437e83de45d33c5858e, type: 3}
   noAmmoSound: {fileID: 8300000, guid: 6973fe7191cc41f479e6cfa18d36916c, type: 3}
   magazine: {fileID: 0}
   socketInteractor: {fileID: 4576590574397482279}
@@ -549,6 +550,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &3994097011856382719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6702208775310765937}
+  m_Layer: 7
+  m_Name: Slider Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6702208775310765937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994097011856382719}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -24.8, z: 46.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7148118032603169090}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4238227703971173701
 GameObject:
   m_ObjectHideFlags: 0
@@ -6801,6 +6833,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 426450, guid: 40f85fbf483918e44862a63a0bc4bd2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 426450, guid: 40f85fbf483918e44862a63a0bc4bd2a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 46.6
       objectReference: {fileID: 0}
@@ -6909,6 +6945,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 8769271105396091656, guid: 40f85fbf483918e44862a63a0bc4bd2a, type: 3}
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 405050, guid: 40f85fbf483918e44862a63a0bc4bd2a,
+        type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 6702208775310765937}
     - targetCorrespondingSourceObject: {fileID: 426450, guid: 40f85fbf483918e44862a63a0bc4bd2a,
         type: 3}
       insertIndex: -1
@@ -6934,6 +6974,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 818891590572021061}
+    - targetCorrespondingSourceObject: {fileID: 113292, guid: 40f85fbf483918e44862a63a0bc4bd2a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 211881400161238146}
   m_SourcePrefab: {fileID: 100100000, guid: 40f85fbf483918e44862a63a0bc4bd2a, type: 3}
 --- !u!4 &2498998790001452646 stripped
 Transform:
@@ -7039,8 +7083,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 17.5, y: 160, z: 15}
-  m_Center: {x: 0, y: 0, z: 1.5}
+  m_Size: {x: 17.5, y: 170, z: 15}
+  m_Center: {x: 0, y: -4, z: 1.5}
 --- !u!54 &1565087299074236561
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7067,7 +7111,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &8534000170353155541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7119,6 +7163,18 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 211881400161238146}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1004500491877690590}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
@@ -7134,6 +7190,18 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 211881400161238146}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1004500491877690590}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
@@ -7208,11 +7276,11 @@ MonoBehaviour:
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
-  m_SmoothPosition: 1
+  m_SmoothPosition: 0
   m_SmoothPositionAmount: 5
   m_TightenPosition: 0.5
   m_TrackRotation: 1
-  m_SmoothRotation: 1
+  m_SmoothRotation: 0
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
   m_ThrowOnDetach: 1
@@ -7342,6 +7410,35 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &211881400161238146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7148118032603665908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6ea8825ae33b1499c36afce1d60ff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0.02
+  target: {fileID: 6702208775310765937}
+  OnReached:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 796366980429507022}
+        m_TargetAssemblyTypeName: FireBulletOnActivate, Assembly-CSharp
+        m_MethodName: Slide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &7203525334922448411
 PrefabInstance:
   m_ObjectHideFlags: 0
