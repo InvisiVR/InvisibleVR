@@ -245,7 +245,8 @@ MonoBehaviour:
   cartridgeSpeed: 5
   source: {fileID: 1304908917340031047}
   fireSound: {fileID: 8300000, guid: 34b439bf70b80a6409eadecc6be92d68, type: 3}
-  reloadSound: {fileID: 8300000, guid: cef0fa03af5b747f0abe82cde0b2bccc, type: 3}
+  reloadInSound: {fileID: 0}
+  reloadOutSound: {fileID: 0}
   noAmmoSound: {fileID: 8300000, guid: 6973fe7191cc41f479e6cfa18d36916c, type: 3}
   magazine: {fileID: 0}
   socketInteractor: {fileID: 4576590574397482279}
@@ -382,12 +383,12 @@ MonoBehaviour:
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
-  m_SmoothPosition: 1
-  m_SmoothPositionAmount: 5
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 20
   m_TightenPosition: 0.5
   m_TrackRotation: 1
-  m_SmoothRotation: 1
-  m_SmoothRotationAmount: 5
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 20
   m_TightenRotation: 0.5
   m_ThrowOnDetach: 1
   m_ThrowSmoothingDuration: 0.25
@@ -7039,7 +7040,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 17.5, y: 160, z: 20}
+  m_Size: {x: 17.5, y: 160, z: 15}
   m_Center: {x: 0, y: 0, z: 1.5}
 --- !u!54 &1565087299074236561
 Rigidbody:

@@ -25,7 +25,8 @@ public class FireBulletOnActivate : MonoBehaviour
     [Header("Sounds")]
     public AudioSource source;
     public AudioClip fireSound;
-    public AudioClip reloadSound;
+    public AudioClip reloadInSound;
+    public AudioClip reloadOutSound;
     public AudioClip noAmmoSound;
 
     [Header("magazine")]
@@ -82,14 +83,20 @@ public class FireBulletOnActivate : MonoBehaviour
 
     public void AddMagazine(SelectEnterEventArgs args)
     {
+        //Magazine potentialMagazine = args.interactableObject as Magazine;
+        //if (potentialMagazine != null)
+        //{
+        //    magazine = potentialMagazine;
+        //    source.PlayOneShot(reloadSound);
+        //}
         magazine = args.interactableObject as Magazine;
-        source.PlayOneShot(reloadSound);
+        source.PlayOneShot(reloadInSound);
     }
 
     public void RemoveMagazine(SelectExitEventArgs args)
     {
         magazine = null;
-        source.PlayOneShot(reloadSound);
+        source.PlayOneShot(reloadOutSound);
     }
 
     public void Slide()
