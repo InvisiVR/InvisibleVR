@@ -7178,7 +7178,7 @@ GameObject:
   - component: {fileID: 1021314937}
   - component: {fileID: 1021314939}
   - component: {fileID: 1021314938}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right Hand Controller
   m_TagString: Right Hand
   m_Icon: {fileID: 0}
@@ -12301,6 +12301,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 2290706418528479652, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2544847166823424732, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384014049679034814, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3421288646806945885, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: switchOnOffObject.Array.size
@@ -12351,6 +12366,11 @@ PrefabInstance:
       propertyPath: m_StartingSelectedInteractable
       value: 
       objectReference: {fileID: 992240898}
+    - target: {fileID: 7148118032603665908, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8098149712730381531, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12965,7 +12985,7 @@ GameObject:
   - component: {fileID: 1737063076}
   - component: {fileID: 1737063077}
   - component: {fileID: 1737063078}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left Hand Controller
   m_TagString: Left Hand
   m_Icon: {fileID: 0}

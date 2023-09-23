@@ -16,8 +16,8 @@ TagManager:
   - Player
   - Interactable
   - Disinteractable
-  - 
-  - 
+  - InteractableComponent
+  - Hand
   - 
   - 
   - 
