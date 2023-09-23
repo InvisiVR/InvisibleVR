@@ -8,8 +8,15 @@ public class XRGrabInteractableTwoAttach : XRGrabInteractable
     public Transform leftAttachTransform;
     public Transform rightAttachTransform;
 
+    public GameObject[] switchOnOffObject;
+
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
+        for (int i = 0; i < switchOnOffObject.Length; i++)
+        {
+            switchOnOffObject[i].layer = LayerMask.NameToLayer("Disinteractable");
+        }
+
         if (args.interactorObject.transform.CompareTag("Left Hand"))
         {
             attachTransform = leftAttachTransform;
@@ -19,5 +26,15 @@ public class XRGrabInteractableTwoAttach : XRGrabInteractable
             attachTransform = rightAttachTransform;
         }
         base.OnSelectEntered(args);
+    }
+
+    protected override void OnSelectExited(SelectExitEventArgs args)
+    {
+        for (int i = 0; i < switchOnOffObject.Length; i++)
+        {
+            switchOnOffObject[i].layer = LayerMask.NameToLayer("Interactable");
+        }
+
+        base.OnSelectExited(args);
     }
 }
