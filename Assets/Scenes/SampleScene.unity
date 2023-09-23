@@ -8161,7 +8161,7 @@ PrefabInstance:
     - target: {fileID: 179289423917066995, guid: 535f942bb23629341ae39105044f189b,
         type: 3}
       propertyPath: bulletNum
-      value: 1000
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5861847362986030944, guid: 535f942bb23629341ae39105044f189b,
         type: 3}
@@ -8181,12 +8181,12 @@ PrefabInstance:
     - target: {fileID: 7653281376088080470, guid: 535f942bb23629341ae39105044f189b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0013
+      value: 0.0013000001
       objectReference: {fileID: 0}
     - target: {fileID: 7653281376088080470, guid: 535f942bb23629341ae39105044f189b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.189
+      value: 0.98599994
       objectReference: {fileID: 0}
     - target: {fileID: 7653281376088080470, guid: 535f942bb23629341ae39105044f189b,
         type: 3}
@@ -8801,12 +8801,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8783402042002415646, guid: 75f0b9a28e4835a4f893787bb59972a5,
     type: 3}
   m_PrefabInstance: {fileID: 1233366666}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1244380004 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 7178266309061967526, guid: 75626972a31180e4aa78fa23a64defae,
-    type: 3}
-  m_PrefabInstance: {fileID: 1675804531}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1297785968
 GameObject:
@@ -12277,31 +12271,41 @@ PrefabInstance:
       propertyPath: recoilBodyOfHand
       value: 
       objectReference: {fileID: 1737063078}
-    - target: {fileID: 3421288646806945885, guid: 75626972a31180e4aa78fa23a64defae,
+    - target: {fileID: 1175277491312283285, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
-      propertyPath: m_Colliders.Array.size
-      value: 3
+      propertyPath: LightsModule.maxLights
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 3421288646806945885, guid: 75626972a31180e4aa78fa23a64defae,
+    - target: {fileID: 1175277491312283285, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
-      propertyPath: m_Colliders.Array.data[3]
-      value: 
-      objectReference: {fileID: 1244380004}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175277491312283285, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 3910791348290799694, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_Name
       value: handgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_ColorTemperature
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 7128753662364844379, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_StartingSelectedInteractable
       value: 
       objectReference: {fileID: 992240898}
-    - target: {fileID: 7178266309061967526, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8098149712730381531, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12352,15 +12356,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8633231573796177960, guid: 75626972a31180e4aa78fa23a64defae,
+    - target: {fileID: 9090513309116725746, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
+      propertyPath: threshold
+      value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 8633231573796177960, guid: 75626972a31180e4aa78fa23a64defae,
+    - target: {fileID: 9090513309116725746, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
+      propertyPath: wasReached
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
