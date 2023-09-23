@@ -8161,7 +8161,7 @@ PrefabInstance:
     - target: {fileID: 179289423917066995, guid: 535f942bb23629341ae39105044f189b,
         type: 3}
       propertyPath: bulletNum
-      value: 1000
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5861847362986030944, guid: 535f942bb23629341ae39105044f189b,
         type: 3}
@@ -8181,12 +8181,12 @@ PrefabInstance:
     - target: {fileID: 7653281376088080470, guid: 535f942bb23629341ae39105044f189b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0013
+      value: 0.0013000001
       objectReference: {fileID: 0}
     - target: {fileID: 7653281376088080470, guid: 535f942bb23629341ae39105044f189b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.189
+      value: 0.98599994
       objectReference: {fileID: 0}
     - target: {fileID: 7653281376088080470, guid: 535f942bb23629341ae39105044f189b,
         type: 3}
@@ -12276,10 +12276,25 @@ PrefabInstance:
       propertyPath: LightsModule.maxLights
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1175277491312283285, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175277491312283285, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 3910791348290799694, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_Name
       value: handgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
@@ -12339,6 +12354,16 @@ PrefabInstance:
     - target: {fileID: 8098149712730381531, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090513309116725746, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: threshold
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090513309116725746, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: wasReached
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

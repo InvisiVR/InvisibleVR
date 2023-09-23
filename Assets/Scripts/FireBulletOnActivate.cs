@@ -63,10 +63,10 @@ public class FireBulletOnActivate : MonoBehaviour
     {
         BulletFire();
         MuzzleFlash();
-        Rebound();
+        Recoil();
     }
 
-    void Rebound()
+    void Recoil()
     {
         if(recoilBody != null)
         {
