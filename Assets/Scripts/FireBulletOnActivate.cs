@@ -72,15 +72,16 @@ public class FireBulletOnActivate : MonoBehaviour
             float force = 1f;
 
             recoilBody.AddForce(-transform.forward * force, ForceMode.Impulse);
+            recoilBody.transform.localRotation = Quaternion.AngleAxis(-15 * force, Vector3.right);
 
-            if(recoilBodyOfHand != null)
+            if (recoilBodyOfHand != null)
             {
                 force *= 0.1f;
                 recoilBodyOfHand.AddForce(-transform.forward, ForceMode.Impulse);
             }
             else
             {
-                recoilBody.transform.localRotation = Quaternion.AngleAxis(-50 * force, Vector3.right);
+                recoilBody.transform.localRotation = Quaternion.AngleAxis(-500 * force, Vector3.right);
             }
         }
     }
