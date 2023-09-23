@@ -305,6 +305,7 @@ MonoBehaviour:
   noAmmoSound: {fileID: 8300000, guid: 6973fe7191cc41f479e6cfa18d36916c, type: 3}
   magazine: {fileID: 0}
   socketInteractor: {fileID: 7128753662364844379}
+  hasSlide: 1
   recoilBody: {fileID: 0}
   recoilBodyOfHand: {fileID: 0}
 --- !u!114 &8242037631685947531
@@ -6773,6 +6774,16 @@ PrefabInstance:
     - target: {fileID: 405050, guid: 40f85fbf483918e44862a63a0bc4bd2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095522698086749834, guid: 40f85fbf483918e44862a63a0bc4bd2a,
+        type: 3}
+      propertyPath: threshold
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095522698086749834, guid: 40f85fbf483918e44862a63a0bc4bd2a,
+        type: 3}
+      propertyPath: wasReached
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2095522698086749834, guid: 40f85fbf483918e44862a63a0bc4bd2a,
         type: 3}

@@ -38,6 +38,7 @@ public class FireBulletOnActivate : MonoBehaviour
     private bool hasSlide = true;
 
     [Header("Recoil")]
+
     public Rigidbody recoilBody;
     public Rigidbody recoilBodyOfHand;
 
