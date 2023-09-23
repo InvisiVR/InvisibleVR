@@ -8802,12 +8802,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1233366666}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1244380004 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 7178266309061967526, guid: 75626972a31180e4aa78fa23a64defae,
-    type: 3}
-  m_PrefabInstance: {fileID: 1675804531}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1297785968
 GameObject:
   m_ObjectHideFlags: 0
@@ -12277,31 +12271,26 @@ PrefabInstance:
       propertyPath: recoilBodyOfHand
       value: 
       objectReference: {fileID: 1737063078}
-    - target: {fileID: 3421288646806945885, guid: 75626972a31180e4aa78fa23a64defae,
+    - target: {fileID: 1175277491312283285, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
-      propertyPath: m_Colliders.Array.size
-      value: 3
+      propertyPath: LightsModule.maxLights
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 3421288646806945885, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      propertyPath: m_Colliders.Array.data[3]
-      value: 
-      objectReference: {fileID: 1244380004}
     - target: {fileID: 3910791348290799694, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_Name
       value: handgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_ColorTemperature
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 7128753662364844379, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_StartingSelectedInteractable
       value: 
       objectReference: {fileID: 992240898}
-    - target: {fileID: 7178266309061967526, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8098149712730381531, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12351,16 +12340,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8633231573796177960, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8633231573796177960, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
