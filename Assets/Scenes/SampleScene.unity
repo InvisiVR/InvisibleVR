@@ -1847,9 +1847,9 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   m_BlockedColorGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-    key1: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 1, g: 1, b: 1, a: 0}
+    key1: {r: 1, g: 1, b: 1, a: 0}
+    key2: {r: 0, g: 0, b: 0, a: 0.9676508}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
@@ -1865,14 +1865,14 @@ MonoBehaviour:
     ctime7: 0
     atime0: 0
     atime1: 65535
-    atime2: 0
-    atime3: 0
+    atime2: 65535
+    atime3: 65535
     atime4: 0
     atime5: 0
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   m_TreatSelectionAsValidState: 0
@@ -2098,7 +2098,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
   m_RaycastSnapVolumeInteraction: 1
-  m_HitClosestOnly: 0
+  m_HitClosestOnly: 1
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
   m_AutoDeselect: 0
@@ -6777,6 +6777,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 978135047}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &992240898 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1361928989487604332, guid: 535f942bb23629341ae39105044f189b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1197669885}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &992240899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 179289423917066995, guid: 535f942bb23629341ae39105044f189b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1197669885}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79751aa3d23bae64aade473fd034ed01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &992987832
 GameObject:
   m_ObjectHideFlags: 0
@@ -8778,6 +8802,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1233366666}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1244380004 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 7178266309061967526, guid: 75626972a31180e4aa78fa23a64defae,
+    type: 3}
+  m_PrefabInstance: {fileID: 1675804531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1297785968
 GameObject:
   m_ObjectHideFlags: 0
@@ -9696,9 +9726,9 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   m_BlockedColorGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-    key1: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 1, g: 1, b: 1, a: 0}
+    key1: {r: 1, g: 1, b: 1, a: 0}
+    key2: {r: 0, g: 0, b: 0, a: 0.9676508}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
@@ -9714,14 +9744,14 @@ MonoBehaviour:
     ctime7: 0
     atime0: 0
     atime1: 65535
-    atime2: 0
-    atime3: 0
+    atime2: 65535
+    atime3: 65535
     atime4: 0
     atime5: 0
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   m_TreatSelectionAsValidState: 0
@@ -9947,7 +9977,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
   m_RaycastSnapVolumeInteraction: 1
-  m_HitClosestOnly: 0
+  m_HitClosestOnly: 1
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
   m_AutoDeselect: 0
@@ -12234,6 +12264,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 796366980429507022, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
+      propertyPath: magazine
+      value: 
+      objectReference: {fileID: 992240899}
+    - target: {fileID: 796366980429507022, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
       propertyPath: recoilBody
       value: 
       objectReference: {fileID: 767720728}
@@ -12242,10 +12277,30 @@ PrefabInstance:
       propertyPath: recoilBodyOfHand
       value: 
       objectReference: {fileID: 1737063078}
+    - target: {fileID: 3421288646806945885, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421288646806945885, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Colliders.Array.data[3]
+      value: 
+      objectReference: {fileID: 1244380004}
     - target: {fileID: 3910791348290799694, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_Name
       value: handgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128753662364844379, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_StartingSelectedInteractable
+      value: 
+      objectReference: {fileID: 992240898}
+    - target: {fileID: 7178266309061967526, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8098149712730381531, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
@@ -12297,10 +12352,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9090513309116725746, guid: 75626972a31180e4aa78fa23a64defae,
+    - target: {fileID: 8633231573796177960, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
-      propertyPath: threshold
-      value: 0.02
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633231573796177960, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

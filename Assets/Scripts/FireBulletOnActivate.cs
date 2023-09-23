@@ -35,7 +35,7 @@ public class FireBulletOnActivate : MonoBehaviour
     public XRSocketInteractor socketInteractor;
 
     [Header("Slide")]
-    private bool hasSlide = true;
+    public bool hasSlide = true;
 
     [Header("Recoil")]
 

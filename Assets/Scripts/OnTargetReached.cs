@@ -10,10 +10,10 @@ public class OnTargetReached : MonoBehaviour
     public float threshold = 0.02f;
     public Transform target;
     public UnityEvent OnReached;
-    private bool wasReached = false;
+    public bool wasReached = false;
     private void FixedUpdate()
     {
-        float distance = Vector3.Distance(transform.position, target.position);
+        float distance = Vector3.Distance(target.position, transform.position);
 
         if(distance < threshold && !wasReached)
         {
