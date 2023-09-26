@@ -39,8 +39,14 @@ public class FireBulletOnActivate : MonoBehaviour
 
     [Header("Recoil")]
 
-    public Rigidbody recoilBody;
-    public Rigidbody recoilBodyOfHand;
+    private Rigidbody recoilBody = null;
+    private Rigidbody recoilBodyOfHand = null;
+
+    public Rigidbody leftRecoilBody;
+    public Rigidbody rightRecoilBody;
+
+    public Rigidbody leftRecoilBodyOfHand;
+    public Rigidbody rightRecoilBodyOfHand;
 
     void Start()
     {
@@ -84,6 +90,24 @@ public class FireBulletOnActivate : MonoBehaviour
 
     void Recoil()
     {
+        string CHS = gameObject.GetComponent<XRGrabInteractableTwoAttach>().curGrabbedHand;
+
+        if (CHS == "Left")
+        {
+            recoilBody = leftRecoilBody;
+            recoilBodyOfHand = leftRecoilBodyOfHand;
+        }
+        else if(CHS == "Right")
+        {
+            recoilBody = rightRecoilBody;
+            recoilBodyOfHand = rightRecoilBodyOfHand;
+        }
+        else if(CHS == "None")
+        {
+            recoilBody = null;
+            recoilBodyOfHand = null;
+        }
+
         if(recoilBody != null)
         {
             float force = 1f;
