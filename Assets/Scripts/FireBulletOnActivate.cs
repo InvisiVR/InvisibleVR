@@ -54,9 +54,25 @@ public class FireBulletOnActivate : MonoBehaviour
     public void FireBullet(ActivateEventArgs arg)
     {
         if (magazine && magazine.bulletNum > 0 && hasSlide)
+        {
             shotAnime.SetTrigger("doShot");
-        else 
+        }
+        else if(magazine && magazine.bulletNum > 0 && !hasSlide)
+        {
+            shotAnime.SetBool("NoAmmo", false);
+            shotAnime.SetTrigger("doReload");
+            Slide();
+        }
+        else
+        {
+            if (shotAnime.GetBool("NoAmmo") == false)
+            {
+                shotAnime.SetBool("NoAmmo", true);
+                shotAnime.SetTrigger("doNoAmmo");
+            }
             source.PlayOneShot(noAmmoSound);
+        }
+            
     }
 
     void Shoot()
