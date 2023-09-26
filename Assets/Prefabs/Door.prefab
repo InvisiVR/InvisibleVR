@@ -183,6 +183,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_Knob Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012657353528, guid: 9f4e5dd2165039f4a878d1c1260761df, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012957683102, guid: 9f4e5dd2165039f4a878d1c1260761df, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013859883750, guid: 9f4e5dd2165039f4a878d1c1260761df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -231,11 +239,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1000012657353528, guid: 9f4e5dd2165039f4a878d1c1260761df,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 423650694396541656}
-    - targetCorrespondingSourceObject: {fileID: 1000012657353528, guid: 9f4e5dd2165039f4a878d1c1260761df,
+      addedObject: {fileID: 5484734230243441223}
+    - targetCorrespondingSourceObject: {fileID: 1000012957683102, guid: 9f4e5dd2165039f4a878d1c1260761df,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5484734230243441223}
+      addedObject: {fileID: 468928575027037135}
   m_SourcePrefab: {fileID: 100100000, guid: 9f4e5dd2165039f4a878d1c1260761df, type: 3}
 --- !u!4 &2857022370364427751 stripped
 Transform:
@@ -243,26 +251,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2857563962333824769}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2858544179450733625 stripped
+--- !u!1 &2858544178676140703 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000012657353528, guid: 9f4e5dd2165039f4a878d1c1260761df,
+  m_CorrespondingSourceObject: {fileID: 1000012957683102, guid: 9f4e5dd2165039f4a878d1c1260761df,
     type: 3}
   m_PrefabInstance: {fileID: 2857563962333824769}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &423650694396541656
+--- !u!114 &468928575027037135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2858544179450733625}
+  m_GameObject: {fileID: 2858544178676140703}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 5484734230243441223}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -300,7 +309,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5952838840225972145}
         m_TargetAssemblyTypeName: Door, Assembly-CSharp
         m_MethodName: DoorOpenClose
         m_Mode: 1
@@ -363,6 +372,12 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &2858544179450733625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000012657353528, guid: 9f4e5dd2165039f4a878d1c1260761df,
+    type: 3}
+  m_PrefabInstance: {fileID: 2857563962333824769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &5484734230243441223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -382,5 +397,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07512369, y: 0.23802392, z: 0.07542834}
+  m_Size: {x: 0.15, y: 0.23802392, z: 0.15}
   m_Center: {x: -0.000000074505806, y: -0.00000023841858, z: 0.00000047683716}
