@@ -3571,7 +3571,7 @@ PrefabInstance:
     - target: {fileID: 5199280685253015031, guid: ee3eac2398972e844bbd6845c30961ac,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 5.67
       objectReference: {fileID: 0}
     - target: {fileID: 5199280685253015031, guid: ee3eac2398972e844bbd6845c30961ac,
         type: 3}
@@ -8643,7 +8643,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -12281,10 +12281,130 @@ PrefabInstance:
       propertyPath: rightRecoilBodyOfHand
       value: 
       objectReference: {fileID: 1021314939}
+    - target: {fileID: 1175277491312283285, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 1742306301}
+    - target: {fileID: 1175277491312283285, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: LightsModule.maxLights
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175277491312283285, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: LightsModule.rangeCurve.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175277491312283285, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: LightsModule.intensityCurve.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761659636405277033, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761659636405277033, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.102
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641085825092267703, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Range
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641085825092267703, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641085825092267703, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641085825092267703, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641085825092267703, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641085825092267703, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641085825092267703, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641085825092267703, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Shadows.m_NearPlane
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3910791348290799694, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_Name
       value: handgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Range
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 179
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 64.97794
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_ColorTemperature
+      value: 3800
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: m_Shadows.m_NearPlane
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7128753662364844379, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
@@ -13273,6 +13393,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!108 &1742306301 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6163220826599674488, guid: 75626972a31180e4aa78fa23a64defae,
+    type: 3}
+  m_PrefabInstance: {fileID: 1675804531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1753990419
 PrefabInstance:
   m_ObjectHideFlags: 0
