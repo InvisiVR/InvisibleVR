@@ -52,9 +52,15 @@ public class FireBulletOnActivate : MonoBehaviour
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
         grabbable.activated.AddListener(FireBullet);
+        grabbable.activated.AddListener(FlashOnOff);
 
         socketInteractor.selectEntered.AddListener(AddMagazine);
         socketInteractor.selectExited.AddListener(RemoveMagazine);
+    }
+
+    public void FlashOnOff(ActivateEventArgs arg)
+    {
+        
     }
 
     public void FireBullet(ActivateEventArgs arg)
