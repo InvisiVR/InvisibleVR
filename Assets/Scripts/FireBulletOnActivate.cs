@@ -161,10 +161,9 @@ public class FireBulletOnActivate : MonoBehaviour
         spawnedCartridge.transform.position = cartridgeSpawnPoint.position;
         spawnedCartridge.transform.rotation = cartridgeSpawnPoint.rotation;
 
-        spawnedCartridge.GetComponentInChildren<Rigidbody>().velocity = new Vector3(1, Random.Range(1f, 1.5f), Random.Range(-1.5f, -1f)) * Random.Range(0.5f, 1f);
-        spawnedCartridge.GetComponentInChildren<Rigidbody>().angularVelocity = new Vector3(Random.Range(1f, 1.5f), Random.Range(1f, 1.5f), Random.Range(-1.5f, -1f));
+        Casing casing = spawnedCartridge.GetComponentInChildren<Casing>();
 
-        Destroy(spawnedCartridge, 8);
+        casing.Setup(transform.right);
     }
 
     public void AddMagazine(SelectEnterEventArgs args)
