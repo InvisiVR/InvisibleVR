@@ -12647,6 +12647,11 @@ PrefabInstance:
       propertyPath: rightRecoilBodyOfHand
       value: 
       objectReference: {fileID: 1021314939}
+    - target: {fileID: 1175277491312283285, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3910791348290799694, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_Name
