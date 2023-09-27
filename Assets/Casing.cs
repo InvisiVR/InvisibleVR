@@ -17,6 +17,8 @@ public class Casing : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+
+        Destroy(gameObject, destroyTime);
     }
 
     public void Setup(Vector3 direction)
