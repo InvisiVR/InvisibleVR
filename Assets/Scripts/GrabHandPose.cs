@@ -50,7 +50,8 @@ public class GrabHandPose : MonoBehaviour
             {
                 SetHandDataValues(handData, rightHandPose);
             }
-            
+            gameObject.layer = LayerMask.NameToLayer("Disinteractable");
+
             StartCoroutine(SetHandDataRoutine(handData, finalHandPosition, finalHandRotation, finalFingerRotations, startingHandPosition, startingHandRotation, startingFingerRotations));
         }
     }
@@ -61,6 +62,8 @@ public class GrabHandPose : MonoBehaviour
         {
             HandData handData = args.interactorObject.transform.GetComponentInChildren<HandData>();
             handData.animator.enabled = true;
+
+            gameObject.layer = LayerMask.NameToLayer("Interactable");
 
             StartCoroutine(SetHandDataRoutine(handData, startingHandPosition, startingHandRotation, startingFingerRotations, finalHandPosition, finalHandRotation, finalFingerRotations));
         }
