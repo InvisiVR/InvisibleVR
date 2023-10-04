@@ -168,6 +168,7 @@ public class HandGun : MonoBehaviour
 
     public void AddMagazine(SelectEnterEventArgs args)
     {
+        args.interactableObject.transform.gameObject.layer = LayerMask.NameToLayer("Disinteractable");
         magazine = args.interactableObject.transform.GetComponent<Magazine>();
         source.PlayOneShot(reloadInSound);
         hasSlide = false;
@@ -175,6 +176,7 @@ public class HandGun : MonoBehaviour
 
     public void RemoveMagazine(SelectExitEventArgs args)
     {
+        args.interactableObject.transform.gameObject.layer = LayerMask.NameToLayer("Interactable");
         magazine = null;
         source.PlayOneShot(reloadOutSound);
     }
