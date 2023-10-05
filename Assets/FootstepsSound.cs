@@ -6,13 +6,13 @@ using UnityEngine.XR;
 
 public class FootstepsSound : MonoBehaviour
 {
-    public CharacterController characterController;
     public AudioClip[] walkingSound;
 
     private AudioSource audioSource;
+    private RaycastHit hit;
     private int idx = 0;
     private bool isMoving;
-    private bool isWalking;
+    private bool isGround;
 
     private InputData _inputData;
 
@@ -24,53 +24,52 @@ public class FootstepsSound : MonoBehaviour
 
     void Update()
     {
+        RaycastFloorCheck();
         MoveSfx();
+    }
+
+    void RaycastFloorCheck()
+    {
+        //Ray Check
+        if (Physics.Raycast(transform.position, -transform.up, out hit))
+        {
+            Debug.Log("hit point : " + hit.point + ", distance : " + hit.distance + ", name : " + hit.collider.name);
+            Debug.DrawRay(transform.position, -transform.up * hit.distance, Color.red);
+
+            isGround = true;
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, -transform.up * 0.1f, Color.blue);
+
+            isGround = false;
+        }
     }
 
     void MoveSfx()
     {
-        if (_inputData._leftController.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 continuousVector))
-        {
-            if (Mathf.Abs(continuousVector.x) > 0.1 || Mathf.Abs(continuousVector.y) > 0.1) isMoving = true;
-            else isMoving = false;
-        }
-
-        if (isMoving)
-        {
-            if (!audioSource.isPlaying) audioSource.Play();
-            else audioSource.Stop();
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        idx = 0;
-        audioSource.clip = walkingSound[1];
-
-        //if (collision.gameObject.CompareTag("¹Ù´Ú"))
+        //if (_inputData._leftController.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 continuousVector))
         //{
-        //    idx = 0;
-        //    isWalking = true;
+        //    if (Mathf.Abs(continuousVector.x) > 0.1f || Mathf.Abs(continuousVector.y) > 0.1f) isMoving = true;
+        //    else isMoving = false;
         //}
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        idx = 0;
+        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f) isMoving = true;
+        else isMoving = false;
 
-        //if (collision.gameObject.CompareTag("¹Ù´Ú"))
-        //{
-        //    isWalking = false;
-        //}
+        if (isGround && isMoving)
+        {
+            Debug.Log("phase1");
+            if (!audioSource.isPlaying)
+            {
+                Debug.Log("phase2");
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            Debug.Log("Nope" + isMoving + " " + isGround);
+            audioSource.Stop();
+        }
     }
 }
