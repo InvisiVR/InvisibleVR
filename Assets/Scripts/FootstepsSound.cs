@@ -10,7 +10,6 @@ public class FootstepsSound : MonoBehaviour
 
     private AudioSource audioSource;
     private RaycastHit hit;
-    private int idx = 0;
     private bool isMoving;
     private bool isGround;
 
@@ -37,6 +36,11 @@ public class FootstepsSound : MonoBehaviour
             Debug.DrawRay(transform.position, -transform.up * hit.distance, Color.red);
 
             isGround = true;
+
+            if(audioSource.clip != NameToClip(hit.collider.name))
+            {
+                audioSource.clip = NameToClip(hit.collider.name);
+            }
         }
         else
         {
@@ -48,28 +52,43 @@ public class FootstepsSound : MonoBehaviour
 
     void MoveSfx()
     {
+        //XR Input Read System
         //if (_inputData._leftController.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 continuousVector))
         //{
         //    if (Mathf.Abs(continuousVector.x) > 0.1f || Mathf.Abs(continuousVector.y) > 0.1f) isMoving = true;
         //    else isMoving = false;
         //}
 
+        //PC Test System
         if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f) isMoving = true;
         else isMoving = false;
 
         if (isGround && isMoving)
         {
-            Debug.Log("phase1");
             if (!audioSource.isPlaying)
             {
-                Debug.Log("phase2");
                 audioSource.Play();
             }
         }
         else
         {
-            Debug.Log("Nope" + isMoving + " " + isGround);
             audioSource.Stop();
+        }
+    }
+
+    AudioClip NameToClip(string floor)
+    {
+        switch (floor)
+        {
+            case "Plane":
+                return walkingSound[0];
+            case "MetalPlane":
+                return walkingSound[1];
+            case "WoodPlane":
+                return walkingSound[2];
+            default:
+                return walkingSound[3];
+            //ø¨¿Â
         }
     }
 }
