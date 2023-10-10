@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Left Hand
   - Right Hand
+  - Door
   layers:
   - Default
   - TransparentFX
