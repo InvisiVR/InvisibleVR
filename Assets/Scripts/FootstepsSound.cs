@@ -61,21 +61,31 @@ public class FootstepsSound : MonoBehaviour
         //}
 
         //PC Test System
-        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f) isMoving = true;
-        else isMoving = false;
+        //if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f) isMoving = true;
+        //else isMoving = false;
 
-        if (isGround && isMoving)
+        //if (isGround && isMoving)
+        //{
+        //    if (!audioSource.isPlaying)
+        //    {
+        //        audioSource.Play();
+        //        isFootSoundPlaying = true;
+        //    }
+        //}
+        //else
+        //{
+        //    audioSource.Stop();
+        //    isFootSoundPlaying = false;
+        //}
+
+        //NEO PC Test System
+        if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f)
         {
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play();
-                isFootSoundPlaying = true;
-            }
+            audioSource.enabled = true;
         }
         else
         {
-            audioSource.Stop();
-            isFootSoundPlaying = false;
+            audioSource.enabled = false;
         }
     }
 
@@ -90,7 +100,7 @@ public class FootstepsSound : MonoBehaviour
             case "WoodPlane":
                 return walkingSound[2];
             default:
-                return walkingSound[3];
+                return walkingSound[0];
             //????
         }
     }
