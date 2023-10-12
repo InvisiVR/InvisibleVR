@@ -61,6 +61,9 @@ public class HandGun : MonoBehaviour
     public float BulletDistance = 100;
     public GameObject ImpactEffect;
 
+    public bool fiered = false;
+    private float fireSoundDelay;
+
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
@@ -184,8 +187,18 @@ public class HandGun : MonoBehaviour
         spawnedBullet.GetComponentInChildren<Rigidbody>().velocity = bulletSpawnPoint.forward * fireSpeed;
 
         source.PlayOneShot(fireSound);
+        fiered = true;
+        fireSoundDelay = 2.0f;
+        StartCoroutine(FireSoundDelayCoroutine());
 
         Destroy(spawnedBullet, 5);
+    }
+
+    private IEnumerator FireSoundDelayCoroutine()
+    {
+        yield return new WaitForSeconds(fireSoundDelay);
+        fireSoundDelay = 0;
+        fiered = false;
     }
 
     void CasingRelease()

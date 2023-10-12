@@ -12,6 +12,7 @@ public class FootstepsSound : MonoBehaviour
     private RaycastHit hit;
     private bool isMoving;
     private bool isGround;
+    public bool isFootSoundPlaying;
 
     private InputData _inputData;
 
@@ -68,11 +69,13 @@ public class FootstepsSound : MonoBehaviour
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
+                isFootSoundPlaying = true;
             }
         }
         else
         {
             audioSource.Stop();
+            isFootSoundPlaying = false;
         }
     }
 
@@ -88,7 +91,7 @@ public class FootstepsSound : MonoBehaviour
                 return walkingSound[2];
             default:
                 return walkingSound[3];
-            //ø¨¿Â
+            //????
         }
     }
 }
