@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+[System.Serializable]
+public class ImpactInfo
+{
+    public MaterialType.MaterialTypeEnum MaterialType;
+    public GameObject ImpactEffect;
+}
+
 public class HandGun : MonoBehaviour
 {
     [Header("Prefab References")]
@@ -48,13 +55,6 @@ public class HandGun : MonoBehaviour
     public Rigidbody leftRecoilBodyOfHand;
     public Rigidbody rightRecoilBodyOfHand;
 
-    [System.Serializable]
-    public class ImpactInfo
-    {
-        public MaterialType.MaterialTypeEnum MaterialType;
-        public GameObject ImpactEffect;
-    }
-
     [Header("Effects")]
     public ImpactInfo[] ImpactElemets = new ImpactInfo[0];
     
@@ -68,15 +68,9 @@ public class HandGun : MonoBehaviour
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
         grabbable.activated.AddListener(FireBullet);
-        grabbable.activated.AddListener(FlashOnOff);
 
         socketInteractor.selectEntered.AddListener(AddMagazine);
         socketInteractor.selectExited.AddListener(RemoveMagazine);
-    }
-
-    public void FlashOnOff(ActivateEventArgs arg)
-    {
-        
     }
 
     public void FireBullet(ActivateEventArgs arg)
@@ -99,8 +93,7 @@ public class HandGun : MonoBehaviour
                 shotAnime.SetTrigger("doNoAmmo");
             }
             source.PlayOneShot(noAmmoSound);
-        }
-            
+        }   
     }
 
     void Shoot()
