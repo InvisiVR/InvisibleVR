@@ -100,7 +100,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 53a4fc60406865c4f9d0707f1e13e3ad, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -112,6 +113,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 9079574695229561208}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 53a4fc60406865c4f9d0707f1e13e3ad,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9104868315604671713}
   m_SourcePrefab: {fileID: 100100000, guid: 53a4fc60406865c4f9d0707f1e13e3ad, type: 3}
 --- !u!4 &4478418632902341197 stripped
 Transform:
@@ -175,3 +180,32 @@ CapsuleCollider:
   m_Height: 0.03
   m_Direction: 1
   m_Center: {x: 0, y: 0.001, z: 0}
+--- !u!114 &9104868315604671713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4478418632902569581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0151de9dd7ca064ea1c902932a8fd75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImpactElemets:
+  - MaterialType: 4
+    ImpactEffect: {fileID: 138412, guid: c75e5a4fa5c842546a553399e24eb22d, type: 3}
+  - MaterialType: 0
+    ImpactEffect: {fileID: 0}
+  - MaterialType: 0
+    ImpactEffect: {fileID: 0}
+  - MaterialType: 0
+    ImpactEffect: {fileID: 0}
+  - MaterialType: 0
+    ImpactEffect: {fileID: 0}
+  - MaterialType: 0
+    ImpactEffect: {fileID: 0}
+  - MaterialType: 0
+    ImpactEffect: {fileID: 0}
+  - MaterialType: 0
+    ImpactEffect: {fileID: 0}

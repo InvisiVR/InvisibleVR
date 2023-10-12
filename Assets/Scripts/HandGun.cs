@@ -168,6 +168,7 @@ public class HandGun : MonoBehaviour
 
             var effectIstance = Instantiate(effect, hit.point, new Quaternion()) as GameObject;
             effectIstance.transform.LookAt(hit.point + hit.normal);
+
             Destroy(effectIstance, 20);
         }
     }
@@ -185,7 +186,7 @@ public class HandGun : MonoBehaviour
 
         source.PlayOneShot(fireSound);
 
-        Destroy(spawnedBullet, 5);
+        if(spawnedBullet != null) Destroy(spawnedBullet, 5);
     }
 
     void CasingRelease()
@@ -224,8 +225,7 @@ public class HandGun : MonoBehaviour
     GameObject GetImpactEffect(GameObject impactedGameObject)
     {
         var materialType = impactedGameObject.GetComponent<MaterialType>();
-        if (materialType == null)
-            return null;
+        if (materialType == null) return null;
         foreach (var impactInfo in ImpactElemets)
         {
             if (impactInfo.MaterialType == materialType.TypeOfMaterial)
