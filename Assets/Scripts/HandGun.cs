@@ -48,6 +48,19 @@ public class HandGun : MonoBehaviour
     public Rigidbody leftRecoilBodyOfHand;
     public Rigidbody rightRecoilBodyOfHand;
 
+    [System.Serializable]
+    public class ImpactInfo
+    {
+        public MaterialType.MaterialTypeEnum MaterialType;
+        public GameObject ImpactEffect;
+    }
+
+    [Header("Effects")]
+    public ImpactInfo[] ImpactElemets = new ImpactInfo[0];
+    
+    public float BulletDistance = 100;
+    public GameObject ImpactEffect;
+
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
@@ -135,7 +148,28 @@ public class HandGun : MonoBehaviour
 
     void MuzzleFlash()
     {
+        //Gun Light Muzzle Flashes
         MuzzleFlashParticle.Play();
+
+        //Gun Fire Muzzle Flashes
+        var impactEffectIstance = Instantiate(ImpactEffect, bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation) as GameObject;
+
+        Destroy(impactEffectIstance, 4);
+
+        //Bullet Mark 
+        RaycastHit hit;
+
+        var ray = new Ray(bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.forward);
+        if (Physics.Raycast(ray, out hit, BulletDistance))
+        {
+            var effect = GetImpactEffect(hit.transform.gameObject);
+            
+            if (effect == null) return;
+
+            var effectIstance = Instantiate(effect, hit.point, new Quaternion()) as GameObject;
+            effectIstance.transform.LookAt(hit.point + hit.normal);
+            Destroy(effectIstance, 20);
+        }
     }
 
     void BulletFire()
@@ -185,5 +219,18 @@ public class HandGun : MonoBehaviour
     {
         hasSlide = true;
         source.PlayOneShot(reloadSound);
+    }
+
+    GameObject GetImpactEffect(GameObject impactedGameObject)
+    {
+        var materialType = impactedGameObject.GetComponent<MaterialType>();
+        if (materialType == null)
+            return null;
+        foreach (var impactInfo in ImpactElemets)
+        {
+            if (impactInfo.MaterialType == materialType.TypeOfMaterial)
+                return impactInfo.ImpactEffect;
+        }
+        return null;
     }
 }

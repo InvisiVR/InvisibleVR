@@ -10,7 +10,6 @@ public class FPSFireManager : MonoBehaviour
 
 	void Update () {
 	    if (Input.GetMouseButtonDown(0)) {
-            
 	        RaycastHit hit;
             var ray = new Ray(transform.position, transform.forward);
             if (Physics.Raycast(ray, out hit, BulletDistance)) {
@@ -25,9 +24,7 @@ public class FPSFireManager : MonoBehaviour
 
                 Destroy(impactEffectIstance, 4);
             }
-           
 	    }
-	    
     }
     
     [System.Serializable]
