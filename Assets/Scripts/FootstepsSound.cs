@@ -94,7 +94,7 @@ public class FootstepsSound : MonoBehaviour
         switch (floor)
         {
             case "Plane":
-                return walkingSound[0];
+                return walkingSound[1];
             case "MetalPlane":
                 return walkingSound[1];
             case "WoodPlane":
