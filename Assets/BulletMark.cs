@@ -4,17 +4,6 @@ using UnityEngine;
 
 public class BulletMark : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -22,7 +11,7 @@ public class BulletMark : MonoBehaviour
         {
             gameObject.SetActive(false);
 
-            Destroy(transform.parent.gameObject, 25f);
+            Destroy(transform.parent.gameObject, 5f);
         }
     }
 }

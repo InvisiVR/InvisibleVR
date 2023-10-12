@@ -172,7 +172,7 @@ public class HandGun : MonoBehaviour
             var effectIstance = Instantiate(effect, hit.point, new Quaternion()) as GameObject;
             effectIstance.transform.LookAt(hit.point + hit.normal);
 
-            Destroy(effectIstance, 20);
+            Destroy(effectIstance, 10);
         }
     }
 
