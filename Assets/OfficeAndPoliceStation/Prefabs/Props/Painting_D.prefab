@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2553420968503271050}
   - component: {fileID: 327467129202485824}
   - component: {fileID: 1390187591140751046}
+  - component: {fileID: -3779092432434352102}
   m_Layer: 0
   m_Name: Painting_D
-  m_TagString: Untagged
+  m_TagString: Glass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7290808, y: 0.56839734, z: 0.026799357}
   m_Center: {x: -0.00000013411045, y: 0, z: 0.013262671}
+--- !u!114 &-3779092432434352102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2273079685511678869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 8

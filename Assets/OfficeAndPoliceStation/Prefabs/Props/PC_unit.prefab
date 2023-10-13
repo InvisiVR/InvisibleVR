@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3243542124871074732}
   m_Layer: 0
   m_Name: PC_unit
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

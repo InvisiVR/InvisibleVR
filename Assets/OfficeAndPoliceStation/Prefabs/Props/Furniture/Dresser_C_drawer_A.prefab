@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 594006194980716362}
   - component: {fileID: 594006194980716361}
   - component: {fileID: 594006194980716360}
+  - component: {fileID: 2837890796146655046}
   m_Layer: 0
   m_Name: Dresser_C_drawer_A
   m_TagString: Untagged
@@ -193,3 +194,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.36195844, y: 0.03, z: 0.5734266}
   m_Center: {x: -0.000000029802322, y: -0.13, z: -0.28}
+--- !u!114 &2837890796146655046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360073210319454759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 6

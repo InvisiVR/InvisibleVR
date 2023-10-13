@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5128168082200054147}
   - component: {fileID: 5128168082200054146}
   - component: {fileID: 5128168082200054157}
+  - component: {fileID: 4151594844629045510}
   m_Layer: 0
   m_Name: Table_cabinet_A_drawer_A
   m_TagString: Untagged
@@ -194,3 +195,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6298938, y: 0.03, z: 0.65846914}
   m_Center: {x: -0.00000295043, y: -0.08, z: -0.31091693}
+--- !u!114 &4151594844629045510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5470607333921584350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 6

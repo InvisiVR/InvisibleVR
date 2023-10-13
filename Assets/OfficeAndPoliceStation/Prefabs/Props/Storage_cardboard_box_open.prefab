@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 7546912142507924788}
   - component: {fileID: 2685845427903813124}
   - component: {fileID: 3728986236735607688}
+  - component: {fileID: -3699627671414895841}
   m_Layer: 0
   m_Name: Storage_cardboard_box_open
   m_TagString: Untagged
@@ -281,3 +282,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.02, z: 0.7}
   m_Center: {x: 0.010782704, y: 0.01, z: 0}
+--- !u!114 &-3699627671414895841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5115465020436997863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 4

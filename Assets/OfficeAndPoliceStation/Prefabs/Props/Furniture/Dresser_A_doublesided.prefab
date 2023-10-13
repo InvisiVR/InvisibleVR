@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 906048779314187209}
   - component: {fileID: 1969052915336238912}
   - component: {fileID: 1969052915336238915}
+  - component: {fileID: 8390517902436694906}
   m_Layer: 0
   m_Name: Dresser_A_doublesided
   m_TagString: Untagged
@@ -139,6 +140,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6622686, y: 0.8645146, z: 0.75}
   m_Center: {x: 0, y: 0.43225724, z: -0.020642802}
+--- !u!114 &8390517902436694906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698440764073011740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 6
 --- !u!1001 &434326707179419318
 PrefabInstance:
   m_ObjectHideFlags: 0

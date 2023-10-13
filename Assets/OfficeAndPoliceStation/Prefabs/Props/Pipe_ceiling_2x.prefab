@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3192366140995451583}
   - component: {fileID: 840316461205704309}
   - component: {fileID: 2047153209209180915}
+  - component: {fileID: -4911879078727431261}
   m_Layer: 0
   m_Name: Pipe_ceiling_2x
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -106,6 +107,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1864392, y: 0.18643917, z: 2.0217917}
   m_Center: {x: 0, y: -0.11625608, z: -0.9999999}
+--- !u!114 &-4911879078727431261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200661400758513568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 1
 --- !u!1 &6297938829057630466
 GameObject:
   m_ObjectHideFlags: 0

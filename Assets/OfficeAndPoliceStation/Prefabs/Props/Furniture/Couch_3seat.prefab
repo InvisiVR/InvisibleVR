@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9161600218132340912}
   - component: {fileID: 9161600218132340915}
   - component: {fileID: 9161600218132340914}
+  - component: {fileID: 5265492781063191300}
   m_Layer: 0
   m_Name: Couch_3seat
   m_TagString: Untagged
@@ -171,3 +172,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.11, y: 0.44, z: 0.86391187}
   m_Center: {x: 0.0058402717, y: 0.25, z: 0.08386965}
+--- !u!114 &5265492781063191300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8351330717391019493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 6

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5667785669110203935}
   - component: {fileID: 5667785669110203934}
   - component: {fileID: 5667785669110203933}
+  - component: {fileID: -5740896105827644152}
   m_Layer: 0
   m_Name: Table_wooden_B
   m_TagString: Untagged
@@ -149,3 +150,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.03, y: 0.81345314, z: 0.06}
   m_Center: {x: 0.73, y: 0.4106324, z: -0.1}
+--- !u!114 &-5740896105827644152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785475756347112258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 4

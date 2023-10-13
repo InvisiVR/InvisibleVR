@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3338549088690732303}
   - component: {fileID: 698093113101355461}
   - component: {fileID: 2193686625680037187}
+  - component: {fileID: 8371625025957126609}
   m_Layer: 0
   m_Name: Whiteboard_mounted
   m_TagString: Untagged
@@ -106,3 +107,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.823495, y: 1.1501143, z: 0.022057457}
   m_Center: {x: 0, y: 0.025085181, z: 0.011028728}
+--- !u!114 &8371625025957126609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346826482980366352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 6

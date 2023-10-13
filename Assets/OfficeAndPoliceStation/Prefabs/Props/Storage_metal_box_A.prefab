@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4072564957482003983}
   m_Layer: 0
   m_Name: Storage_metal_box_A
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

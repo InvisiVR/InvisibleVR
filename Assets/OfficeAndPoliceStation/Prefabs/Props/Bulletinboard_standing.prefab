@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9190518187693057479}
   - component: {fileID: 9190518187693057478}
   - component: {fileID: 9190518187693057481}
+  - component: {fileID: -3862951931733008146}
   m_Layer: 0
   m_Name: Bulletinboard_standing
   m_TagString: Untagged
@@ -149,3 +150,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.03, y: 1.45, z: 0.05}
   m_Center: {x: 0.86, y: 0.72, z: -0.000000029802322}
+--- !u!114 &-3862951931733008146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307503352686254234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 6

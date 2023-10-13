@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -888224411381068396}
   m_Layer: 0
   m_Name: Painting_H
-  m_TagString: Untagged
+  m_TagString: Glass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

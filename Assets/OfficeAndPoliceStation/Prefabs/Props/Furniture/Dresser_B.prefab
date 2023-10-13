@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7532426952995337578}
   - component: {fileID: 7532426952995337577}
   - component: {fileID: 7532426952995337576}
+  - component: {fileID: -3236372630545340839}
   m_Layer: 0
   m_Name: Dresser_B
   m_TagString: Untagged
@@ -196,6 +197,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.03, z: 0.30000004}
   m_Center: {x: 0, y: 0.01, z: -0.0037923157}
+--- !u!114 &-3236372630545340839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7226561847469557815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 6
 --- !u!1001 &2311858909301391611
 PrefabInstance:
   m_ObjectHideFlags: 0
