@@ -33,7 +33,6 @@ public class FootstepsSound : MonoBehaviour
         //Ray Check
         if (Physics.Raycast(transform.position, -transform.up, out hit))
         {
-            Debug.Log("hit point : " + hit.point + ", distance : " + hit.distance + ", name : " + hit.collider.name);
             Debug.DrawRay(transform.position, -transform.up * hit.distance, Color.red);
 
             isGround = true;
