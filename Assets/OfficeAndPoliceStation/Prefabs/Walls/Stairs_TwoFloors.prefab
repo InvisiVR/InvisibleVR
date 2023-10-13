@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33564597264544642}
   - component: {fileID: 23583746678497562}
   - component: {fileID: 64816488201172376}
+  - component: {fileID: 6595372445990219841}
   m_Layer: 0
   m_Name: Stairs_TwoFloors
   m_TagString: Untagged
@@ -113,6 +114,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c0a1ebfa2e5a61b4b8f9eaf27ff967df, type: 3}
+--- !u!114 &6595372445990219841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394454790458268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 0
 --- !u!1 &1597536964041910
 GameObject:
   m_ObjectHideFlags: 0

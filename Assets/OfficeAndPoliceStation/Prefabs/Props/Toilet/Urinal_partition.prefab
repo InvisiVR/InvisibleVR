@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7570785651928639547}
   - component: {fileID: 5689209860298923249}
   - component: {fileID: 6428245908573831287}
+  - component: {fileID: 1868745668803797900}
   m_Layer: 0
   m_Name: Urinal_partition
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.053621903, y: 1.4965079, z: 0.6341954}
   m_Center: {x: 0.00061893463, y: 1.1708543, z: 0.41387305}
+--- !u!114 &1868745668803797900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6193819795095026980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 1

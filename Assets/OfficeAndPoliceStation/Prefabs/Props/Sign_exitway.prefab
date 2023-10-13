@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 7097621607318184433}
   - component: {fileID: 5015644901816571195}
   - component: {fileID: 5934253195128998328}
+  - component: {fileID: 6275292617109080322}
   m_Layer: 0
   m_Name: Sign_exitway
   m_TagString: Untagged
@@ -211,3 +212,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.89637816, y: 0.227589, z: 0.08234603}
   m_Center: {x: 0, y: -0.13897023, z: 0.13270052}
+--- !u!114 &6275292617109080322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6817282184066970862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 8

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3373598}
   - component: {fileID: 2367522}
   - component: {fileID: 6500734}
+  - component: {fileID: -3229703855864750635}
   m_Layer: 0
   m_Name: W_2x_glass_A
-  m_TagString: Untagged
+  m_TagString: Glass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -106,3 +107,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 3, z: 0.05000013}
   m_Center: {x: -1, y: 1.5, z: 0}
+--- !u!114 &-3229703855864750635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 8

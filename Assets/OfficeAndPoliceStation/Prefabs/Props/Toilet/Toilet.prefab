@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 847267682859661711}
   - component: {fileID: 2018611909282374926}
   - component: {fileID: 2018611909282374925}
+  - component: {fileID: 4035996776142872446}
   m_Layer: 0
   m_Name: Toilet
   m_TagString: Untagged
@@ -129,6 +130,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.44, y: 0.47, z: 0.21}
   m_Center: {x: -0.0012585893, y: 0.655, z: -0.05}
+--- !u!114 &4035996776142872446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207779471607404634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 6
 --- !u!1 &3175875799293456875
 GameObject:
   m_ObjectHideFlags: 0

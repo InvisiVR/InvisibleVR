@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4572298053613870027}
   - component: {fileID: 1770169272753827585}
   - component: {fileID: 1103788946857341831}
+  - component: {fileID: -888224411381068396}
   m_Layer: 0
   m_Name: Painting_H
   m_TagString: Untagged
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.62888896, y: 0.9534714, z: 0.03004696}
   m_Center: {x: 0, y: 0, z: 0.014520477}
+--- !u!114 &-888224411381068396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256735840806506196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 8

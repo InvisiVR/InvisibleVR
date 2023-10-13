@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7614136718086439161}
   - component: {fileID: 7614136718086439686}
   - component: {fileID: 7614136718086439687}
+  - component: {fileID: -3418972460410073124}
   m_Layer: 0
   m_Name: Table_office
   m_TagString: Untagged
@@ -150,3 +151,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.05, y: 0.77777374, z: 0.64}
   m_Center: {x: -0.82, y: 0.38772672, z: 0.34518012}
+--- !u!114 &-3418972460410073124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7308129232381558356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 6

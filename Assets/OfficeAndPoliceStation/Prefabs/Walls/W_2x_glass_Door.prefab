@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 6573980}
   - component: {fileID: 4834503338374259575}
   - component: {fileID: 3464072447487563367}
+  - component: {fileID: -288491202149837762}
   m_Layer: 0
   m_Name: W_2x_glass_Door
-  m_TagString: Untagged
+  m_TagString: Glass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -150,3 +151,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 0.7, z: 0.06285527}
   m_Center: {x: -1, y: 2.65, z: -0.00022107083}
+--- !u!114 &-288491202149837762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 8

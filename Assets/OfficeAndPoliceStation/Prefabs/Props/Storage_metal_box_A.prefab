@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8620639642185595829}
   - component: {fileID: 5784413427347722111}
   - component: {fileID: 6781341679562132005}
+  - component: {fileID: -4072564957482003983}
   m_Layer: 0
   m_Name: Storage_metal_box_A
   m_TagString: Untagged
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.39404884, y: 0.29455042, z: 0.51698434}
   m_Center: {x: 0.0000008940697, y: 0.14727521, z: -0.000051155686}
+--- !u!114 &-4072564957482003983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5424200017028066986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 1

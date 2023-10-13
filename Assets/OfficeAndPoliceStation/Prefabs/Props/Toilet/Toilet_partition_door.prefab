@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 9214650328749077593}
   - component: {fileID: 6342744957498327187}
   - component: {fileID: 5747826017137073173}
+  - component: {fileID: -4631745450558928252}
   m_Layer: 0
   m_Name: Toilet_partition_door
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1988369, y: 2, z: 0.08613121}
   m_Center: {x: -0.59941846, y: 1.3011546, z: -0.013884392}
+--- !u!114 &-4631745450558928252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4829275653515321670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 1

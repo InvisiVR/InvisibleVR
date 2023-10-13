@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3387608}
   - component: {fileID: 2379726}
   - component: {fileID: 6433382}
+  - component: {fileID: 3558210455093488692}
   m_Layer: 0
   m_Name: Cell
   m_TagString: Untagged
@@ -111,6 +112,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 4bed8fdfd2ba3a14dbee57df503949d6, type: 3}
+--- !u!114 &3558210455093488692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 0
 --- !u!1001 &7178775434919810505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,6 +192,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door_Cell
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237051237172027966, guid: ede9743b5aa5bff488ac363f58c4afb2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Metal
       objectReference: {fileID: 0}
     - target: {fileID: 6791355114786859484, guid: ede9743b5aa5bff488ac363f58c4afb2,
         type: 3}

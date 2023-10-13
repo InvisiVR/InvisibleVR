@@ -117,9 +117,10 @@ GameObject:
   - component: {fileID: 6944817241672850564}
   - component: {fileID: 5153249601057974350}
   - component: {fileID: 5784188263222310089}
+  - component: {fileID: 7166022051008581798}
   m_Layer: 0
   m_Name: Desk_metal
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -216,6 +217,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7011492303168654833, guid: d76a1881717cd2241a6e93ee561a664d, type: 3}
+--- !u!114 &7166022051008581798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666727426171881883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 1
 --- !u!1001 &5756871318990794555
 PrefabInstance:
   m_ObjectHideFlags: 0

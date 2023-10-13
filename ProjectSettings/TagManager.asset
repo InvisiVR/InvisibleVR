@@ -8,6 +8,8 @@ TagManager:
   - Right Hand
   - Door
   - HandGun
+  - Glass
+  - Metal
   layers:
   - Default
   - TransparentFX

@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2140103544440162284}
+  - component: {fileID: -3922114283886134821}
   m_Layer: 0
   m_Name: Door_Cell
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +33,19 @@ Transform:
   - {fileID: 6791355114786859484}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3922114283886134821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4237051237172027966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 1
 --- !u!1001 &6791355114786468700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43,6 +57,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 73d690fd3e333fa4fb707fefcf9d1d16, type: 3}
       propertyPath: m_Name
       value: Door_Cell_mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 73d690fd3e333fa4fb707fefcf9d1d16, type: 3}
+      propertyPath: m_TagString
+      value: Metal
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73d690fd3e333fa4fb707fefcf9d1d16, type: 3}
       propertyPath: m_RootOrder
@@ -100,6 +118,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 632627699271442831}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 73d690fd3e333fa4fb707fefcf9d1d16,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5217552327407278716}
   m_SourcePrefab: {fileID: 100100000, guid: 73d690fd3e333fa4fb707fefcf9d1d16, type: 3}
 --- !u!1 &6791355114786436604 stripped
 GameObject:
@@ -149,6 +171,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5217552327407278716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791355114786436604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 1
 --- !u!4 &6791355114786859484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 73d690fd3e333fa4fb707fefcf9d1d16,

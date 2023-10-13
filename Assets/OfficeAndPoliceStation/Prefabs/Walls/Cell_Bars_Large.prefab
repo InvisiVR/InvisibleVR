@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 65147942857725608}
   - component: {fileID: 5429397757526960657}
   - component: {fileID: 1436151396785212570}
+  - component: {fileID: -7051677231046475328}
   m_Layer: 0
   m_Name: Cell_Bars_Large
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -149,3 +150,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.0185413, y: 0.3, z: 0.119028166}
   m_Center: {x: 1.5961375, y: 2.35, z: -0.015794754}
+--- !u!114 &-7051677231046475328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108228323723988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 1

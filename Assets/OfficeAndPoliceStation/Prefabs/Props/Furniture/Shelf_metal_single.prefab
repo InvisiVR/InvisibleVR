@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6363361448990109413}
   - component: {fileID: 9199663044595587631}
   - component: {fileID: 7523915659303585449}
+  - component: {fileID: 8228947636236704042}
   m_Layer: 0
   m_Name: Shelf_metal_single
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4999999, y: 0.08875046, z: 0.34494022}
   m_Center: {x: -0.0000009536743, y: -0.02537528, z: 0.17245962}
+--- !u!114 &8228947636236704042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7253954005532359674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 1

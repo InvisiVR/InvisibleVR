@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2313111482493476683}
   - component: {fileID: 2313111482493476682}
   - component: {fileID: 2313111482493476681}
+  - component: {fileID: 1496114996275425142}
   m_Layer: 0
   m_Name: Toilet_partition_tile
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -149,3 +150,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.25, y: 0.04, z: 0.03}
   m_Center: {x: 0.08, y: 2.67, z: 0.01}
+--- !u!114 &1496114996275425142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3231538833823343110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 1

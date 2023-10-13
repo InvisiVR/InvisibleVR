@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6243511493609181423}
   - component: {fileID: 6243511493609181416}
   - component: {fileID: 6243511493609181417}
+  - component: {fileID: -6626859014060075340}
   m_Layer: 0
   m_Name: Sign_hanging
   m_TagString: Untagged
@@ -149,3 +150,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.03, y: 0.7183267, z: 0.049319312}
   m_Center: {x: 0.36, y: -0.35583478, z: 0.0000000121071935}
+--- !u!114 &-6626859014060075340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6513332397007302074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 4

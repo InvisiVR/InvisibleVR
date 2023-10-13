@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5994130420773544231}
   - component: {fileID: 8415990297330259437}
   - component: {fileID: 7136533276526872939}
+  - component: {fileID: -1732927710378495059}
   m_Layer: 0
   m_Name: Trashcan_plastic
   m_TagString: Untagged
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3426596, y: 0.38192052, z: 0.34016123}
   m_Center: {x: 0, y: 0.19109681, z: 0.000000014901161}
+--- !u!114 &-1732927710378495059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8055645495960187960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 1

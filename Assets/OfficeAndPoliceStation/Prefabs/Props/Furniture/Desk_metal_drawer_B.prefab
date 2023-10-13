@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 122699087855027611}
   - component: {fileID: 122699087855027610}
   - component: {fileID: 122699087855027609}
+  - component: {fileID: 6409329185660741216}
   m_Layer: 0
   m_Name: Desk_metal_drawer_B
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -193,3 +194,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.4168308, y: 0.03, z: 0.75}
   m_Center: {x: 0.008100852, y: -0.33, z: -0.4}
+--- !u!114 &6409329185660741216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968981981713938644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c216f014d903439060cd429cb53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfMaterial: 1
