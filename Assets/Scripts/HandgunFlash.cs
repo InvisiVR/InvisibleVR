@@ -1,34 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 using static Unity.VisualScripting.Member;
 
 public class HandgunFlash : MonoBehaviour
 {
     [Header("Lights")]
-    private Light lit;
-
-    [Header("Sounds")]
-    private AudioSource source;
-    public AudioClip lightOn;
-    public AudioClip lightOff;
+    public Light lit;
 
     // Start is called before the first frame update
-    //void Start()
-    //{
-    //    lit = GameObject.Find("HandgunFlash").GetComponent<Light>();
-    //    source = GetComponent<AudioSource>();
-    //}
-
-    public void LightOn()
+    void Start()
     {
-        lit.enabled = true;
-        source.PlayOneShot(lightOn);
+        XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
+        grabbable.selectEntered.AddListener(LightOn);
+        grabbable.selectExited.AddListener(LightOff);
     }
 
-    public void LightOff()
+    public void LightOn(SelectEnterEventArgs args)
+    {
+        lit.enabled = true;
+    }
+
+    public void LightOff(SelectExitEventArgs args)
     {
         lit.enabled = false;
-        source.PlayOneShot(lightOff);
     }
 }
