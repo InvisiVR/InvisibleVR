@@ -25,7 +25,6 @@ public class Door : MonoBehaviour
         if (isLocked)
         {
             source.PlayOneShot(doorClips[Random.Range(2, 4)]);
-            animator.SetBool("locked", isOpened);
         }
         else
         {
