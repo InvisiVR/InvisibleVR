@@ -96,7 +96,7 @@ public class Zombies : MonoBehaviour
 
         // Raycast Hits OR In Distance --> Mode 2 (Chase Mode)
         FindingPlayerForRay();
-        if (player_zombie_dist < mustChase_dist || isFindPlayer)
+        if (isFindPlayer || player_zombie_dist < mustChase_dist)
         {
             cur_mode = 2;
             isFindPlayer = false;
