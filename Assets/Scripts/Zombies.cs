@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class Zombies : MonoBehaviour
 {
     NavMeshAgent agent;
+    private Animator anim;
     [SerializeField] private Transform target;
 
     // Raycast
@@ -21,7 +22,7 @@ public class Zombies : MonoBehaviour
     };
     private RaycastHit hit1, hit2, hit3, hit4, hit5, hit6, hit7; // Racast Hits
     private Vector3 layPos;
-    [SerializeField] private LayerMask layerMask = -1; // Layer Mask
+    //[SerializeField] private LayerMask layerMask = -1; // Layer Mask
 
     private float player_zombie_dist;
     private bool isFindPlayer;
@@ -29,7 +30,6 @@ public class Zombies : MonoBehaviour
     private int cur_mode = 0;
     private float hearing_dist = 7.0f;
     private float mustChase_dist = 3.0f;
-    private float spd = 2.0f;
 
     private float mode2delaytime;
 
@@ -60,7 +60,9 @@ public class Zombies : MonoBehaviour
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
         curPatrolSpot = patrolSpot[Random.Range(0, 10)];
+        agent.speed = 1.0f;
     }
 
     // Start is called before the first frame update
@@ -99,8 +101,11 @@ public class Zombies : MonoBehaviour
         if (isFindPlayer || player_zombie_dist < mustChase_dist)
         {
             cur_mode = 2;
-            isFindPlayer = false;
+            agent.speed = 2.0f;
+            anim.SetInteger("mode", 1);
+
             // If the player is not visible for '5.0f' seconds --> Mode 0 (Patrol Mode)
+            isFindPlayer = false;
             mode2delaytime = 5.0f;
             StartCoroutine(Mode2Coroutine());
         }
@@ -112,6 +117,7 @@ public class Zombies : MonoBehaviour
         {
             case 0: // 0:Patrol Mode
                 agent.SetDestination(curPatrolSpot);
+
                 if (Vector3.Distance(transform.position, curPatrolSpot) < 1.0f)
                 {
                     curPatrolSpot = patrolSpot[Random.Range(0, 10)];
@@ -121,17 +127,20 @@ public class Zombies : MonoBehaviour
                 agent.SetDestination(target.position);
                 if (Vector3.Distance(transform.position, curPatrolSpot) < 1.0f)
                 {
+                    // Return to Patrol Mode
                     cur_mode = 0;
+                    anim.SetInteger("mode", 0);
+                    agent.speed = 1.0f;
                 }
                 break;
             case 2: // 2:Chase Mode
                 agent.SetDestination(target.position);
 
                 // Catch!!!
-                if (Vector3.Distance(transform.position, target.position) < 0.7f)
+                if (player_zombie_dist < 1.0f)
                 {
                     // Jumpscare Event Play!
-                    Debug.Log(this.name + " Catched!");
+                    anim.SetInteger("mode", 4);
                 }
                 break;
         }
