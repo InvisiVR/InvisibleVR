@@ -6363,7 +6363,7 @@ GameObject:
   - component: {fileID: 150840389}
   - component: {fileID: 150840388}
   m_Layer: 0
-  m_Name: SicknessVolumeFin
+  m_Name: VolumeFin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6418,8 +6418,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsGlobal: 0
-  priority: 1
-  blendDistance: 2
+  priority: 3
+  blendDistance: 34
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 72a9e804d1642ff40822dcd71ffab588, type: 2}
 --- !u!1001 &153702678
@@ -19589,12 +19589,12 @@ GameObject:
   - component: {fileID: 425336649}
   - component: {fileID: 425336648}
   m_Layer: 0
-  m_Name: SicknessVolumeTotal
+  m_Name: VolumeTotal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &425336647
 Transform:
   m_ObjectHideFlags: 0
@@ -19644,7 +19644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsGlobal: 0
-  priority: 1
+  priority: 2
   blendDistance: 40
   weight: 1
   sharedProfile: {fileID: 11400000, guid: e0100f28593d77746a240b672f859457, type: 2}
@@ -31418,13 +31418,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693304061}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5940106, y: 0.1375573, z: 0.017235607, w: -0.7924218}
-  m_LocalPosition: {x: -11.6234, y: 2.37, z: 12.9028}
+  m_LocalRotation: {x: -0.597244, y: 0.042483207, z: 0.20630419, w: -0.77390784}
+  m_LocalPosition: {x: -11.673, y: 2.378, z: 12.861}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1455358193}
-  m_LocalEulerAnglesHint: {x: 69.5, y: -42.92, z: 327}
+  m_LocalEulerAnglesHint: {x: 65.08, y: -47.808, z: 298.565}
 --- !u!114 &693304063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31473,10 +31473,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.9339623, g: 0.9239715, b: 0.885502, a: 1}
-  m_Intensity: 4
+  m_Intensity: 10
   m_Range: 6
-  m_SpotAngle: 100
-  m_InnerSpotAngle: 40
+  m_SpotAngle: 85
+  m_InnerSpotAngle: 65
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -64207,7 +64207,7 @@ PrefabInstance:
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.496
+      value: -11.524
       objectReference: {fileID: 0}
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
@@ -64217,27 +64217,27 @@ PrefabInstance:
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.745
+      value: 12.735
       objectReference: {fileID: 0}
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9467898
+      value: 0.8882527
       objectReference: {fileID: 0}
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.32185265
+      value: -0.4593552
       objectReference: {fileID: 0}
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
@@ -64247,7 +64247,7 @@ PrefabInstance:
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -37.55
+      value: -54.691
       objectReference: {fileID: 0}
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}

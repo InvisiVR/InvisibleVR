@@ -119,9 +119,7 @@ MonoBehaviour:
   - {fileID: -7616172324105567221}
   - {fileID: -6996952439944865052}
   - {fileID: -6779253073674589969}
-  - {fileID: 4802204963622008400}
   - {fileID: 3709925590790903481}
-  - {fileID: 1644586813152254692}
   - {fileID: 1570523679704748724}
 --- !u!114 &1570523679704748724
 MonoBehaviour:
@@ -163,28 +161,6 @@ MonoBehaviour:
   maxNits:
     m_OverrideState: 0
     m_Value: 1000
---- !u!114 &1644586813152254692
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
-  m_Name: SplitToning
-  m_EditorClassIdentifier: 
-  active: 0
-  shadows:
-    m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 1}
-  highlights:
-    m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-  balance:
-    m_OverrideState: 1
-    m_Value: 0.5
 --- !u!114 &3709925590790903481
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -213,28 +189,3 @@ MonoBehaviour:
   scale:
     m_OverrideState: 1
     m_Value: 1
---- !u!114 &4802204963622008400
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
-  m_Name: FilmGrain
-  m_EditorClassIdentifier: 
-  active: 0
-  type:
-    m_OverrideState: 1
-    m_Value: 0
-  intensity:
-    m_OverrideState: 1
-    m_Value: 0.922
-  response:
-    m_OverrideState: 1
-    m_Value: 1
-  texture:
-    m_OverrideState: 1
-    m_Value: {fileID: 0}
