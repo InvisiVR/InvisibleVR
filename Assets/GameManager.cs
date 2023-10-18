@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public int curTime;//DateTime.Now.ToString(); 초 단위 계산
     public int expectPlayTime; //초 단위 계산
 
+    public GameObject[] clues;//스토리 진행 정도 판별    
+
+
     //key & 단서 획득 정보
 
     
