@@ -8,6 +8,8 @@ public class Zombies : MonoBehaviour
     NavMeshAgent agent;
     private Animator anim;
     [SerializeField] private Transform target;
+    [SerializeField] HandGun handGun;
+    [SerializeField] FootstepsSound footStep;
 
     // Raycast
     private float ray_dist = 10.0f; // Raycast Distance
@@ -87,21 +89,24 @@ public class Zombies : MonoBehaviour
         rays[6] = new Ray(layPos, (transform.forward + transform.right * 0.3f).normalized);
 
         // Heard Player's Sound --> Mode 1 (Go to place of sound)
-        // ********************************************
-        if (player_zombie_dist < hearing_dist)
+        if (cur_mode == 0 && player_zombie_dist < hearing_dist)
         {
-            // if Walking Sound Heard -> spd = 2.4f, Walking Ani
+            curPatrolSpot = target.position;
+            cur_mode = 1;
 
-            // if Gun Fire Sound Heard -> spd = 2.8f, Running Ani
+            // if Gun Fire Sound Heard -> spd = 2.4f
+            if (handGun.fiered) agent.speed = 2.4f;
+            // if Walking Sound Heard -> spd = 2.2f
+            else if (footStep.isFootSoundPlaying) agent.speed = 2.2f;
+            else agent.speed = 2.0f;
         }
-
 
         // Raycast Hits OR In Distance --> Mode 2 (Chase Mode)
         FindingPlayerForRay();
         if (isFindPlayer || player_zombie_dist < mustChase_dist)
         {
             cur_mode = 2;
-            agent.speed = 2.0f;
+            agent.speed = 2.5f;
             anim.SetInteger("mode", 1);
 
             // If the player is not visible for '5.0f' seconds --> Mode 0 (Patrol Mode)
@@ -124,7 +129,8 @@ public class Zombies : MonoBehaviour
                 }
                 break;
             case 1: // 1:Go to Sound
-                agent.SetDestination(target.position);
+                agent.SetDestination(curPatrolSpot);
+
                 if (Vector3.Distance(transform.position, curPatrolSpot) < 1.0f)
                 {
                     // Return to Patrol Mode
@@ -136,11 +142,14 @@ public class Zombies : MonoBehaviour
             case 2: // 2:Chase Mode
                 agent.SetDestination(target.position);
 
+                if (handGun.magazine.bulletNum == 0) agent.speed = 3.0f;
+                else agent.speed = 2.5f;
+
                 // Catch!!!
                 if (player_zombie_dist < 1.0f)
                 {
                     // Jumpscare Event Play!
-                    anim.SetInteger("mode", 4);
+                    // anim.SetInteger("mode", 4);
                 }
                 break;
         }
