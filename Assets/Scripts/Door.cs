@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Door : MonoBehaviour
 {
-    public bool isLocked = false;
     public bool isOpened;
 
     [Header("Animations")]
-    Animator animator;
+    protected Animator animator;
 
     [Header("Sounds")]
-    private AudioSource source;
+    protected AudioSource source;
+
     public AudioClip[] doorClips;
 
     void Start()
@@ -20,33 +21,20 @@ public class Door : MonoBehaviour
         source = GetComponent<AudioSource>();
     }
 
-    public void DoorOpenClose()
+    public virtual void DoorOpenClose()
     {
-        if (isLocked)
+        if (isOpened)
         {
-            source.PlayOneShot(doorClips[Random.Range(2, 4)]);
+            //Close
+            source.PlayOneShot(doorClips[1]);
+            isOpened = false;
         }
         else
         {
-            if (isOpened)
-            {
-                //Close
-                source.PlayOneShot(doorClips[1]);
-                isOpened = false;
-            }
-            else
-            {
-                //Open
-                source.PlayOneShot(doorClips[0]);
-                isOpened = true;
-            }
-            animator.SetBool("open", isOpened);
+            //Open
+            source.PlayOneShot(doorClips[0]);
+            isOpened = true;
         }
-    }
-
-    public void DoorUnlock()
-    {
-        isLocked = false;
-        source.PlayOneShot(doorClips[Random.Range(5, 7)]);
+        animator.SetBool("open", isOpened);
     }
 }
