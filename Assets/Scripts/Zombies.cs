@@ -35,6 +35,9 @@ public class Zombies : MonoBehaviour
 
     private float mode2delaytime;
 
+    // Zombie HP
+    public float hp;
+
     private Vector3 curPatrolSpot;
     private Vector3[] patrolSpot =
     {
@@ -153,6 +156,12 @@ public class Zombies : MonoBehaviour
                 }
                 break;
         }
+
+        // if HP < 0, Die Animation & Respawn
+        if (hp < 0)
+        {
+            StartCoroutine(ZombieDie());
+        }
                 
     }
 
@@ -187,5 +196,18 @@ public class Zombies : MonoBehaviour
         yield return new WaitForSeconds(mode2delaytime);
         mode2delaytime = 0;
         cur_mode = 0;
+    }
+
+    private IEnumerator ZombieDie()
+    {
+        anim.SetInteger("mode", 3);
+        yield return new WaitForSeconds(4.0f);
+
+        // Respawn
+        while (Vector3.Distance(curPatrolSpot, target.position) < 15.0f) curPatrolSpot = patrolSpot[Random.Range(0, 10)];
+        transform.position = curPatrolSpot;
+        cur_mode = 0;
+        anim.SetInteger("mode", 0);
+        agent.speed = 1.0f;
     }
 }
