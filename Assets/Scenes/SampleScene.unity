@@ -9557,7 +9557,7 @@ PrefabInstance:
         type: 3}
       propertyPath: HMD
       value: 
-      objectReference: {fileID: 1804487136}
+      objectReference: {fileID: 914319566}
     - target: {fileID: 7024630164404550708, guid: b3ea30fe82b97e449a62f5c43e15eb0e,
         type: 3}
       propertyPath: bodySockets.Array.data[0].heightRatio
