@@ -17,6 +17,7 @@ public class MaterialType : MonoBehaviour {
         Concrete,
         Dirt,
         Glass,
-        Water
+        Water,
+        Zombie
 	}
 }
