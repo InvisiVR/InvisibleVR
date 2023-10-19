@@ -41,6 +41,7 @@ public class Zombies : MonoBehaviour
     private Vector3 curPatrolSpot;
     private Vector3[] patrolSpot =
     {
+        /*
         // 3F Spots
         new Vector3(-18f, 9f, 26f),
 
@@ -60,14 +61,22 @@ public class Zombies : MonoBehaviour
         new Vector3(-7f, -3f, 26f),
         
         // --> Total 10 Spots
+        */
+
+        // For Test Spots
+        new Vector3(-8f, 0f, 8f),
+        new Vector3(-8f, 0f, -8f),
+        new Vector3(8f, 0f, -8f),
+        new Vector3(8f, 0f, 8f)
     };
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        curPatrolSpot = patrolSpot[Random.Range(0, 10)];
+        curPatrolSpot = patrolSpot[Random.Range(0, 4)];
         agent.speed = 1.0f;
+        hp = 10.0f;
     }
 
     // Start is called before the first frame update
@@ -94,14 +103,20 @@ public class Zombies : MonoBehaviour
         // Heard Player's Sound --> Mode 1 (Go to place of sound)
         if (cur_mode == 0 && player_zombie_dist < hearing_dist)
         {
-            curPatrolSpot = target.position;
-            cur_mode = 1;
-
             // if Gun Fire Sound Heard -> spd = 2.4f
-            if (handGun.fiered) agent.speed = 2.4f;
+            if (handGun.fiered)
+            {
+                curPatrolSpot = target.position;
+                cur_mode = 1;
+                agent.speed = 2.4f;
+            }
             // if Walking Sound Heard -> spd = 2.2f
-            else if (footStep.isFootSoundPlaying) agent.speed = 2.2f;
-            else agent.speed = 2.0f;
+            else if (footStep.isFootSoundPlaying)
+            {
+                curPatrolSpot = target.position;
+                cur_mode = 1;
+                agent.speed = 2.2f;
+            }
         }
 
         // Raycast Hits OR In Distance --> Mode 2 (Chase Mode)
@@ -126,15 +141,15 @@ public class Zombies : MonoBehaviour
             case 0: // 0:Patrol Mode
                 agent.SetDestination(curPatrolSpot);
 
-                if (Vector3.Distance(transform.position, curPatrolSpot) < 1.0f)
+                if (Vector3.Distance(transform.position, curPatrolSpot) < 2.0f)
                 {
-                    curPatrolSpot = patrolSpot[Random.Range(0, 10)];
+                    curPatrolSpot = patrolSpot[Random.Range(0, 4)];
                 }
                 break;
             case 1: // 1:Go to Sound
                 agent.SetDestination(curPatrolSpot);
 
-                if (Vector3.Distance(transform.position, curPatrolSpot) < 1.0f)
+                if (Vector3.Distance(transform.position, curPatrolSpot) < 2.0f)
                 {
                     // Return to Patrol Mode
                     cur_mode = 0;
@@ -149,10 +164,10 @@ public class Zombies : MonoBehaviour
                 else agent.speed = 2.5f;
 
                 // Catch!!!
-                if (player_zombie_dist < 1.0f)
+                if (player_zombie_dist < 2.0f)
                 {
                     // Jumpscare Event Play!
-                    // anim.SetInteger("mode", 4);
+                    anim.SetInteger("mode", 4);
                 }
                 break;
         }
@@ -160,6 +175,7 @@ public class Zombies : MonoBehaviour
         // if HP < 0, Die Animation & Respawn
         if (hp < 0)
         {
+            hp = 10.0f;
             StartCoroutine(ZombieDie());
         }
                 
@@ -204,7 +220,7 @@ public class Zombies : MonoBehaviour
         yield return new WaitForSeconds(4.0f);
 
         // Respawn
-        while (Vector3.Distance(curPatrolSpot, target.position) < 15.0f) curPatrolSpot = patrolSpot[Random.Range(0, 10)];
+        while (Vector3.Distance(curPatrolSpot, target.position) < 15.0f) curPatrolSpot = patrolSpot[Random.Range(0, 4)];
         transform.position = curPatrolSpot;
         cur_mode = 0;
         anim.SetInteger("mode", 0);
