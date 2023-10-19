@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Zombies : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class Zombies : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] HandGun handGun;
     [SerializeField] FootstepsSound footStep;
+
+    [SerializeField] private GameObject xrOrigin;
+    [SerializeField] private GameObject jumpscareCam;
+    [SerializeField] private Image bloodIMG;
 
     // Raycast
     private float ray_dist = 10.0f; // Raycast Distance
@@ -121,15 +126,16 @@ public class Zombies : MonoBehaviour
 
         // Raycast Hits OR In Distance --> Mode 2 (Chase Mode)
         FindingPlayerForRay();
-        if (isFindPlayer || player_zombie_dist < mustChase_dist)
+        if (cur_mode < 2 && (isFindPlayer || player_zombie_dist < mustChase_dist))
         {
+            Debug.Log("Raycast Hits OR In Distance --> Mode 2 (Chase Mode)");
             cur_mode = 2;
             agent.speed = 2.5f;
             anim.SetInteger("mode", 1);
 
-            // If the player is not visible for '5.0f' seconds --> Mode 0 (Patrol Mode)
+            // If the player is not visible for '3.0f' seconds --> Mode 0 (Patrol Mode)
             isFindPlayer = false;
-            mode2delaytime = 5.0f;
+            mode2delaytime = 3.0f;
             StartCoroutine(Mode2Coroutine());
         }
         DebugLayCastLine(); // For Laycast Debugging
@@ -158,8 +164,6 @@ public class Zombies : MonoBehaviour
                 }
                 break;
             case 2: // 2:Chase Mode
-                agent.SetDestination(target.position);
-
                 if (handGun.magazine.bulletNum == 0) agent.speed = 3.0f;
                 else agent.speed = 2.5f;
 
@@ -168,7 +172,8 @@ public class Zombies : MonoBehaviour
                 {
                     // Jumpscare Event Play!
                     anim.SetInteger("mode", 4);
-                }
+                    StartJumpScare();
+                } else agent.SetDestination(target.position);
                 break;
         }
 
@@ -225,5 +230,16 @@ public class Zombies : MonoBehaviour
         cur_mode = 0;
         anim.SetInteger("mode", 0);
         agent.speed = 1.0f;
+    }
+
+    private void StartJumpScare()
+    {
+        xrOrigin.SetActive(false);
+        jumpscareCam.SetActive(true);
+        bloodIMG.color = new Color(1, 0, 0, Random.Range(0.05f, 0.15f));
+        gameObject.GetComponent<NavMeshAgent>().enabled = false;
+
+        jumpscareCam.transform.position = transform.position + transform.forward*0.8f + new Vector3(0, 0.6f, 0);
+        jumpscareCam.transform.eulerAngles = transform.eulerAngles + new Vector3(-45f + Random.Range(-1.5f, 1.5f), 180f + Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f));
     }
 }
