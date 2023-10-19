@@ -6,6 +6,7 @@ using UnityEngine;
 public class bodySocket
 {
     public GameObject gameObject;
+
     [Range(0.01f, 1f)]
     public float heightRatio;
 }
@@ -32,7 +33,7 @@ public class BodySocketInventory : MonoBehaviour
     private void UpdateBodySocketHeight(bodySocket bodySocket)
     {
 
-        bodySocket.gameObject.transform.localPosition = new Vector3(bodySocket.gameObject.transform.localPosition.x, (_currentHMDlocalPosition.y * bodySocket.heightRatio), bodySocket.gameObject.transform.localPosition.z);
+        bodySocket.gameObject.transform.localPosition = new Vector3(bodySocket.gameObject.transform.localPosition.x, _currentHMDlocalPosition.y * bodySocket.heightRatio - 0.5f, bodySocket.gameObject.transform.localPosition.z);
     }
 
     private void UpdateSocketInventory()
