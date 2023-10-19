@@ -9561,17 +9561,17 @@ PrefabInstance:
     - target: {fileID: 7024630164404550708, guid: b3ea30fe82b97e449a62f5c43e15eb0e,
         type: 3}
       propertyPath: inventoryOffset
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7024630164404550708, guid: b3ea30fe82b97e449a62f5c43e15eb0e,
         type: 3}
       propertyPath: bodySockets.Array.data[0].heightRatio
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7024630164404550708, guid: b3ea30fe82b97e449a62f5c43e15eb0e,
         type: 3}
       propertyPath: bodySockets.Array.data[1].heightRatio
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7024630164404550709, guid: b3ea30fe82b97e449a62f5c43e15eb0e,
         type: 3}
@@ -15778,7 +15778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8245296013853043329
 Transform:
   m_ObjectHideFlags: 0
