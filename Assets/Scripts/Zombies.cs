@@ -220,8 +220,8 @@ public class Zombies : MonoBehaviour
         yield return new WaitForSeconds(4.0f);
 
         // Respawn
-        while (Vector3.Distance(curPatrolSpot, target.position) < 15.0f) curPatrolSpot = patrolSpot[Random.Range(0, 4)];
-        transform.position = curPatrolSpot;
+        //while (Vector3.Distance(curPatrolSpot, target.position) < 15.0f) curPatrolSpot = patrolSpot[Random.Range(0, 4)];
+        transform.position = patrolSpot[Random.Range(0, 4)];
         cur_mode = 0;
         anim.SetInteger("mode", 0);
         agent.speed = 1.0f;

@@ -192,20 +192,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0151de9dd7ca064ea1c902932a8fd75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ImpactElemets:
-  - MaterialType: 4
-    ImpactEffect: {fileID: 138412, guid: c75e5a4fa5c842546a553399e24eb22d, type: 3}
-  - MaterialType: 0
-    ImpactEffect: {fileID: 0}
-  - MaterialType: 0
-    ImpactEffect: {fileID: 0}
-  - MaterialType: 0
-    ImpactEffect: {fileID: 0}
-  - MaterialType: 0
-    ImpactEffect: {fileID: 0}
-  - MaterialType: 0
-    ImpactEffect: {fileID: 0}
-  - MaterialType: 0
-    ImpactEffect: {fileID: 0}
-  - MaterialType: 0
-    ImpactEffect: {fileID: 0}
+  bloodEff: {fileID: 198000011254678926, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}

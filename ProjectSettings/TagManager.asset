@@ -10,6 +10,7 @@ TagManager:
   - HandGun
   - Glass
   - Metal
+  - Zombie
   layers:
   - Default
   - TransparentFX
