@@ -9560,6 +9560,11 @@ PrefabInstance:
       objectReference: {fileID: 914319566}
     - target: {fileID: 7024630164404550708, guid: b3ea30fe82b97e449a62f5c43e15eb0e,
         type: 3}
+      propertyPath: inventoryOffset
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7024630164404550708, guid: b3ea30fe82b97e449a62f5c43e15eb0e,
+        type: 3}
       propertyPath: bodySockets.Array.data[0].heightRatio
       value: 1
       objectReference: {fileID: 0}
@@ -11216,7 +11221,7 @@ Transform:
   m_GameObject: {fileID: 1955463860}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

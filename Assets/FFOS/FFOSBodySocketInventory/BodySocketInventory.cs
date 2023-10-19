@@ -16,6 +16,8 @@ public class BodySocketInventory : MonoBehaviour
     public GameObject HMD;
     public bodySocket[] bodySockets;
 
+    public float inventoryOffset;
+
     private Vector3 _currentHMDlocalPosition;
     private Quaternion _currentHMDRotation;
     void Update()
@@ -32,7 +34,7 @@ public class BodySocketInventory : MonoBehaviour
     private void UpdateBodySocketHeight(bodySocket bodySocket)
     {
 
-        bodySocket.gameObject.transform.localPosition = new Vector3(bodySocket.gameObject.transform.localPosition.x, _currentHMDlocalPosition.y * bodySocket.heightRatio - 0.25f, bodySocket.gameObject.transform.localPosition.z);
+        bodySocket.gameObject.transform.localPosition = new Vector3(bodySocket.gameObject.transform.localPosition.x, _currentHMDlocalPosition.y * bodySocket.heightRatio - inventoryOffset, bodySocket.gameObject.transform.localPosition.z);
     }
 
     private void UpdateSocketInventory()
