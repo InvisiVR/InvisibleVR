@@ -35,34 +35,6 @@ MonoBehaviour:
   intensity:
     m_OverrideState: 1
     m_Value: 1
---- !u!114 &-7119915749593065052
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5e1dc532bcb41949b58bc4f2abfbb7e, type: 3}
-  m_Name: LensDistortion
-  m_EditorClassIdentifier: 
-  active: 1
-  intensity:
-    m_OverrideState: 1
-    m_Value: 0.5
-  xMultiplier:
-    m_OverrideState: 1
-    m_Value: 1
-  yMultiplier:
-    m_OverrideState: 1
-    m_Value: 1
-  center:
-    m_OverrideState: 1
-    m_Value: {x: 0.5, y: 0.5}
-  scale:
-    m_OverrideState: 1
-    m_Value: 1
 --- !u!114 &-4689055627749564366
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -130,9 +102,9 @@ MonoBehaviour:
   - {fileID: -4689055627749564366}
   - {fileID: -8672588807944303952}
   - {fileID: -3934423122953705740}
-  - {fileID: 6813666245986915649}
-  - {fileID: -7119915749593065052}
---- !u!114 &6813666245986915649
+  - {fileID: 3544672849709044460}
+  - {fileID: 6040654921557971205}
+--- !u!114 &3544672849709044460
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,40 +113,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
-  m_Name: DepthOfField
+  m_Script: {fileID: 11500000, guid: c5e1dc532bcb41949b58bc4f2abfbb7e, type: 3}
+  m_Name: LensDistortion
   m_EditorClassIdentifier: 
   active: 1
-  mode:
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.15
+  xMultiplier:
     m_OverrideState: 1
     m_Value: 1
-  gaussianStart:
-    m_OverrideState: 1
-    m_Value: 0
-  gaussianEnd:
-    m_OverrideState: 1
-    m_Value: 0
-  gaussianMaxRadius:
+  yMultiplier:
     m_OverrideState: 1
     m_Value: 1
-  highQualitySampling:
+  center:
+    m_OverrideState: 1
+    m_Value: {x: 0.5, y: 0.5}
+  scale:
     m_OverrideState: 1
     m_Value: 1
-  focusDistance:
+--- !u!114 &6040654921557971205
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
+  m_Name: Vignette
+  m_EditorClassIdentifier: 
+  active: 1
+  color:
     m_OverrideState: 1
-    m_Value: 0.1
-  aperture:
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+  center:
+    m_OverrideState: 1
+    m_Value: {x: 0.5, y: 0.5}
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.15
+  smoothness:
     m_OverrideState: 1
     m_Value: 1
-  focalLength:
+  rounded:
     m_OverrideState: 1
-    m_Value: 15
-  bladeCount:
-    m_OverrideState: 1
-    m_Value: 3
-  bladeCurvature:
-    m_OverrideState: 1
-    m_Value: 0.566
-  bladeRotation:
-    m_OverrideState: 1
-    m_Value: -131
+    m_Value: 1
