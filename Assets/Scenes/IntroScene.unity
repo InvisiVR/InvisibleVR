@@ -60638,6 +60638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_4x2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 140426, guid: 4b322584f6f87df4d9bcfeb7fa4d8c12, type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 463416, guid: 4b322584f6f87df4d9bcfeb7fa4d8c12, type: 3}
       propertyPath: m_RootOrder
       value: 12

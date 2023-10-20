@@ -37,9 +37,9 @@ public class FootstepsSound : MonoBehaviour
 
             isGround = true;
 
-            if(audioSource.clip != NameToClip(hit.collider.name))
+            if(audioSource.clip != NameToClip(hit.collider.tag))
             {
-                audioSource.clip = NameToClip(hit.collider.name);
+                audioSource.clip = NameToClip(hit.collider.tag);
             }
         }
         else
@@ -104,7 +104,7 @@ public class FootstepsSound : MonoBehaviour
     {
         switch (floor)
         {
-            case "Plane":
+            case "Tile":
                 return walkingSound[1];
             case "MetalPlane":
                 return walkingSound[1];

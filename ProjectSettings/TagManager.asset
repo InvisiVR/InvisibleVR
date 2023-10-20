@@ -11,6 +11,7 @@ TagManager:
   - Glass
   - Metal
   - Zombie
+  - Tile
   layers:
   - Default
   - TransparentFX
