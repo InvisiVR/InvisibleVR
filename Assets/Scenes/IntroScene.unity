@@ -12221,6 +12221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 241328731}
   - component: {fileID: 241328732}
+  - component: {fileID: 241328733}
   m_Layer: 0
   m_Name: Area Light ceiling embeded double
   m_TagString: Untagged
@@ -12305,6 +12306,29 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &241328733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241328730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &241558937
 GameObject:
   m_ObjectHideFlags: 0
@@ -27521,7 +27545,7 @@ Transform:
   m_GameObject: {fileID: 550074703}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 22.66, y: 1.751, z: 25.982}
+  m_LocalPosition: {x: 23.669, y: 2.465, z: 25.982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33903,13 +33927,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693304061}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.597244, y: 0.042483207, z: 0.20630419, w: -0.77390784}
-  m_LocalPosition: {x: -11.673, y: 2.378, z: 12.861}
+  m_LocalRotation: {x: -0.6474767, y: 0.006737909, z: 0.1401265, w: -0.7490615}
+  m_LocalPosition: {x: -11.785, y: 2.411, z: 12.923}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1455358193}
-  m_LocalEulerAnglesHint: {x: 65.08, y: -47.808, z: 298.565}
+  m_LocalEulerAnglesHint: {x: 75.492, y: -49.873, z: 299.215}
 --- !u!114 &693304063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33958,9 +33982,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.9339623, g: 0.9239715, b: 0.885502, a: 1}
-  m_Intensity: 10
+  m_Intensity: 100
   m_Range: 6
-  m_SpotAngle: 85
+  m_SpotAngle: 80
   m_InnerSpotAngle: 65
   m_CookieSize: 10
   m_Shadows:
@@ -45898,6 +45922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 945041507}
   - component: {fileID: 945041508}
+  - component: {fileID: 945041509}
   m_Layer: 0
   m_Name: Area Light police area
   m_TagString: Untagged
@@ -45982,6 +46007,29 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &945041509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945041506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &948007305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68444,7 +68492,7 @@ PrefabInstance:
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.524
+      value: -11.639
       objectReference: {fileID: 0}
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
@@ -68454,7 +68502,7 @@ PrefabInstance:
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.735
+      value: 12.816
       objectReference: {fileID: 0}
     - target: {fileID: 8084258248807334807, guid: 102a46f2f8527914fba0ae512ee34ee5,
         type: 3}
