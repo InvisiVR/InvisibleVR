@@ -108,19 +108,19 @@ public class Zombies : MonoBehaviour
         // Heard Player's Sound --> Mode 1 (Go to place of sound)
         if (cur_mode == 0 && player_zombie_dist < hearing_dist)
         {
-            // if Gun Fire Sound Heard -> spd = 2.4f
+            // if Gun Fire Sound Heard -> spd = 1.6f
             if (handGun.fiered)
             {
                 curPatrolSpot = target.position;
                 cur_mode = 1;
-                agent.speed = 2.4f;
+                agent.speed = 1.6f;
             }
-            // if Walking Sound Heard -> spd = 2.2f
+            // if Walking Sound Heard -> spd = 1.4f
             else if (footStep.isFootSoundPlaying)
             {
                 curPatrolSpot = target.position;
                 cur_mode = 1;
-                agent.speed = 2.2f;
+                agent.speed = 1.4f;
             }
         }
 
@@ -130,7 +130,7 @@ public class Zombies : MonoBehaviour
         {
             Debug.Log("Raycast Hits OR In Distance --> Mode 2 (Chase Mode)");
             cur_mode = 2;
-            agent.speed = 2.5f;
+            agent.speed = 1.8f;
             anim.SetInteger("mode", 1);
 
             // If the player is not visible for '3.0f' seconds --> Mode 0 (Patrol Mode)
@@ -164,8 +164,8 @@ public class Zombies : MonoBehaviour
                 }
                 break;
             case 2: // 2:Chase Mode
-                if (handGun.magazine.bulletNum == 0) agent.speed = 3.0f;
-                else agent.speed = 2.5f;
+                if (handGun.magazine.bulletNum == 0) agent.speed = 2.2f;
+                else agent.speed = 1.8f;
 
                 // Catch!!!
                 if (player_zombie_dist < 2.0f)
