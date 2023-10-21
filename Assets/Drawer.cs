@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Drawer : MonoBehaviour
 {
-    public bool[] isLocked = { false, false };
-    public bool[] isOpened = { false, false };
+    public bool[] isLocked = { false, true, true, true, true };
+    public bool[] isOpened = { false, false, false, false, false };
 
     [Header("Animations")]
     Animator animator;
@@ -13,6 +14,26 @@ public class Drawer : MonoBehaviour
     [Header("Sounds")]
     private AudioSource source;
     public AudioClip[] drawerClips;
+
+    public XRSocketInteractor socketInteractor1;
+    public int drawerNum;
+
+    private void Awake()
+    {
+        // 이벤트 리스너 등록
+        socketInteractor1.selectEntered.AddListener(OnObjectAttached);
+        socketInteractor1.selectExited.AddListener(OnObjectDetached);
+    }
+
+    private void OnObjectAttached(SelectEnterEventArgs args)
+    {
+        if (args.interactableObject.transform.GetComponent<Key>().keyNum == drawerNum) DrawerUnlock(drawerNum);
+    }
+
+    private void OnObjectDetached(SelectExitEventArgs args)
+    {
+        Debug.Log("소켓에서 오브젝트 제거: " + args.interactableObject.transform.name);
+    }
 
     void Start()
     {
