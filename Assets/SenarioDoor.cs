@@ -37,12 +37,14 @@ public class SenarioDoor : Door
     public void DoorUnlockSuccess()
     {
         isLocked = false;
-        source.PlayOneShot(doorClips[Random.Range(7, 9)]);
+        source.PlayOneShot(doorClips[Random.Range(5, 7)]);
+        Debug.Log("Unlock Success");
     }
 
     public void DoorUnlockFailed()
     {
-        source.PlayOneShot(doorClips[Random.Range(5, 7)]);
+        source.PlayOneShot(doorClips[Random.Range(2, 4)]);
+        Debug.Log("Unlock Failed");
     }
 
     public override void DoorOpenClose()
@@ -73,39 +75,47 @@ public class SenarioDoor : Door
     public override void DoorOpenCloseLR()
     {
         animator.SetBool("isCabinetA", isCabinetA);
-        if (isLeft)
+        if (isLocked)
         {
-            animator.SetBool("isLeft", isLeft);
-            if (isOpened)
-            {
-                //Close
-                source.PlayOneShot(doorClips[1]);
-                isOpened = false;
-            }
-            else
-            {
-                //Open
-                source.PlayOneShot(doorClips[0]);
-                isOpened = true;
-            }
+            source.PlayOneShot(doorClips[Random.Range(2, 4)]);
         }
         else
         {
-            animator.SetBool("isLeft", isLeft);
-            if (isOpened)
+            if (isLeft)
             {
-                //Close
-                source.PlayOneShot(doorClips[1]);
-                isOpened = false;
+                animator.SetBool("isLeft", isLeft);
+                if (isOpened)
+                {
+                    //Close
+                    source.PlayOneShot(doorClips[1]);
+                    isOpened = false;
+                }
+                else
+                {
+                    //Open
+                    source.PlayOneShot(doorClips[0]);
+                    isOpened = true;
+                }
             }
             else
             {
-                //Open
-                source.PlayOneShot(doorClips[0]);
-                isOpened = true;
+                animator.SetBool("isLeft", isLeft);
+                if (isOpened)
+                {
+                    //Close
+                    source.PlayOneShot(doorClips[1]);
+                    isOpened = false;
+                }
+                else
+                {
+                    //Open
+                    source.PlayOneShot(doorClips[0]);
+                    isOpened = true;
+                }
             }
-        }
 
-        animator.SetBool("open", isOpened);
+            animator.SetBool("open", isOpened);
+        }
+        
     }
 }
