@@ -2545,7 +2545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTMP: {fileID: 1942646519}
-  delay: 1
+  delay: 6
 --- !u!4 &331368294
 Transform:
   m_ObjectHideFlags: 0
@@ -11640,7 +11640,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<shake> dsadasdas :) </shake> '
+  m_text: "\uAC00\uB098\uB2E4 TEST"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7d326e1a6d8cca5468267e115b77a9ab, type: 2}
   m_sharedMaterial: {fileID: 8130786720258761866, guid: 7d326e1a6d8cca5468267e115b77a9ab,
@@ -11668,11 +11668,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
-  m_fontSizeBase: 26
+  m_fontSize: 21
+  m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 21
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -11733,7 +11733,7 @@ MonoBehaviour:
   typewriterStartsAutomatically: 1
   animationLoop: 0
   timeScale: 0
-  _text: '<shake> dsadasdas :) </shake> '
+  _text: "\uAC00\uB098\uB2E4 TEST"
   useDynamicScaling: 1
   referenceFontSize: 10
   isResettingTimeOnNewText: 1
@@ -11743,9 +11743,9 @@ MonoBehaviour:
     type: 2}
   databaseActions: {fileID: 11400000, guid: 941c1eddbb818ea45af8cad86bb5094e, type: 2}
   defaultAppearancesTags:
-  - size
+  - fade d=1
   defaultDisappearancesTags:
-  - fade
+  - fade d=0.1
   defaultBehaviorsTags: []
   defaultTagsMode: 0
 --- !u!114 &1942646522
@@ -11768,7 +11768,19 @@ MonoBehaviour:
   disappearanceOrientation: 0
   onTextShowed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 331368293}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: FadeOut
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1942646519}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onTypewriterStart:
     m_PersistentCalls:
       m_Calls: []
@@ -11781,15 +11793,15 @@ MonoBehaviour:
   onMessage:
     m_PersistentCalls:
       m_Calls: []
-  waitForNormalChars: 0.03
-  waitLong: 0.6
-  waitMiddle: 0.2
+  waitForNormalChars: 0.06
+  waitLong: 0.7
+  waitMiddle: 0.3
   avoidMultiplePunctuactionWait: 0
   waitForNewLines: 1
   waitForLastCharacter: 1
   useTypewriterWaitForDisappearances: 1
   disappearanceWaitTime: 0.015
-  disappearanceSpeedMultiplier: 1
+  disappearanceSpeedMultiplier: 0.5
 --- !u!1 &1948263123
 GameObject:
   m_ObjectHideFlags: 0
