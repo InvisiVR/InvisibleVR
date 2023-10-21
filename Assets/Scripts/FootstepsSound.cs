@@ -53,21 +53,21 @@ public class FootstepsSound : MonoBehaviour
     void MoveSfx()
     {
         //XR Input Read System
-        if (_inputData._leftController.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 continuousVector))
-        {
-            if (Mathf.Abs(continuousVector.x) > 0.1f || Mathf.Abs(continuousVector.y) > 0.1f)
-            {
-                isMoving = true;
-                audioSource.enabled = true;
-                isFootSoundPlaying = true;
-            }
-            else
-            {
-                isMoving = false;
-                audioSource.enabled = false;
-                isFootSoundPlaying = false;
-            }
-        }
+        //if (_inputData._leftController.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 continuousVector))
+        //{
+        //    if (Mathf.Abs(continuousVector.x) > 0.1f || Mathf.Abs(continuousVector.y) > 0.1f)
+        //    {
+        //        isMoving = true;
+        //        audioSource.enabled = true;
+        //        isFootSoundPlaying = true;
+        //    }
+        //    else
+        //    {
+        //        isMoving = false;
+        //        audioSource.enabled = false;
+        //        isFootSoundPlaying = false;
+        //    }
+        //}
 
         //PC Test System
         //if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f) isMoving = true;
@@ -88,16 +88,18 @@ public class FootstepsSound : MonoBehaviour
         //}
 
         //NEO PC Test System
-        //if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f)
-        //{
-        //    audioSource.enabled = true;
-        //    isFootSoundPlaying = true;
-        //}
-        //else
-        //{
-        //    audioSource.enabled = false;
-        //    isFootSoundPlaying = false;
-        //}
+        if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f)
+        {
+            isMoving = true;
+            audioSource.enabled = true;
+            isFootSoundPlaying = true;
+        }
+        else
+        {
+            isMoving = false;
+            audioSource.enabled = false;
+            isFootSoundPlaying = false;
+        }
     }
 
     AudioClip NameToClip(string floor)
