@@ -47,6 +47,82 @@ public class SenarioDoor : Door
         Debug.Log("Unlock Failed");
     }
 
+    public void LockerOpenClose()
+    {
+        animator.SetBool("isLocker", isLocker);
+        if (isLocked)
+        {
+            source.PlayOneShot(doorClips[Random.Range(2, 4)]);
+        }
+        else
+        {
+            if (A)
+            {
+                if (isOpened)
+                {
+                    //Close
+                    source.PlayOneShot(doorClips[1]);
+                    isOpened = false;
+                }
+                else
+                {
+                    //Open
+                    source.PlayOneShot(doorClips[0]);
+                    isOpened = true;
+                }
+                animator.SetBool("open", isOpened);
+            }
+            else if (B)
+            {
+                if (isOpened)
+                {
+                    //Close
+                    source.PlayOneShot(doorClips[1]);
+                    isOpened = false;
+                }
+                else
+                {
+                    //Open
+                    source.PlayOneShot(doorClips[0]);
+                    isOpened = true;
+                }
+                animator.SetBool("open", isOpened);
+            }
+            else if (C)
+            {
+                if (isOpened)
+                {
+                    //Close
+                    source.PlayOneShot(doorClips[1]);
+                    isOpened = false;
+                }
+                else
+                {
+                    //Open
+                    source.PlayOneShot(doorClips[0]);
+                    isOpened = true;
+                }
+                animator.SetBool("open", isOpened);
+            }
+            else if (D)
+            {
+                if (isOpened)
+                {
+                    //Close
+                    source.PlayOneShot(doorClips[1]);
+                    isOpened = false;
+                }
+                else
+                {
+                    //Open
+                    source.PlayOneShot(doorClips[0]);
+                    isOpened = true;
+                }
+                animator.SetBool("open", isOpened);
+            }
+        }
+    }
+
     public override void DoorOpenClose()
     {
         animator.SetBool("isCabinetA", isCabinetA);

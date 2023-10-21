@@ -7,6 +7,8 @@ public class Door : MonoBehaviour
 {
     public bool isLeft;
     public bool isOpened;
+    public bool isLocker;
+    public bool A, B, C, D;
 
     [Header("Animations")]
     protected Animator animator;
@@ -20,6 +22,75 @@ public class Door : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         source = GetComponent<AudioSource>();
+    }
+
+    public virtual void Locker()
+    {
+        animator.SetBool("isLocker", isLocker);
+        if (A)
+        {
+            if (isOpened)
+            {
+                //Close
+                source.PlayOneShot(doorClips[1]);
+                isOpened = false;
+            }
+            else
+            {
+                //Open
+                source.PlayOneShot(doorClips[0]);
+                isOpened = true;
+            }
+            animator.SetBool("open", isOpened);
+        }
+        else if (B)
+        {
+            if (isOpened)
+            {
+                //Close
+                source.PlayOneShot(doorClips[1]);
+                isOpened = false;
+            }
+            else
+            {
+                //Open
+                source.PlayOneShot(doorClips[0]);
+                isOpened = true;
+            }
+            animator.SetBool("open", isOpened);
+        }
+        else if (C)
+        {
+            if (isOpened)
+            {
+                //Close
+                source.PlayOneShot(doorClips[1]);
+                isOpened = false;
+            }
+            else
+            {
+                //Open
+                source.PlayOneShot(doorClips[0]);
+                isOpened = true;
+            }
+            animator.SetBool("open", isOpened);
+        }
+        else if (D)
+        {
+            if (isOpened)
+            {
+                //Close
+                source.PlayOneShot(doorClips[1]);
+                isOpened = false;
+            }
+            else
+            {
+                //Open
+                source.PlayOneShot(doorClips[0]);
+                isOpened = true;
+            }
+            animator.SetBool("open", isOpened);
+        }
     }
 
     public virtual void DoorOpenCloseLR()
