@@ -125,7 +125,7 @@ public class HandGun : MonoBehaviour
 
         if(recoilBody != null)
         {
-            float force = 1f;
+            float force = 1.5f;
 
             recoilBody.AddForce(-transform.forward * force, ForceMode.Impulse);
             recoilBody.transform.localRotation = Quaternion.AngleAxis(-15 * force, Vector3.right);
