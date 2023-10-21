@@ -9,6 +9,7 @@ public class SenarioDoor : Door
     public XRSocketInteractor socketInteractor2;
 
     public bool isLocked = false;
+    public bool isCabinetA = false;
 
     public int doorNum;
 
@@ -46,6 +47,7 @@ public class SenarioDoor : Door
 
     public override void DoorOpenClose()
     {
+        animator.SetBool("isCabinetA", isCabinetA);
         if (isLocked)
         {
             source.PlayOneShot(doorClips[Random.Range(2, 4)]);
@@ -66,5 +68,44 @@ public class SenarioDoor : Door
             }
             animator.SetBool("open", isOpened);
         }
+    }
+
+    public override void DoorOpenCloseLR()
+    {
+        animator.SetBool("isCabinetA", isCabinetA);
+        if (isLeft)
+        {
+            animator.SetBool("isLeft", isLeft);
+            if (isOpened)
+            {
+                //Close
+                source.PlayOneShot(doorClips[1]);
+                isOpened = false;
+            }
+            else
+            {
+                //Open
+                source.PlayOneShot(doorClips[0]);
+                isOpened = true;
+            }
+        }
+        else
+        {
+            animator.SetBool("isLeft", isLeft);
+            if (isOpened)
+            {
+                //Close
+                source.PlayOneShot(doorClips[1]);
+                isOpened = false;
+            }
+            else
+            {
+                //Open
+                source.PlayOneShot(doorClips[0]);
+                isOpened = true;
+            }
+        }
+
+        animator.SetBool("open", isOpened);
     }
 }
