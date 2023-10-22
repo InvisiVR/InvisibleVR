@@ -1,3 +1,4 @@
+using Febucci.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,7 +13,12 @@ public class DialogueManager : MonoBehaviour
 
     public TextMeshProUGUI dialogueTMP;
 
-    public float delay = 1.0f;
+    public AudioSource playerAudioSource;
+
+    public AudioClip[] typingAudioClips;
+
+    public float fadeInDelay = 1.0f;
+    public float fadeOutDelay = 1.0f;
 
     private List<Dictionary<string, object>> data_Dialog;
 
@@ -45,14 +51,11 @@ public class DialogueManager : MonoBehaviour
 
         do
         {
-            //Fade In
-            //FadeUp(dialogueTMP);
+            dialogueTMP.gameObject.GetComponent<TypewriterByCharacter>().StartShowingText();
 
             dialogueTMP.text = TMPBehavioursApplication(data_Dialog[curID]["Dialogue"].ToString(), data_Dialog[curID]["Mode"].ToString());
 
-            yield return new WaitForSeconds(delay);
-
-            //Fade Out
+            yield return new WaitForSeconds(fadeInDelay + fadeOutDelay);
         }
         while (int.Parse(data_Dialog[curID]["Chain"].ToString()) + 1 == int.Parse(data_Dialog[++curID]["Chain"].ToString()));
 
@@ -74,28 +77,24 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void FadeUp(TextMeshProUGUI dialogueTMP)
-    {
-        Color targetColor = new Color(dialogueTMP.color.r, dialogueTMP.color.g, dialogueTMP.color.b, 1);
-        dialogueTMP.color = targetColor;
-    }
+    //public void FadeUp(TextMeshProUGUI dialogueTMP)
+    //{
+    //    Color targetColor = new Color(dialogueTMP.color.r, dialogueTMP.color.g, dialogueTMP.color.b, 1);
+    //    dialogueTMP.color = targetColor;
+    //}
 
-    public void FadeOut(TextMeshProUGUI dialogueTMP)
+    public void FadeOut()
     {
-        float duration = 1.0f; // 항상 1초로 고정
-        Color startColor = dialogueTMP.color;
-        Color targetColor = new Color(startColor.r, startColor.g, startColor.b, 0); // Fade out to completely transparent
+        // Ensure the final color is fully transparent
+        dialogueTMP.gameObject.GetComponent<TypewriterByCharacter>().StartDisappearingText();
+
+        float duration = fadeOutDelay;
 
         float elapsedTime = 0;
 
         while (elapsedTime < duration)
         {
-            float t = elapsedTime / duration;
-            dialogueTMP.color = Color.Lerp(startColor, targetColor, t);
             elapsedTime += Time.deltaTime;
         }
-
-        // Ensure the final color is fully transparent
-        dialogueTMP.color = targetColor;
     }
 }
