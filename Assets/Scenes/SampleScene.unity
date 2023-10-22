@@ -2547,7 +2547,7 @@ MonoBehaviour:
   dialogueTMP: {fileID: 1942646519}
   typer: {fileID: 1942646522}
   fadeInDelay: 4
-  fadeOutDelay: 1
+  fadeOutDelay: 0.5
 --- !u!4 &331368294
 Transform:
   m_ObjectHideFlags: 0

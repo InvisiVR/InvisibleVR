@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour
         //    print(data_Dialog[i]["Chain"].ToString());
         //}
 
-        CallDialogue(2);
+        CallDialogue(17);
     }
 
     public void CallDialogue(int ID)
@@ -99,6 +99,8 @@ public class DialogueManager : MonoBehaviour
                 return "<shake a=5>" + dialog + "</shake>";
             case "wiggle":
                 return "<wiggle a=2>" + dialog + "</wiggle>";
+            case "bounce":
+                return "<bounce a=2>" + dialog + "</bounce>";
             default:
                 return dialog;
         }
