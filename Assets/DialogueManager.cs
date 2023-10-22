@@ -104,7 +104,7 @@ public class DialogueManager : MonoBehaviour
             case "wiggle":
                 return "<wiggle a=2>" + dialog + "</wiggle>";
             case "bounce":
-                return "<bounce a=2>" + dialog + "</bounce>";
+                return "<bounce>" + dialog + "</bounce>";
             default:
                 return dialog;
         }
