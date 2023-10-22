@@ -12,9 +12,9 @@ public class GameManager : MonoBehaviour
     public int curTime;//DateTime.Now.ToString(); 초 단위 계산
     public int expectPlayTime; //초 단위 계산
 
-    //진행정보 = 열쇠 획득
-    public int phaseNum;
-
+    //진행정보 = Dialogue Proceed Num;
+    public int curPhaseNum = 0;
+    public int totalPhaseNum = 0;
 
     public bool[] clues;
 
@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
         else
             Debug.LogError("Duplicated GameManager", gameObject);
     }
-
 
     // Start is called before the first frame update
     void Start()

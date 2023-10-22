@@ -43,20 +43,24 @@ public class DialogueManager : MonoBehaviour
         FadeInWaitForSeconds = new WaitForSeconds(fadeInDelay);
         FadeOutWaitForSeconds = new WaitForSeconds(fadeOutDelay);
 
-        //for (int i = 0; i < data_Dialog.Count; i++)
-        //{
-        //    print(data_Dialog[i]["ID"].ToString());
-        //    print(data_Dialog[i]["Dialogue"].ToString());
-        //    print(data_Dialog[i]["Chain"].ToString());
-        //}
-
-        CallDialogue(17);
+        for (int i = 0; i < data_Dialog.Count; i++)
+        {
+            if(data_Dialog[i]["Chain"].ToString() == "0")
+            {
+                GameManager.instance.totalPhaseNum++;
+            }
+        }
     }
 
     public void CallDialogue(int ID)
     {
-        curDialogueID = ID;
+        GameManager.instance.curPhaseNum++;
+        StartDialogue(ID);
+    }
 
+    public void StartDialogue(int ID)
+    {
+        curDialogueID = ID;
         dialogueTMP.text = TMPBehavioursApplication(data_Dialog[curDialogueID]["Dialogue"].ToString(), data_Dialog[curDialogueID]["Mode"].ToString());
     }
 
@@ -83,7 +87,7 @@ public class DialogueManager : MonoBehaviour
         {
             yield return FadeOutWaitForSeconds;
 
-            CallDialogue(curDialogueID + 1);
+            StartDialogue(curDialogueID + 1);
         }
     }
 
