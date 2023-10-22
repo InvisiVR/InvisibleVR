@@ -2545,6 +2545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTMP: {fileID: 1942646519}
+  typer: {fileID: 1942646522}
   fadeInDelay: 4
   fadeOutDelay: 1
 --- !u!4 &331368294

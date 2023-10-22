@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
 
     public TextMeshProUGUI dialogueTMP;
+    public TypewriterByCharacter typer;
 
     public float fadeInDelay;
     public float fadeOutDelay;
@@ -49,7 +50,7 @@ public class DialogueManager : MonoBehaviour
         //    print(data_Dialog[i]["Chain"].ToString());
         //}
 
-        CallDialogue(12);
+        CallDialogue(2);
     }
 
     public void CallDialogue(int ID)
@@ -73,7 +74,7 @@ public class DialogueManager : MonoBehaviour
     {
         yield return FadeInWaitForSeconds;
 
-        dialogueTMP.gameObject.GetComponent<TypewriterByCharacter>().StartDisappearingText();
+        typer.StartDisappearingText();
     }
 
     public IEnumerator NextDialogue()
@@ -97,7 +98,7 @@ public class DialogueManager : MonoBehaviour
             case "shake":
                 return "<shake a=5>" + dialog + "</shake>";
             case "wiggle":
-                return "<wiggle a=2 f=5>" + dialog + "</wiggle>";
+                return "<wiggle a=2>" + dialog + "</wiggle>";
             default:
                 return dialog;
         }
