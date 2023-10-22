@@ -1,7 +1,9 @@
 using Febucci.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
@@ -13,12 +15,13 @@ public class DialogueManager : MonoBehaviour
 
     public TextMeshProUGUI dialogueTMP;
 
-    public AudioSource playerAudioSource;
+    public float fadeInDelay;
+    public float fadeOutDelay;
 
-    public AudioClip[] typingAudioClips;
+    private int curDialogueID;
 
-    public float fadeInDelay = 1.0f;
-    public float fadeOutDelay = 1.0f;
+    WaitForSeconds FadeInWaitForSeconds;
+    WaitForSeconds FadeOutWaitForSeconds;
 
     private List<Dictionary<string, object>> data_Dialog;
 
@@ -36,30 +39,51 @@ public class DialogueManager : MonoBehaviour
     {
         data_Dialog = CSVReader.Read("Dialogues");
 
+        FadeInWaitForSeconds = new WaitForSeconds(fadeInDelay);
+        FadeOutWaitForSeconds = new WaitForSeconds(fadeOutDelay);
+
         //for (int i = 0; i < data_Dialog.Count; i++)
         //{
         //    print(data_Dialog[i]["ID"].ToString());
         //    print(data_Dialog[i]["Dialogue"].ToString());
         //    print(data_Dialog[i]["Chain"].ToString());
         //}
-        StartCoroutine(CallDialogue(12));
+
+        CallDialogue(12);
     }
 
-    IEnumerator CallDialogue(int ID)
+    public void CallDialogue(int ID)
     {
-        int curID = ID;
+        curDialogueID = ID;
 
-        do
+        dialogueTMP.text = TMPBehavioursApplication(data_Dialog[curDialogueID]["Dialogue"].ToString(), data_Dialog[curDialogueID]["Mode"].ToString());
+    }
+
+    public void CallNextDialogue()
+    {
+        StartCoroutine(NextDialogue());
+    }
+
+    public void CallDisappearDialogue()
+    {
+        StartCoroutine(DisappearingDialogue());
+    }
+
+    public IEnumerator DisappearingDialogue()
+    {
+        yield return FadeInWaitForSeconds;
+
+        dialogueTMP.gameObject.GetComponent<TypewriterByCharacter>().StartDisappearingText();
+    }
+
+    public IEnumerator NextDialogue()
+    {
+        if (int.Parse(data_Dialog[curDialogueID]["Chain"].ToString()) + 1 == int.Parse(data_Dialog[curDialogueID+1]["Chain"].ToString()))
         {
-            dialogueTMP.gameObject.GetComponent<TypewriterByCharacter>().StartShowingText();
+            yield return FadeOutWaitForSeconds;
 
-            dialogueTMP.text = TMPBehavioursApplication(data_Dialog[curID]["Dialogue"].ToString(), data_Dialog[curID]["Mode"].ToString());
-
-            yield return new WaitForSeconds(fadeInDelay + fadeOutDelay);
+            CallDialogue(curDialogueID + 1);
         }
-        while (int.Parse(data_Dialog[curID]["Chain"].ToString()) + 1 == int.Parse(data_Dialog[++curID]["Chain"].ToString()));
-
-        yield return null;
     }
 
     public string TMPBehavioursApplication(string dialog, string mode)
@@ -71,30 +95,11 @@ public class DialogueManager : MonoBehaviour
             case "dangle":
                 return "<dangle>" + dialog + "</dangle>";
             case "shake":
-                return "<shake a=2>" + dialog + "</shake>";
+                return "<shake a=5>" + dialog + "</shake>";
+            case "wiggle":
+                return "<wiggle a=2 f=5>" + dialog + "</wiggle>";
             default:
                 return dialog;
-        }
-    }
-
-    //public void FadeUp(TextMeshProUGUI dialogueTMP)
-    //{
-    //    Color targetColor = new Color(dialogueTMP.color.r, dialogueTMP.color.g, dialogueTMP.color.b, 1);
-    //    dialogueTMP.color = targetColor;
-    //}
-
-    public void FadeOut()
-    {
-        // Ensure the final color is fully transparent
-        dialogueTMP.gameObject.GetComponent<TypewriterByCharacter>().StartDisappearingText();
-
-        float duration = fadeOutDelay;
-
-        float elapsedTime = 0;
-
-        while (elapsedTime < duration)
-        {
-            elapsedTime += Time.deltaTime;
         }
     }
 }

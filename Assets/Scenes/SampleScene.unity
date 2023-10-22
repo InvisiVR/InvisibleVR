@@ -2545,10 +2545,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTMP: {fileID: 1942646519}
-  playerAudioSource: {fileID: 0}
-  typingAudioClips: []
-  fadeInDelay: 6
-  fadeOutDelay: 4
+  fadeInDelay: 4
+  fadeOutDelay: 1
 --- !u!4 &331368294
 Transform:
   m_ObjectHideFlags: 0
@@ -11776,7 +11774,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 331368293}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: FadeOut
+        m_MethodName: CallDisappearDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11791,21 +11789,33 @@ MonoBehaviour:
       m_Calls: []
   onTextDisappeared:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 331368293}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: CallNextDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onCharacterVisible:
     m_PersistentCalls:
       m_Calls: []
   onMessage:
     m_PersistentCalls:
       m_Calls: []
-  waitForNormalChars: 0.06
-  waitLong: 0.7
-  waitMiddle: 0.3
+  waitForNormalChars: 0.08
+  waitLong: 0.0001
+  waitMiddle: 0.0001
   avoidMultiplePunctuactionWait: 0
-  waitForNewLines: 1
-  waitForLastCharacter: 1
-  useTypewriterWaitForDisappearances: 1
-  disappearanceWaitTime: 0.015
+  waitForNewLines: 0
+  waitForLastCharacter: 0
+  useTypewriterWaitForDisappearances: 0
+  disappearanceWaitTime: 0.001
   disappearanceSpeedMultiplier: 1
 --- !u!114 &1942646523
 MonoBehaviour:
@@ -11820,9 +11830,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 2028784394}
-  minSoundDelay: 0.1
+  minSoundDelay: 0.095
   interruptPreviousSound: 0
-  randomSequence: 1
+  randomSequence: 0
   sounds:
   - {fileID: 8300000, guid: eaac6ed0e6e0c2546ad64cd3f6f17202, type: 3}
 --- !u!1 &1948263123

@@ -54,8 +54,6 @@ namespace Febucci.UI.Examples
         {
             if (character == '.' || character == '[' || character == '\"' || character == '\0' || character == ' ') return;
 
-            Debug.Log(character);
-
             if (Time.time - latestTimePlayed <= minSoundDelay)
                 return; //Early return if not enough time passed yet
 
