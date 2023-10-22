@@ -4192,7 +4192,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f4b273c04d0bb4e8c0f9cf1298a54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextID: 0
+  triggerType: 0
+  textID: 0
+  delay: 5
+  isTriggered: 0
 --- !u!1 &767720725
 GameObject:
   m_ObjectHideFlags: 0
@@ -11746,7 +11749,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 21
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 1024
   m_textAlignment: 65535
@@ -11805,7 +11808,7 @@ MonoBehaviour:
   typewriterStartsAutomatically: 1
   animationLoop: 0
   timeScale: 0
-  _text: "\uAC00\uB098\uB2E4 TEST"
+  _text: 
   useDynamicScaling: 1
   referenceFontSize: 10
   isResettingTimeOnNewText: 1
@@ -15041,11 +15044,72 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key1
       objectReference: {fileID: 0}
+    - target: {fileID: 7918071808618517648, guid: 91ea811d0db3d204285fea010ca100b1,
+        type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918071808618517648, guid: 91ea811d0db3d204285fea010ca100b1,
+        type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918071808618517648, guid: 91ea811d0db3d204285fea010ca100b1,
+        type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4131371327342667692}
+    - target: {fileID: 7918071808618517648, guid: 91ea811d0db3d204285fea010ca100b1,
+        type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918071808618517648, guid: 91ea811d0db3d204285fea010ca100b1,
+        type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InteractionTriggerTriggered
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918071808618517648, guid: 91ea811d0db3d204285fea010ca100b1,
+        type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TextTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918071808618517648, guid: 91ea811d0db3d204285fea010ca100b1,
+        type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 80957690667945862, guid: 91ea811d0db3d204285fea010ca100b1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4131371327342667692}
   m_SourcePrefab: {fileID: 100100000, guid: 91ea811d0db3d204285fea010ca100b1, type: 3}
+--- !u!1 &4131371327342667691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 80957690667945862, guid: 91ea811d0db3d204285fea010ca100b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4131371327342667690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4131371327342667692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4131371327342667691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f4b273c04d0bb4e8c0f9cf1298a54d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 1
+  textID: 17
+  delay: 0
+  isTriggered: 0
 --- !u!4 &4152787471049085666
 Transform:
   m_ObjectHideFlags: 0

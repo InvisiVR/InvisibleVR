@@ -1,5 +1,5 @@
 ﻿ID,Dialogue,Chain,상황 설명,Mode
-0,<#FFE650>[ 도움 ]</color> 안녕하세요 도우미입니다.  :),0,인트로씬 특정 위치 트리거 설치(Game Start Scene -> Game Intro Scene),
+0,"<#FFE650>[ 도움 ]</color> 안녕하세요, 도우미입니다.  :)",0,인트로씬 특정 위치 트리거 설치(Game Start Scene -> Game Intro Scene),
 1,<#FFE650>[ 도움 ]</color> 상황이 좋아보이진 않네요…,1,,
 2,"<#FFE650>[ 도움 ]</color> 우선, 자리로 돌아가죠!",2,,
 3,<#FFE650>[ 도움 ]</color> 오! 이런…,0,"자신의 자리에 도착했을 때, 쓰러지며(화면이 점점 어두어짐)",pend
