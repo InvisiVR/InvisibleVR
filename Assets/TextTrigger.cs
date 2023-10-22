@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum TriggerType { localtionTrigger, InteractionTrigger, EncounterTrigger, DodgeTrigger }
+public enum TriggerType { localtionTrigger, InteractionTrigger, OnChasedTrigger, OffChasedTrigger }
 
 public class TextTrigger : MonoBehaviour
 {
@@ -27,9 +27,9 @@ public class TextTrigger : MonoBehaviour
         }
     }
 
-    public void InteractionTriggerTriggered()
+    public void TriggerTriggered()
     {
-        if(triggerType == TriggerType.InteractionTrigger)
+        if(triggerType == TriggerType.InteractionTrigger || triggerType == TriggerType.OnChasedTrigger || triggerType == TriggerType.OffChasedTrigger)
         {
             if (!isTriggered)
             {
