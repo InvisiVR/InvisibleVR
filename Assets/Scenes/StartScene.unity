@@ -1675,11 +1675,12 @@ MonoBehaviour:
   minTime: 0.2
   maxTime: 0.5
   timer: 1.5
+  light_render: {fileID: 0}
+  light_render1: {fileID: 0}
+  enterCount: 0
   aus: {fileID: 1175732631}
   lightAudio: {fileID: 0}
-  lightClips:
-  - {fileID: 8300000, guid: 8323db4c1ece3b9488e18689cdfe15c5, type: 3}
-  - {fileID: 8300000, guid: 56a1a25a51f6e0c4fb5b9fc882f714b0, type: 3}
+  lightClips: []
 --- !u!1001 &315324328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3777,7 +3778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d68c28ce7b16334a80fe39389408715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 1166299552}
+  source: {fileID: 1175732631}
   minSoundDelay: 0.095
   interruptPreviousSound: 0
   randomSequence: 0
@@ -4393,7 +4394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d68c28ce7b16334a80fe39389408715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 1166299552}
+  source: {fileID: 1175732631}
   minSoundDelay: 0.095
   interruptPreviousSound: 0
   randomSequence: 0
@@ -4605,7 +4606,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4841,7 +4842,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4934,7 +4935,7 @@ GameObject:
   - component: {fileID: 1175732630}
   - component: {fileID: 1175732631}
   m_Layer: 0
-  m_Name: LightAudioSource
+  m_Name: TypingAudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8281,6 +8282,9 @@ MonoBehaviour:
   minTime: 0.2
   maxTime: 0.5
   timer: 1.5
+  light_render: {fileID: 0}
+  light_render1: {fileID: 0}
+  enterCount: 0
   aus: {fileID: 1175732631}
   lightAudio: {fileID: 0}
   lightClips:
