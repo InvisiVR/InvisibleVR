@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FlickeringLight : MonoBehaviour
 {
+    public GameObject[] FlickeringObjects;
+
     public Light light1;
     public Light light2;
     public float minTime;
@@ -12,6 +14,9 @@ public class FlickeringLight : MonoBehaviour
 
     public AudioSource aus;
     public AudioClip lightAudio;
+
+    public AudioClip[] lightClips;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +44,30 @@ public class FlickeringLight : MonoBehaviour
             light2.enabled = !light2.enabled;
             timer = Random.Range(minTime, maxTime);
             aus.PlayOneShot(lightAudio);
+        }
+    }
+
+    public void FlickerLightOne()
+    {
+        if (timer > 0) timer -= Time.deltaTime;
+
+        if (timer < 0)
+        {
+           for (int i = 0; i < FlickeringObjects.Length; i++)
+           {
+               FlickeringObjects[i].SetActive(!FlickeringObjects[i].activeSelf);
+           }
+           timer = Random.Range(minTime, maxTime);
+        }
+    }
+
+    public void LightOnOff()
+    {
+        for (int i = 0; i < FlickeringObjects.Length; i++)
+        {
+            aus.PlayOneShot(lightClips[Random.Range(0, 2)]);
+
+            FlickeringObjects[i].SetActive(!FlickeringObjects[i].activeSelf);
         }
     }
 }
