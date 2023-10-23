@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class FlickeringLight : MonoBehaviour
@@ -18,14 +19,12 @@ public class FlickeringLight : MonoBehaviour
     public AudioSource aus;
     public AudioClip lightAudio;
 
-    public AudioClip[] lightClips;
-
     // Start is called before the first frame update
     void Start()
     {
         timer = Random.Range(minTime, maxTime);
-        light_render.material.EnableKeyword("_EMISSION");
-        light_render1.material.EnableKeyword("_EMISSION");
+        if (light_render != null) light_render.material.EnableKeyword("_EMISSION");
+        if (light_render != null) light_render1.material.EnableKeyword("_EMISSION");
     }
 
     private void OnTriggerStay(Collider other)
@@ -66,26 +65,10 @@ public class FlickeringLight : MonoBehaviour
         }
     }
 
-    public void FlickerLightOne()
-    {
-        if (timer > 0) timer -= Time.deltaTime;
-
-        if (timer < 0)
-        {
-           for (int i = 0; i < FlickeringObjects.Length; i++)
-           {
-               FlickeringObjects[i].SetActive(!FlickeringObjects[i].activeSelf);
-           }
-           timer = Random.Range(minTime, maxTime);
-        }
-    }
-
     public void LightOnOff()
     {
         for (int i = 0; i < FlickeringObjects.Length; i++)
         {
-            aus.PlayOneShot(lightClips[Random.Range(0, 2)]);
-
             FlickeringObjects[i].SetActive(!FlickeringObjects[i].activeSelf);
         }
     }
