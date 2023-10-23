@@ -5991,11 +5991,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 283f80a2bc027be4e87a1adc5e2615ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curTime: 0
-  expectPlayTime: 0
+  expectPlayTime: 1200
   curPhaseNum: 0
   totalPhaseNum: 0
-  clues: 000000000000
 --- !u!1 &1038045063
 GameObject:
   m_ObjectHideFlags: 0
