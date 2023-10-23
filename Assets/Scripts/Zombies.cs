@@ -15,6 +15,7 @@ public class Zombies : MonoBehaviour
     [SerializeField] private GameObject xrOrigin;
     [SerializeField] private GameObject jumpscareCam;
     [SerializeField] private Image bloodIMG;
+    [SerializeField] private GameObject FadeOutBlack;
 
     // Sounds
     [SerializeField] private GameObject jumpscareSound;
@@ -39,6 +40,7 @@ public class Zombies : MonoBehaviour
 
     private float player_zombie_dist;
     private bool isFindPlayer;
+    private bool isPlayerCatched;
 
     private int cur_mode = 0;
     private float hearing_dist = 7.0f;
@@ -89,6 +91,7 @@ public class Zombies : MonoBehaviour
         curPatrolSpot = patrolSpot[Random.Range(0, 4)];
         agent.speed = 1.0f;
         hp = 10.0f;
+        isPlayerCatched = false;
     }
 
     // Start is called before the first frame update
@@ -182,6 +185,12 @@ public class Zombies : MonoBehaviour
                     // Jumpscare Event Play!
                     anim.SetInteger("mode", 4);
                     StartJumpScare();
+
+                    if (!isPlayerCatched)
+                    {
+                        isPlayerCatched = true;
+                        StartCoroutine(FadeOutStart());
+                    }
                 } else agent.SetDestination(target.position);
                 break;
         }
@@ -254,5 +263,11 @@ public class Zombies : MonoBehaviour
 
         jumpscareCam.transform.position = transform.position + transform.forward*0.8f + new Vector3(0, 0.6f, 0);
         jumpscareCam.transform.eulerAngles = transform.eulerAngles + new Vector3(-45f + Random.Range(-1.5f, 1.5f), 180f + Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f));
+    }
+
+    private IEnumerator FadeOutStart()
+    {
+        yield return new WaitForSeconds(5.0f);
+        FadeOutBlack.SetActive(true);
     }
 }
