@@ -16,6 +16,12 @@ public class Zombies : MonoBehaviour
     [SerializeField] private GameObject jumpscareCam;
     [SerializeField] private Image bloodIMG;
 
+    // Sounds
+    [SerializeField] private GameObject jumpscareSound;
+    [SerializeField] private GameObject HeartBeatSound;
+    private AudioSource heartbeat;
+    [SerializeField] private GameObject ZombieSound;
+
     // Raycast
     private float ray_dist = 10.0f; // Raycast Distance
     private Ray[] rays = {
@@ -79,6 +85,7 @@ public class Zombies : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        heartbeat = HeartBeatSound.GetComponent<AudioSource>();
         curPatrolSpot = patrolSpot[Random.Range(0, 4)];
         agent.speed = 1.0f;
         hp = 10.0f;
@@ -94,6 +101,9 @@ public class Zombies : MonoBehaviour
     {
         // Distance Zombie-Player
         player_zombie_dist = Vector3.Distance(this.transform.position, target.position);
+
+        // HeartBeatSound Pitch
+        heartbeat.pitch = 1.0f + 3.0f / player_zombie_dist;
 
         // Setting Raycast
         layPos = transform.position + new Vector3(0, 1.3f, 0);
@@ -128,7 +138,6 @@ public class Zombies : MonoBehaviour
         FindingPlayerForRay();
         if (cur_mode < 2 && (isFindPlayer || player_zombie_dist < mustChase_dist))
         {
-            Debug.Log("Raycast Hits OR In Distance --> Mode 2 (Chase Mode)");
             cur_mode = 2;
             agent.speed = 1.8f;
             anim.SetInteger("mode", 1);
@@ -238,6 +247,10 @@ public class Zombies : MonoBehaviour
         jumpscareCam.SetActive(true);
         bloodIMG.color = new Color(1, 0, 0, Random.Range(0.05f, 0.15f));
         gameObject.GetComponent<NavMeshAgent>().enabled = false;
+
+        HeartBeatSound.SetActive(false);
+        ZombieSound.SetActive(false);
+        jumpscareSound.SetActive(true);
 
         jumpscareCam.transform.position = transform.position + transform.forward*0.8f + new Vector3(0, 0.6f, 0);
         jumpscareCam.transform.eulerAngles = transform.eulerAngles + new Vector3(-45f + Random.Range(-1.5f, 1.5f), 180f + Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f));
