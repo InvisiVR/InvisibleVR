@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class FlickeringLight : MonoBehaviour
 {
+    // To Zombie Spawn Trigger
+    [SerializeField] private GameObject zombieActManager;
+
     public GameObject[] FlickeringObjects;
 
     public Light light1;
@@ -37,6 +40,7 @@ public class FlickeringLight : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        zombieActManager.GetComponent<ZombieActiveManager>().isZombieSpawnTime = true;
         light_render.material.SetColor("_EmissionColor", new Color32(191, 171, 138, 255));
         light_render1.material.SetColor("_EmissionColor", new Color32(191, 171, 138, 255));
         light1.GetComponent<Light>().color = new Color32(241, 208, 209, 255);

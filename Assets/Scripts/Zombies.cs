@@ -60,7 +60,6 @@ public class Zombies : MonoBehaviour
     private Vector3 curPatrolSpot;
     private Vector3[] patrolSpot =
     {
-        /*
         // 3F Spots
         new Vector3(-18f, 9f, 26f),
 
@@ -80,13 +79,13 @@ public class Zombies : MonoBehaviour
         new Vector3(-7f, -3f, 26f),
         
         // --> Total 10 Spots
-        */
+        
 
-        // For Test Spots
+        /* For Test Spots
         new Vector3(-8f, 0f, 8f),
         new Vector3(-8f, 0f, -8f),
         new Vector3(8f, 0f, -8f),
-        new Vector3(8f, 0f, 8f)
+        new Vector3(8f, 0f, 8f) */
     };
 
     private void Awake()
@@ -94,7 +93,7 @@ public class Zombies : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         heartbeat = HeartBeatSound.GetComponent<AudioSource>();
-        curPatrolSpot = patrolSpot[Random.Range(0, 4)];
+        curPatrolSpot = patrolSpot[Random.Range(0, 10)];
         agent.speed = 1.0f * speedWeight;
         hp = 10.0f * hpWeight;
         isPlayerCatched = false;
@@ -113,7 +112,7 @@ public class Zombies : MonoBehaviour
         player_zombie_dist = Vector3.Distance(this.transform.position, target.position);
 
         // HeartBeatSound Pitch
-        heartbeat.pitch = 1.0f + 3.0f / player_zombie_dist;
+        heartbeat.pitch = 1.0f + 2.0f / player_zombie_dist;
 
         // Setting Raycast
         layPos = transform.position + new Vector3(0, 1.3f, 0);
@@ -169,7 +168,7 @@ public class Zombies : MonoBehaviour
 
                 if (Vector3.Distance(transform.position, curPatrolSpot) < 2.0f)
                 {
-                    curPatrolSpot = patrolSpot[Random.Range(0, 4)];
+                    curPatrolSpot = patrolSpot[Random.Range(0, 10)];
                 }
                 break;
             case 1: // 1:Go to Sound
@@ -267,7 +266,7 @@ public class Zombies : MonoBehaviour
         agent.enabled = true;
         HeartBeatSound.SetActive(true);
         ZombieSound.SetActive(true);
-        transform.position = patrolSpot[Random.Range(0, 4)];
+        transform.position = patrolSpot[Random.Range(0, 10)];
         cur_mode = 0;
         anim.SetInteger("mode", 0);
         agent.speed = 1.0f * speedWeight;
