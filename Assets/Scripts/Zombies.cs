@@ -41,6 +41,7 @@ public class Zombies : MonoBehaviour
 
     private float player_zombie_dist;
     private bool isFindPlayer;
+    private bool isZombieDie;
     private bool isPlayerCatched;
 
     private int cur_mode = 0;
@@ -97,6 +98,7 @@ public class Zombies : MonoBehaviour
         agent.speed = 1.0f * speedWeight;
         hp = 10.0f * hpWeight;
         isPlayerCatched = false;
+        isZombieDie = false;
     }
 
     // Start is called before the first frame update
@@ -162,7 +164,8 @@ public class Zombies : MonoBehaviour
         switch (cur_mode)
         {
             case 0: // 0:Patrol Mode
-                agent.SetDestination(curPatrolSpot);
+                if (!isPlayerCatched && !isZombieDie) agent.SetDestination(curPatrolSpot);
+                anim.SetInteger("mode", 0);
 
                 if (Vector3.Distance(transform.position, curPatrolSpot) < 2.0f)
                 {
@@ -170,40 +173,47 @@ public class Zombies : MonoBehaviour
                 }
                 break;
             case 1: // 1:Go to Sound
-                agent.SetDestination(curPatrolSpot);
+                if (!isPlayerCatched && !isZombieDie) agent.SetDestination(curPatrolSpot);
+                anim.SetInteger("mode", 0);
 
                 if (Vector3.Distance(transform.position, curPatrolSpot) < 2.0f)
                 {
                     // Return to Patrol Mode
                     cur_mode = 0;
-                    anim.SetInteger("mode", 0);
                     agent.speed = 1.0f * speedWeight;
                 }
                 break;
             case 2: // 2:Chase Mode
+                if (!isZombieDie && !isPlayerCatched) agent.SetDestination(target.position);
+
                 if (handGun.magazine.bulletNum == 0) agent.speed = 2.2f * speedWeight;
                 else agent.speed = 1.8f * speedWeight;
 
                 // Catch!!!
-                if (!isPlayerCatched && player_zombie_dist < 2.0f)
+                if (!isPlayerCatched && player_zombie_dist < 1.5f && !isZombieDie)
                 {
                     // Jumpscare Event Play!
                     isPlayerCatched = true;
+                    StartJumpScare();
                     anim.SetInteger("mode", 4);
                     StartCoroutine(FadeOutStart());
-                } else agent.SetDestination(target.position);
+                } //else agent.SetDestination(target.position);
+
                 break;
         }
 
         // if HP < 0, Die Animation & Respawn
-        if (hp < 0)
+        if (!isZombieDie && hp < 0)
         {
-            hp = 10.0f * hpWeight;
             StartCoroutine(ZombieDie());
         }
 
         // if Player Chatched, Start JumpScare
-        if (isPlayerCatched) StartJumpScare();
+        if (isPlayerCatched)
+        {
+            StartJumpScare();
+            agent.enabled = false;
+        }
 
     }
 
@@ -242,11 +252,21 @@ public class Zombies : MonoBehaviour
 
     private IEnumerator ZombieDie()
     {
+        isZombieDie = true;
+        agent.enabled = false;
+        hp = 10.0f * hpWeight;
         anim.SetInteger("mode", 3);
-        yield return new WaitForSeconds(4.0f);
+        HeartBeatSound.SetActive(false);
+        ZombieSound.SetActive(false);
+
+        yield return new WaitForSeconds(10.0f);
 
         // Respawn
         //while (Vector3.Distance(curPatrolSpot, target.position) < 15.0f) curPatrolSpot = patrolSpot[Random.Range(0, 4)];
+        isZombieDie = false;
+        agent.enabled = true;
+        HeartBeatSound.SetActive(true);
+        ZombieSound.SetActive(true);
         transform.position = patrolSpot[Random.Range(0, 4)];
         cur_mode = 0;
         anim.SetInteger("mode", 0);
