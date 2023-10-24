@@ -14,6 +14,7 @@ public class Zombies : MonoBehaviour
 
     [SerializeField] private GameObject xrOrigin;
     [SerializeField] private GameObject jumpscareCam;
+    [SerializeField] private GameObject bloodIMGobj;
     [SerializeField] private Image bloodIMG;
     [SerializeField] private GameObject FadeOutBlack;
 
@@ -50,6 +51,10 @@ public class Zombies : MonoBehaviour
 
     // Zombie HP
     public float hp;
+
+    // Weights
+    public float hpWeight = 1.0f;
+    public float speedWeight = 1.0f;
 
     private Vector3 curPatrolSpot;
     private Vector3[] patrolSpot =
@@ -89,8 +94,8 @@ public class Zombies : MonoBehaviour
         anim = GetComponent<Animator>();
         heartbeat = HeartBeatSound.GetComponent<AudioSource>();
         curPatrolSpot = patrolSpot[Random.Range(0, 4)];
-        agent.speed = 1.0f;
-        hp = 10.0f;
+        agent.speed = 1.0f * speedWeight;
+        hp = 10.0f * hpWeight;
         isPlayerCatched = false;
     }
 
@@ -126,14 +131,14 @@ public class Zombies : MonoBehaviour
             {
                 curPatrolSpot = target.position;
                 cur_mode = 1;
-                agent.speed = 1.6f;
+                agent.speed = 1.6f * speedWeight;
             }
             // if Walking Sound Heard -> spd = 1.4f
             else if (footStep.isFootSoundPlaying)
             {
                 curPatrolSpot = target.position;
                 cur_mode = 1;
-                agent.speed = 1.4f;
+                agent.speed = 1.4f * speedWeight;
             }
         }
 
@@ -142,7 +147,7 @@ public class Zombies : MonoBehaviour
         if (cur_mode < 2 && (isFindPlayer || player_zombie_dist < mustChase_dist))
         {
             cur_mode = 2;
-            agent.speed = 1.8f;
+            agent.speed = 1.8f * speedWeight;
             anim.SetInteger("mode", 1);
 
             // If the player is not visible for '3.0f' seconds --> Mode 0 (Patrol Mode)
@@ -172,25 +177,20 @@ public class Zombies : MonoBehaviour
                     // Return to Patrol Mode
                     cur_mode = 0;
                     anim.SetInteger("mode", 0);
-                    agent.speed = 1.0f;
+                    agent.speed = 1.0f * speedWeight;
                 }
                 break;
             case 2: // 2:Chase Mode
-                if (handGun.magazine.bulletNum == 0) agent.speed = 2.2f;
-                else agent.speed = 1.8f;
+                if (handGun.magazine.bulletNum == 0) agent.speed = 2.2f * speedWeight;
+                else agent.speed = 1.8f * speedWeight;
 
                 // Catch!!!
-                if (player_zombie_dist < 2.0f)
+                if (!isPlayerCatched && player_zombie_dist < 2.0f)
                 {
                     // Jumpscare Event Play!
+                    isPlayerCatched = true;
                     anim.SetInteger("mode", 4);
-                    StartJumpScare();
-
-                    if (!isPlayerCatched)
-                    {
-                        isPlayerCatched = true;
-                        StartCoroutine(FadeOutStart());
-                    }
+                    StartCoroutine(FadeOutStart());
                 } else agent.SetDestination(target.position);
                 break;
         }
@@ -198,10 +198,13 @@ public class Zombies : MonoBehaviour
         // if HP < 0, Die Animation & Respawn
         if (hp < 0)
         {
-            hp = 10.0f;
+            hp = 10.0f * hpWeight;
             StartCoroutine(ZombieDie());
         }
-                
+
+        // if Player Chatched, Start JumpScare
+        if (isPlayerCatched) StartJumpScare();
+
     }
 
     private void FindingPlayerForRay()
@@ -247,13 +250,14 @@ public class Zombies : MonoBehaviour
         transform.position = patrolSpot[Random.Range(0, 4)];
         cur_mode = 0;
         anim.SetInteger("mode", 0);
-        agent.speed = 1.0f;
+        agent.speed = 1.0f * speedWeight;
     }
 
     private void StartJumpScare()
     {
         xrOrigin.SetActive(false);
         jumpscareCam.SetActive(true);
+        bloodIMGobj.SetActive(true);
         bloodIMG.color = new Color(1, 0, 0, Random.Range(0.05f, 0.15f));
         gameObject.GetComponent<NavMeshAgent>().enabled = false;
 

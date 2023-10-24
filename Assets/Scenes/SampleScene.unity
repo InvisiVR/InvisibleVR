@@ -3791,7 +3791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &686889312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15471,7 +15471,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 00aeed5935c8543efb9e0d8483491671, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16095,12 +16095,15 @@ MonoBehaviour:
   footStep: {fileID: 1955463863}
   xrOrigin: {fileID: 179007883}
   jumpscareCam: {fileID: 1063051687}
+  bloodIMGobj: {fileID: 686889311}
   bloodIMG: {fileID: 686889312}
   FadeOutBlack: {fileID: 5763126855226034933}
   jumpscareSound: {fileID: 3954707748827824339}
   HeartBeatSound: {fileID: 8206891485152193383}
   ZombieSound: {fileID: 5599418016546748927}
   hp: 10
+  hpWeight: 1
+  speedWeight: 1
 --- !u!4 &6109604702311491068
 Transform:
   m_ObjectHideFlags: 0
