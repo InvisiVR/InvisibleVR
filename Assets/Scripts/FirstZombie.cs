@@ -30,7 +30,7 @@ public class FirstZombie : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         heartbeat = HeartBeatSound.GetComponent<AudioSource>();
-        agent.speed = 0.25f;
+        agent.speed = 0.5f;
         isPlayerCatched = false;
     }
 
@@ -62,7 +62,7 @@ public class FirstZombie : MonoBehaviour
         }
 
         // if Player Go To out of range, Disable This
-        if (player_zombie_dist > 15.0f) gameObject.SetActive(false);
+        if (player_zombie_dist > 15.0f) Destroy(gameObject);
     }
 
     private void StartJumpScare()
