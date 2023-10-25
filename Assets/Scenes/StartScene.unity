@@ -2230,7 +2230,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1093627918}
     m_Modifications:
     - target: {fileID: 96276406085080184, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
@@ -2285,12 +2285,12 @@ PrefabInstance:
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1920
+      value: 733
       objectReference: {fileID: 0}
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1080
+      value: 372.99997
       objectReference: {fileID: 0}
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
@@ -2320,37 +2320,37 @@ PrefabInstance:
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.016
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 25.384
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.475
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
@@ -2391,11 +2391,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1093627917}
     - target: {fileID: 8829300712851998148, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_RenderMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829300712851998148, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 999
       objectReference: {fileID: 0}
     - target: {fileID: 8829300712851998148, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
@@ -2582,7 +2587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba2f8c630e5afd49a8c8596245afc8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieActManager: {fileID: 0}
   FlickeringObjects:
   - {fileID: 1721969147}
   - {fileID: 1452816316}
@@ -5313,7 +5317,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6562,7 +6566,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7066,6 +7070,7 @@ Transform:
   - {fileID: 753502836}
   - {fileID: 368540749}
   - {fileID: 1112899317}
+  - {fileID: 274290204}
   m_Father: {fileID: 1365945071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1112899316
@@ -12134,7 +12139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba2f8c630e5afd49a8c8596245afc8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieActManager: {fileID: 0}
   FlickeringObjects:
   - {fileID: 1721969147}
   - {fileID: 1452816316}
@@ -13367,7 +13371,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1391987638}
   - {fileID: 1864844335}
-  - {fileID: 274290203}
   - {fileID: 1654286622}
   - {fileID: 1038173524}
   - {fileID: 38235656}
