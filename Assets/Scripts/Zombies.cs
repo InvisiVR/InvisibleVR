@@ -108,6 +108,8 @@ public class Zombies : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!xrOrigin.activeSelf && !isPlayerCatched) gameObject.SetActive(false);
+
         // Distance Zombie-Player
         player_zombie_dist = Vector3.Distance(this.transform.position, target.position);
 
@@ -204,13 +206,15 @@ public class Zombies : MonoBehaviour
         // if HP < 0, Die Animation & Respawn
         if (!isZombieDie && hp < 0)
         {
-            hp = 10.0f * hpWeight;
+            cur_mode = 999;
+            hp = 999.0f;
             StartCoroutine(ZombieDie());
         }
 
         // if Player Chatched, Start JumpScare
         if (isPlayerCatched)
         {
+            cur_mode = 999;
             StartJumpScare();
             agent.enabled = false;
         }
@@ -266,6 +270,7 @@ public class Zombies : MonoBehaviour
         agent.enabled = true;
         HeartBeatSound.SetActive(true);
         ZombieSound.SetActive(true);
+        hp = 10.0f * hpWeight;
         transform.position = patrolSpot[Random.Range(0, 10)];
         cur_mode = 0;
         anim.SetInteger("mode", 0);
@@ -284,7 +289,7 @@ public class Zombies : MonoBehaviour
         ZombieSound.SetActive(false);
         jumpscareSound.SetActive(true);
 
-        jumpscareCam.transform.position = transform.position + transform.forward*0.8f + new Vector3(0, 0.5f, 0);
+        jumpscareCam.transform.position = transform.position + transform.forward*0.85f + new Vector3(0, 0.5f, 0);
         jumpscareCam.transform.eulerAngles = transform.eulerAngles + new Vector3(-65f + Random.Range(-1.5f, 1.5f), 180f + Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f));
     }
 
