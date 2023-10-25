@@ -147,4 +147,12 @@ public class Door : MonoBehaviour
         }
         animator.SetBool("open", isOpened);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Zombie" && !isOpened)
+        {
+            DoorOpenClose();
+        }
+    }
 }

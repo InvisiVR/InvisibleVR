@@ -10,7 +10,6 @@ public class BulletMark : MonoBehaviour
         {
             if (collision.transform.tag == "Zombie")
             {
-                Debug.Log("ZOMBIE HIT!");
                 collision.gameObject.GetComponent<Zombies>().hp -= 3.5f;
             }
             gameObject.SetActive(false);

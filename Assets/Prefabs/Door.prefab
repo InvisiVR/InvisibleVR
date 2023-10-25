@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5952838840225972145}
   - component: {fileID: 4029866215122117842}
   - component: {fileID: 7491516294389097615}
+  - component: {fileID: 8800222480085335097}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -69,7 +70,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c21d93bcbeef3f41b5b59069a45e00a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLeft: 0
   isOpened: 0
+  isLocker: 0
+  A: 0
+  B: 0
+  C: 0
+  D: 0
   doorClips:
   - {fileID: 8300000, guid: c52f0b0e644464ca0b066d80091a5c8f, type: 3}
   - {fileID: 8300000, guid: 0210c1127dd754ced9c723f73428cc1c, type: 3}
@@ -182,6 +189,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeOfMaterial: 6
+--- !u!65 &8800222480085335097
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925160964947218920}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.5764525, z: 0.20269164}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &1874417016565296870
 PrefabInstance:
   m_ObjectHideFlags: 0
