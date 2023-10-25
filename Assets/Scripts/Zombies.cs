@@ -204,6 +204,7 @@ public class Zombies : MonoBehaviour
         // if HP < 0, Die Animation & Respawn
         if (!isZombieDie && hp < 0)
         {
+            hp = 10.0f * hpWeight;
             StartCoroutine(ZombieDie());
         }
 
@@ -253,7 +254,6 @@ public class Zombies : MonoBehaviour
     {
         isZombieDie = true;
         agent.enabled = false;
-        hp = 10.0f * hpWeight;
         anim.SetInteger("mode", 3);
         HeartBeatSound.SetActive(false);
         ZombieSound.SetActive(false);
@@ -284,8 +284,8 @@ public class Zombies : MonoBehaviour
         ZombieSound.SetActive(false);
         jumpscareSound.SetActive(true);
 
-        jumpscareCam.transform.position = transform.position + transform.forward*0.8f + new Vector3(0, 0.6f, 0);
-        jumpscareCam.transform.eulerAngles = transform.eulerAngles + new Vector3(-45f + Random.Range(-1.5f, 1.5f), 180f + Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f));
+        jumpscareCam.transform.position = transform.position + transform.forward*0.8f + new Vector3(0, 0.5f, 0);
+        jumpscareCam.transform.eulerAngles = transform.eulerAngles + new Vector3(-65f + Random.Range(-1.5f, 1.5f), 180f + Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f));
     }
 
     private IEnumerator FadeOutStart()
