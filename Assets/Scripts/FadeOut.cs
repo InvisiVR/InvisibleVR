@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FadeOut : MonoBehaviour
 {
     [SerializeField] private Image Panel;
+    [SerializeField] private int SceneNumToGo;
     float time = 0f;
     float F_time = 7.0f;
 
@@ -33,5 +35,9 @@ public class FadeOut : MonoBehaviour
             Panel.color = alpha;
             yield return null;
         }
+
+        yield return new WaitForSeconds(5.0f);
+
+        SceneManager.LoadScene(SceneNumToGo);
     }
 }
