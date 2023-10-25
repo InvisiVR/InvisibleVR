@@ -31,4 +31,14 @@ public class ZombieActiveManager : MonoBehaviour
             isZombieSpawnTime = false;
         }
     }
+
+    public void ActiveFirstZombie()
+    {
+
+    }
+
+    public void ActiveNormalZombie()
+    {
+        isZombieSpawnTime = true;
+    }
 }
