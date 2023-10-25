@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ZombieActiveManager : MonoBehaviour
 {
@@ -19,7 +20,11 @@ public class ZombieActiveManager : MonoBehaviour
     {
         if (isFirstZombieSpawnTime)
         {
-            firstZombie.SetActive(true);
+            try
+            {
+                firstZombie.SetActive(true);
+            } catch (MissingReferenceException) { }
+
             isFirstZombieSpawnTime = false;
         }
 
@@ -34,11 +39,17 @@ public class ZombieActiveManager : MonoBehaviour
 
     public void ActiveFirstZombie()
     {
-
+        StartCoroutine(WaitAndActiveFirstZombie());
     }
 
     public void ActiveNormalZombie()
     {
         isZombieSpawnTime = true;
+    }
+
+    private IEnumerator WaitAndActiveFirstZombie()
+    {
+        yield return new WaitForSeconds(7.0f);
+        isFirstZombieSpawnTime = true;
     }
 }
