@@ -21,6 +21,8 @@ public class FirstZombie : MonoBehaviour
     private AudioSource heartbeat;
     [SerializeField] private GameObject ZombieSound;
 
+    [SerializeField] private TextTrigger offChasedTrigger;
+
     private float player_zombie_dist;
 
     private bool isPlayerCatched;
@@ -37,14 +39,17 @@ public class FirstZombie : MonoBehaviour
     private void FixedUpdate()
     {
         // Distance Zombie-Player
-        player_zombie_dist = Vector3.Distance(this.transform.position, target.position);
+        player_zombie_dist = Vector3.Distance(transform.position, target.position);
 
         // HeartBeatSound Pitch
         heartbeat.pitch = 1.0f + 2.0f / player_zombie_dist;
         anim.SetInteger("mode", 0);
 
         // Chase Player
-        if (!isPlayerCatched) agent.SetDestination(target.position);
+        if (!isPlayerCatched)
+        {
+            agent.SetDestination(target.position);
+        }
 
         // if Player Chatched, Start JumpScare
         if (!isPlayerCatched && player_zombie_dist < 1.5f)
@@ -62,7 +67,11 @@ public class FirstZombie : MonoBehaviour
         }
 
         // if Player Go To out of range, Disable This
-        if (player_zombie_dist > 15.0f) Destroy(gameObject);
+        if (player_zombie_dist > 8.0f || Mathf.Abs(target.position.y - transform.position.y) > 2.0f)
+        {
+            offChasedTrigger.TriggerTriggered();
+            Destroy(gameObject);
+        }
     }
 
     private void StartJumpScare()
