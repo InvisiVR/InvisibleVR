@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FadeIn : MonoBehaviour
 {
     [SerializeField] private Image Panel;
+    [SerializeField] private Material startSceneSkyboxMat;
+    [SerializeField] private Material defaultSkyboxMat;
     float time = 0f;
     float F_time = 5.0f;
 
@@ -16,6 +19,16 @@ public class FadeIn : MonoBehaviour
 
     private void FadeInBlack()
     {
+        switch (SceneManager.sceneCount)
+        {
+            case 0:
+                RenderSettings.skybox = startSceneSkyboxMat;
+                break;
+            case 1:
+            case 2:
+                RenderSettings.skybox = defaultSkyboxMat;
+                break;
+        }
         StartCoroutine(FadeInFlow());
     }
 

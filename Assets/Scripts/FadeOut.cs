@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class FadeOut : MonoBehaviour
 {
     [SerializeField] private Image Panel;
+
     [SerializeField] private int SceneNumToGo;
     float time = 0f;
     float F_time = 7.0f;
