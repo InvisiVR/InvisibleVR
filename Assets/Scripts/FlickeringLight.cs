@@ -73,7 +73,7 @@ public class FlickeringLight : MonoBehaviour
         }
     }
 
-    public void ButtonClicked()
+    public void ButtonClickSound()
     {
 
     }
