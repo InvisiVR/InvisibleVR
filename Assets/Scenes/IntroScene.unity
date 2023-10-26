@@ -4298,7 +4298,7 @@ PrefabInstance:
     - target: {fileID: 2384233805496479689, guid: 66179952774fcc340a58288be4736ccb,
         type: 3}
       propertyPath: textID
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2970131974655599349, guid: 66179952774fcc340a58288be4736ccb,
         type: 3}
@@ -73027,41 +73027,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1643992066}
     m_Modifications:
-    - target: {fileID: 96276406085080184, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 96276406085080184, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 72
-      objectReference: {fileID: 0}
     - target: {fileID: 6451651525582229930, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: source
       value: 
       objectReference: {fileID: 1418240081}
-    - target: {fileID: 7984340173796793576, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-<<<<<<< Updated upstream
-      propertyPath: SceneNumToGo
-      value: 2
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      propertyPath: F_time
-      value: 8
-=======
-      propertyPath: SceneNumToGo
-      value: 2
->>>>>>> e0b7e3eaaf79bc58b944afb49db466ddd98e49ab
-=======
-      propertyPath: SceneNumToGo
-      value: 2
->>>>>>> e0b7e3eaaf79bc58b944afb49db466ddd98e49ab
->>>>>>> Stashed changes
-      objectReference: {fileID: 0}
     - target: {fileID: 8136935271964306551, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_Name
@@ -73105,21 +73075,6 @@ PrefabInstance:
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
@@ -73189,19 +73144,9 @@ PrefabInstance:
       objectReference: {fileID: 413295039}
     - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
-      propertyPath: onTextShowed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CallDisappearDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
       propertyPath: onTextDisappeared.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 413295039}
-    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-      propertyPath: onTextDisappeared.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CallNextDialogue
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -101095,19 +101040,7 @@ PrefabInstance:
     - target: {fileID: 2384233805496479689, guid: 66179952774fcc340a58288be4736ccb,
         type: 3}
       propertyPath: delay
-<<<<<<< Updated upstream
       value: 3
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      value: 2
-=======
-      value: 3
->>>>>>> e0b7e3eaaf79bc58b944afb49db466ddd98e49ab
-=======
-      value: 3
->>>>>>> e0b7e3eaaf79bc58b944afb49db466ddd98e49ab
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2384233805496479689, guid: 66179952774fcc340a58288be4736ccb,
         type: 3}
