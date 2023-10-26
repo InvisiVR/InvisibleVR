@@ -153,10 +153,10 @@ MonoBehaviour:
   typewriterStartsAutomatically: 1
   animationLoop: 0
   timeScale: 0
-  _text: dsadsadsa
+  _text: 
   useDynamicScaling: 1
   referenceFontSize: 10
-  isResettingTimeOnNewText: 1
+  isResettingTimeOnNewText: 0
   useDefaultDatabases: 1
   databaseBehaviors: {fileID: 11400000, guid: ff06522733fc0a74e86fefe779f22410, type: 2}
   databaseAppearances: {fileID: 11400000, guid: b523a148f108e85419b210b49294932f,
@@ -181,10 +181,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useTypeWriter: 1
-  startTypewriterMode: 3
+  startTypewriterMode: 2
   hideAppearancesOnSkip: 0
   triggerEventsOnSkip: 0
-  resetTypingSpeedAtStartup: 1
+  resetTypingSpeedAtStartup: 0
   disappearanceOrientation: 0
   onTextShowed:
     m_PersistentCalls:
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 6186098815156425614}
-  SceneNumToGo: 0
+  SceneNumToGo: 2
 --- !u!1 &4184577798505174114
 GameObject:
   m_ObjectHideFlags: 0

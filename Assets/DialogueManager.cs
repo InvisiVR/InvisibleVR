@@ -61,6 +61,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(int ID)
     {
         curDialogueID = ID;
+        typer.StartShowingText();
         dialogueTMP.text = TMPBehavioursApplication(data_Dialog[curDialogueID]["Dialogue"].ToString(), data_Dialog[curDialogueID]["Mode"].ToString());
     }
 
