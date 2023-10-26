@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerType: 1
-  textID: 0
+  textID: 29
   delay: 1
   isTriggered: 0
 --- !u!114 &4825788821518630637

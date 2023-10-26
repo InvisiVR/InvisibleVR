@@ -72,4 +72,9 @@ public class FlickeringLight : MonoBehaviour
             FlickeringObjects[i].SetActive(!FlickeringObjects[i].activeSelf);
         }
     }
+
+    public void ButtonClicked()
+    {
+
+    }
 }

@@ -13,6 +13,18 @@ public class SceneMovement : MonoBehaviour
         SceneMovementStart();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            if (!isTriggered)
+            {
+                isTriggered = true;
+                StartCoroutine(FadeOutStart());
+            }
+        }
+    }
+
     public void SceneMovementStart()
     {
         if (!isTriggered)
