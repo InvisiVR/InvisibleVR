@@ -102,7 +102,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 32
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 1024
   m_textAlignment: 65535
@@ -153,7 +153,7 @@ MonoBehaviour:
   typewriterStartsAutomatically: 1
   animationLoop: 0
   timeScale: 0
-  _text: 
+  _text: dsadsadsa
   useDynamicScaling: 1
   referenceFontSize: 10
   isResettingTimeOnNewText: 1
@@ -431,8 +431,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 7390434372854959765}
-  startSceneSkyboxMat: {fileID: 2100000, guid: 17e916eec66154c49be7e5d37096aab9, type: 2}
-  defaultSkyboxMat: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &8136935271964306551
 GameObject:
   m_ObjectHideFlags: 0

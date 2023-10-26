@@ -16,6 +16,7 @@ public class FlickeringLight : MonoBehaviour
     public Renderer light_render1;
     public int enterCount = 0;
 
+    bool isClicked = false;
     public AudioSource aus;
     public AudioClip lightAudio;
 
@@ -73,8 +74,12 @@ public class FlickeringLight : MonoBehaviour
         }
     }
 
-    public void ButtonClickSound()
+    public void ButtonClickSoundPlay()
     {
-
+        if (!isClicked)
+        {
+            isClicked = true;
+            aus.Play();
+        }
     }
 }

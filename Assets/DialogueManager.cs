@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
     public float fadeInDelay;
     public float fadeOutDelay;
 
-    private int curDialogueID;
+    private int curDialogueID = 0;
 
     WaitForSeconds FadeInWaitForSeconds;
     WaitForSeconds FadeOutWaitForSeconds;
@@ -105,6 +105,7 @@ public class DialogueManager : MonoBehaviour
                 return "<wiggle a=2>" + dialog + "</wiggle>";
             case "bounce":
                 return "<bounce>" + dialog + "</bounce>";
+            case "":
             default:
                 return dialog;
         }

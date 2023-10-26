@@ -15,16 +15,9 @@ public class TextTrigger : MonoBehaviour
     {
         if(triggerType == TriggerType.localtionTrigger)
         {
-            if (!isTriggered)
+            if (other.tag == "Player")
             {
-                if (other.tag == "Player")
-                {
-                    GameManager.instance.curPhaseNum++;
-
-                    StartCoroutine(TriggerDelay());
-
-                    isTriggered = true;
-                }
+                Triggered();
             }
         }
     }
@@ -33,14 +26,19 @@ public class TextTrigger : MonoBehaviour
     {
         if(triggerType == TriggerType.InteractionTrigger || triggerType == TriggerType.OnChasedTrigger || triggerType == TriggerType.OffChasedTrigger)
         {
-            if (!isTriggered)
-            {
-                GameManager.instance.curPhaseNum++;
+            Triggered();
+        }
+    }
 
-                isTriggered = true;
+    public void Triggered()
+    {
+        if (!isTriggered)
+        {
+            GameManager.instance.curPhaseNum++;
 
-                StartCoroutine(TriggerDelay());
-            }
+            isTriggered = true;
+
+            StartCoroutine(TriggerDelay());
         }
     }
 
