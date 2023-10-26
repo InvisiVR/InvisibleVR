@@ -10,7 +10,6 @@ public class SenarioDoor : Door
 
     public bool isLocked = false;
     public bool isCabinetA = false;
-    public bool isLocker = false;
 
     public int doorNum;
 
@@ -59,7 +58,6 @@ public class SenarioDoor : Door
         {
             if (A)
             {
-                animator.SetBool("A", A);
                 if (isOpened)
                 {
                     //Close
@@ -76,7 +74,6 @@ public class SenarioDoor : Door
             }
             else if (B)
             {
-                animator.SetBool("B", B);
                 if (isOpened)
                 {
                     //Close
@@ -93,7 +90,6 @@ public class SenarioDoor : Door
             }
             else if (C)
             {
-                animator.SetBool("C", C);
                 if (isOpened)
                 {
                     //Close
@@ -110,7 +106,6 @@ public class SenarioDoor : Door
             }
             else if (D)
             {
-                animator.SetBool("D", D);
                 if (isOpened)
                 {
                     //Close
@@ -131,7 +126,6 @@ public class SenarioDoor : Door
     public override void DoorOpenClose()
     {
         animator.SetBool("isCabinetA", isCabinetA);
-        animator.SetBool("isLocker", isLocker);
         if (isLocked)
         {
             source.PlayOneShot(doorClips[Random.Range(2, 4)]);
@@ -157,7 +151,6 @@ public class SenarioDoor : Door
     public override void DoorOpenCloseLR()
     {
         animator.SetBool("isCabinetA", isCabinetA);
-        animator.SetBool("isLocker", isLocker);
         if (isLocked)
         {
             source.PlayOneShot(doorClips[Random.Range(2, 4)]);

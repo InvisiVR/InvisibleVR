@@ -70,11 +70,7 @@ public class FlickeringLight : MonoBehaviour
     {
         for (int i = 0; i < FlickeringObjects.Length; i++)
         {
-            FlickeringObjects[i].GetComponent<Light>().color = Color.black;
-            if (i == 1)
-            {
-                FlickeringObjects[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.black);
-            }
+            FlickeringObjects[i].SetActive(!FlickeringObjects[i].activeSelf);
         }
     }
 
