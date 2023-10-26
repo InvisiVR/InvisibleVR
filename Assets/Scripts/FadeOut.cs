@@ -10,7 +10,7 @@ public class FadeOut : MonoBehaviour
 
     [SerializeField] private int SceneNumToGo;
     float time = 0f;
-    float F_time = 7.0f;
+    float F_time = 4.0f;
 
     private void Awake()
     {
