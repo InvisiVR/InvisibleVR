@@ -25,7 +25,6 @@ public class ZombieActiveManager : MonoBehaviour
             try
             {
                 firstZombie.SetActive(true);
-                onChasedTrigger.TriggerTriggered();
             } catch (MissingReferenceException) { }
 
             isFirstZombieSpawnTime = false;
@@ -52,7 +51,8 @@ public class ZombieActiveManager : MonoBehaviour
 
     private IEnumerator WaitAndActiveFirstZombie()
     {
-        yield return new WaitForSeconds(7.5f);
+        yield return new WaitForSeconds(8f);
+        onChasedTrigger.TriggerTriggered();
         isFirstZombieSpawnTime = true;
     }
 }
