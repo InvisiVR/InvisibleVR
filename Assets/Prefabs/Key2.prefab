@@ -68,12 +68,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ad10e4113786ee546b5e5563829d2b45,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.045
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad10e4113786ee546b5e5563829d2b45,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.0005
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad10e4113786ee546b5e5563829d2b45,
         type: 3}
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4994596804135370860}
         m_TargetAssemblyTypeName: TextTrigger, Assembly-CSharp
         m_MethodName: TriggerTriggered
         m_Mode: 1
