@@ -3484,6 +3484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 406318765}
   SceneNumToGo: 0
+  F_time: 4
 --- !u!114 &406318765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12757,11 +12758,6 @@ PrefabInstance:
       propertyPath: rightRecoilBodyOfHand
       value: 
       objectReference: {fileID: 1021314939}
-    - target: {fileID: 3421288646806945885, guid: 75626972a31180e4aa78fa23a64defae,
-        type: 3}
-      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3910791348290799694, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_Name
@@ -18218,21 +18214,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key3
       objectReference: {fileID: 0}
-    - target: {fileID: 4399067298022134370, guid: 62718f5000ebbf64b943e348f141c41c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8872098561075055865, guid: 62718f5000ebbf64b943e348f141c41c,
-        type: 3}
-      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62718f5000ebbf64b943e348f141c41c, type: 3}
+--- !u!114 &1774824573192914899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4830896740300323443, guid: 62718f5000ebbf64b943e348f141c41c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1774824573192914898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f4b273c04d0bb4e8c0f9cf1298a54d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1836551982401424696
 GameObject:
   m_ObjectHideFlags: 0
@@ -18648,18 +18646,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 85664468199106752, guid: 3bcf2713aa14e7842bda6a7f4f549bb1,
         type: 3}
-      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1774824573192914899}
     - target: {fileID: 5124236170039326299, guid: 3bcf2713aa14e7842bda6a7f4f549bb1,
         type: 3}
       propertyPath: m_Name
       value: Key4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5124236170039326299, guid: 3bcf2713aa14e7842bda6a7f4f549bb1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8168255209019118659, guid: 3bcf2713aa14e7842bda6a7f4f549bb1,
         type: 3}
@@ -19156,16 +19149,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Key1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3156463271867468299, guid: 91ea811d0db3d204285fea010ca100b1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918071808618517648, guid: 91ea811d0db3d204285fea010ca100b1,
-        type: 3}
-      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20086,18 +20069,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 620351575936891782, guid: 766b4ae3992b61b43a04e84002b174b4,
         type: 3}
-      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1774824573192914899}
     - target: {fileID: 6130599646930151318, guid: 766b4ae3992b61b43a04e84002b174b4,
         type: 3}
       propertyPath: m_Name
       value: Key2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6130599646930151318, guid: 766b4ae3992b61b43a04e84002b174b4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9164922415790653084, guid: 766b4ae3992b61b43a04e84002b174b4,
         type: 3}

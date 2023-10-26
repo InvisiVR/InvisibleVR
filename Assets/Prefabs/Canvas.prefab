@@ -153,8 +153,8 @@ MonoBehaviour:
   typewriterStartsAutomatically: 1
   animationLoop: 0
   timeScale: 0
-  _text: dsadsadsa
-  useDynamicScaling: 1
+  _text: 
+  useDynamicScaling: 0
   referenceFontSize: 10
   isResettingTimeOnNewText: 0
   useDefaultDatabases: 1
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 6186098815156425614}
   SceneNumToGo: 2
-  F_time: 4
+  F_time: 7
 --- !u!1 &4184577798505174114
 GameObject:
   m_ObjectHideFlags: 0

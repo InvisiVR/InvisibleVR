@@ -252,7 +252,7 @@ MonoBehaviour:
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4994596804135370860}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextTrigger, Assembly-CSharp
         m_MethodName: TriggerTriggered
         m_Mode: 1

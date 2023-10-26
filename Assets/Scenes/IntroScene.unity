@@ -4298,7 +4298,7 @@ PrefabInstance:
     - target: {fileID: 2384233805496479689, guid: 66179952774fcc340a58288be4736ccb,
         type: 3}
       propertyPath: textID
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2970131974655599349, guid: 66179952774fcc340a58288be4736ccb,
         type: 3}
@@ -22883,7 +22883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTMP: {fileID: 1382959228}
   typer: {fileID: 1382959227}
-  fadeInDelay: 4
+  fadeInDelay: 2
   fadeOutDelay: 0.5
 --- !u!4 &413295040
 Transform:
@@ -73027,11 +73027,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1643992066}
     m_Modifications:
+    - target: {fileID: 96276406085080184, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 96276406085080184, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 6451651525582229930, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: source
       value: 
       objectReference: {fileID: 1418240081}
+    - target: {fileID: 7984340173796793576, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: F_time
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8136935271964306551, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_Name
@@ -101040,7 +101055,7 @@ PrefabInstance:
     - target: {fileID: 2384233805496479689, guid: 66179952774fcc340a58288be4736ccb,
         type: 3}
       propertyPath: delay
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2384233805496479689, guid: 66179952774fcc340a58288be4736ccb,
         type: 3}
@@ -101051,6 +101066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TextTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970131974655599349, guid: 66179952774fcc340a58288be4736ccb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4745770267659492002, guid: 66179952774fcc340a58288be4736ccb,
         type: 3}
