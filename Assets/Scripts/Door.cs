@@ -7,7 +7,6 @@ public class Door : MonoBehaviour
 {
     public bool isLeft;
     public bool isOpened;
-    public bool isLocker;
     public bool A, B, C, D;
 
     [Header("Animations")]
@@ -26,7 +25,6 @@ public class Door : MonoBehaviour
 
     public virtual void Locker()
     {
-        animator.SetBool("isLocker", isLocker);
         if (A)
         {
             if (isOpened)

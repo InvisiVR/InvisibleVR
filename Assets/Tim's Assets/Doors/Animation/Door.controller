@@ -541,6 +541,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: isCabinetA
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isLocker
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 974934644399840290}
   m_Solo: 0
@@ -1091,6 +1094,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: isCabinetA
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isLocker
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2688636025622233928}
   m_Solo: 0
@@ -1282,6 +1288,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: isCabinetA
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isLocker
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3726864816891717364}
