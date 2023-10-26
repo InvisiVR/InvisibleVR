@@ -130,6 +130,7 @@ public class SenarioDoor : Door
 
     public override void DoorOpenClose()
     {
+        animator.SetBool("isLocker", isLocker);
         animator.SetBool("isCabinetA", isCabinetA);
         animator.SetBool("isLocker", isLocker);
         if (isLocked)
@@ -156,6 +157,7 @@ public class SenarioDoor : Door
 
     public override void DoorOpenCloseLR()
     {
+        animator.SetBool("isLocker", isLocker);
         animator.SetBool("isCabinetA", isCabinetA);
         animator.SetBool("isLocker", isLocker);
         if (isLocked)
