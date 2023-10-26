@@ -10,7 +10,7 @@ public class FadeIn : MonoBehaviour
     [SerializeField] private Material startSceneSkyboxMat;
     [SerializeField] private Material defaultSkyboxMat;
     float time = 0f;
-    float F_time = 5.0f;
+    float F_time = 3.0f;
 
     private void Awake()
     {
