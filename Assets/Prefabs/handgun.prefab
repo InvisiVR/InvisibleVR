@@ -865,8 +865,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerType: 1
-  textID: 0
-  delay: 1
+  textID: 24
+  delay: 0.5
   isTriggered: 0
 --- !u!1 &4238227703971173701
 GameObject:

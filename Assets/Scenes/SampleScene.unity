@@ -12758,6 +12758,16 @@ PrefabInstance:
       propertyPath: rightRecoilBodyOfHand
       value: 
       objectReference: {fileID: 1021314939}
+    - target: {fileID: 1370903987814527140, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: delay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1370903987814527140, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: textID
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 3910791348290799694, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_Name
