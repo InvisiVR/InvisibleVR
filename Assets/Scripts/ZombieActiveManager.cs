@@ -9,6 +9,8 @@ public class ZombieActiveManager : MonoBehaviour
     public bool isFirstZombieSpawnTime = false;
     public bool isZombieSpawnTime = false;
 
+    [SerializeField] private TextTrigger onChasedTrigger;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class ZombieActiveManager : MonoBehaviour
             try
             {
                 firstZombie.SetActive(true);
+                onChasedTrigger.TriggerTriggered();
             } catch (MissingReferenceException) { }
 
             isFirstZombieSpawnTime = false;
@@ -49,7 +52,7 @@ public class ZombieActiveManager : MonoBehaviour
 
     private IEnumerator WaitAndActiveFirstZombie()
     {
-        yield return new WaitForSeconds(7.0f);
+        yield return new WaitForSeconds(7.5f);
         isFirstZombieSpawnTime = true;
     }
 }
