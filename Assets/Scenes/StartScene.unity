@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1206,12 +1206,12 @@ PrefabInstance:
     - target: {fileID: 6282630012355691467, guid: 2dbd2c2f1c5dbb844948302039e80fe2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.375
+      value: 26.376171
       objectReference: {fileID: 0}
     - target: {fileID: 6282630012355691467, guid: 2dbd2c2f1c5dbb844948302039e80fe2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.507
+      value: 3.5070038
       objectReference: {fileID: 0}
     - target: {fileID: 6282630012355691467, guid: 2dbd2c2f1c5dbb844948302039e80fe2,
         type: 3}
@@ -1221,32 +1221,32 @@ PrefabInstance:
     - target: {fileID: 6282630012355691467, guid: 2dbd2c2f1c5dbb844948302039e80fe2,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7071068
+      value: -0.7071036
       objectReference: {fileID: 0}
     - target: {fileID: 6282630012355691467, guid: 2dbd2c2f1c5dbb844948302039e80fe2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.0021283922
       objectReference: {fileID: 0}
     - target: {fileID: 6282630012355691467, guid: 2dbd2c2f1c5dbb844948302039e80fe2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.7071036
       objectReference: {fileID: 0}
     - target: {fileID: 6282630012355691467, guid: 2dbd2c2f1c5dbb844948302039e80fe2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.0021283932
       objectReference: {fileID: 0}
     - target: {fileID: 6282630012355691467, guid: 2dbd2c2f1c5dbb844948302039e80fe2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 0.345
       objectReference: {fileID: 0}
     - target: {fileID: 6282630012355691467, guid: 2dbd2c2f1c5dbb844948302039e80fe2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90.65401
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 6282630012355691467, guid: 2dbd2c2f1c5dbb844948302039e80fe2,
         type: 3}
@@ -2396,6 +2396,7 @@ GameObject:
   - component: {fileID: 286040733}
   - component: {fileID: 286040736}
   - component: {fileID: 286040737}
+  - component: {fileID: 286040738}
   m_Layer: 5
   m_Name: GameStartBtn
   m_TagString: Untagged
@@ -12818,6 +12819,7 @@ GameObject:
   - component: {fileID: 1800935483}
   - component: {fileID: 1800935486}
   - component: {fileID: 1800935487}
+  - component: {fileID: 1800935488}
   m_Layer: 5
   m_Name: GameExitBtn
   m_TagString: Untagged
@@ -12973,10 +12975,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlickeringObjects:
-  - {fileID: 1721969147}
+  - {fileID: 1608044341}
   - {fileID: 1452816316}
   - {fileID: 1608044341}
-  light1: {fileID: 0}
+  light1: {fileID: 1608044344}
   light2: {fileID: 0}
   minTime: 0.2
   maxTime: 0.5
