@@ -17761,6 +17761,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669257379831123540, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
+      propertyPath: isResettingTimeOnNewText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669257379831123540, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
       propertyPath: typewriterStartsAutomatically
       value: 1
       objectReference: {fileID: 0}
@@ -17957,6 +17962,19 @@ PrefabInstance:
     - target: {fileID: 8605637729678949735, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_IgnoreReversedGraphics
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+<<<<<<< Updated upstream
+      propertyPath: hideAppearancesOnSkip
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+=======
+>>>>>>> Stashed changes
+      propertyPath: resetTypingSpeedAtStartup
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,

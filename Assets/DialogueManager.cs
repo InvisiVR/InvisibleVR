@@ -54,6 +54,7 @@ public class DialogueManager : MonoBehaviour
 
     public void CallDialogue(int ID)
     {
+        StopAllCoroutines();
         GameManager.instance.curPhaseNum++;
         StartDialogue(ID);
     }
@@ -101,11 +102,15 @@ public class DialogueManager : MonoBehaviour
             case "dangle":
                 return "<dangle>" + dialog + "</dangle>";
             case "shake":
-                return "<shake a=5>" + dialog + "</shake>";
+                return "<shake a=3>" + dialog + "</shake>";
             case "wiggle":
-                return "<wiggle a=2>" + dialog + "</wiggle>";
+                return "<wiggle>" + dialog + "</wiggle>";
             case "bounce":
                 return "<bounce>" + dialog + "</bounce>";
+            case "swing":
+                return "<swing>" + dialog + "</swing>";
+            case "incr":
+                return "<incr>" + dialog + "</incr>";
             case "":
             default:
                 return dialog;
