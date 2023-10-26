@@ -342,6 +342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 6186098815156425614}
   SceneNumToGo: 2
+  F_time: 4
 --- !u!1 &4184577798505174114
 GameObject:
   m_ObjectHideFlags: 0
