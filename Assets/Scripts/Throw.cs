@@ -7,6 +7,7 @@ public class Throw : MonoBehaviour
     private int count = 0;
 
     public GameObject throw_object;
+    public GameObject throw_object1;
     public AudioSource aus;
     public AudioClip paper;
 
@@ -21,6 +22,9 @@ public class Throw : MonoBehaviour
         {
             throw_object.SetActive(true);
             throw_object.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 400
+                * Time.deltaTime, ForceMode.Impulse);
+            throw_object1.SetActive(true);
+            throw_object1.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 350
                 * Time.deltaTime, ForceMode.Impulse);
             aus.clip = paper;
             aus.PlayDelayed(0.5f);
