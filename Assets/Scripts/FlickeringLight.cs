@@ -26,7 +26,7 @@ public class FlickeringLight : MonoBehaviour
         timer = Random.Range(minTime, maxTime);
         if (light_render != null) light_render.material.EnableKeyword("_EMISSION");
         if (light_render1 != null) light_render1.material.EnableKeyword("_EMISSION");
-        //if(FlickeringObjects[1] != null) FlickeringObjects[1].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+        if(FlickeringObjects[1] != null) FlickeringObjects[1].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
     }
 
     private void OnTriggerStay(Collider other)
