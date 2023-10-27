@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 3880701856927541016}
   - component: {fileID: 7238080163018099220}
   m_Layer: 0
-  m_Name: CabinetASenario
+  m_Name: binetASenario 1 1
   m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6cc4537865ae1479b9e7ac12ab172909, type: 3}
   socketInteractor1: {fileID: 7719350618730124475}
   socketInteractor2: {fileID: 7719350618730124475}
-  isLocked: 0
+  isLocked: 1
   isCabinetA: 1
   isLocker: 0
   doorNum: 0
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6cc4537865ae1479b9e7ac12ab172909, type: 3}
   socketInteractor1: {fileID: 8092834598456633244}
   socketInteractor2: {fileID: 8092834598456633244}
-  isLocked: 0
+  isLocked: 1
   isCabinetA: 1
   isLocker: 0
   doorNum: 0

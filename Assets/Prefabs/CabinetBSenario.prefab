@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 3880701856927541016}
   - component: {fileID: 7238080163018099220}
   m_Layer: 0
-  m_Name: CabinetASenario
+  m_Name: CabinetBSenario
   m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,7 +51,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3291270193854843089}
-  m_Mesh: {fileID: -693619242474993780, guid: afd3d94cfddc6c542b2ecccee5751c78, type: 3}
+  m_Mesh: {fileID: -802972414446302934, guid: 8cfe79d98f9cc4a41bc2b3e6b020ae98, type: 3}
 --- !u!23 &5858442847701574214
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -435,7 +435,7 @@ Transform:
   m_GameObject: {fileID: 4748490972571487714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.62460935, y: 1.2501147, z: 0.22218697}
+  m_LocalPosition: {x: 0.55, y: 1.2501147, z: 0.22218697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -450,7 +450,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4748490972571487714}
-  m_Mesh: {fileID: -4322446403960396564, guid: afd3d94cfddc6c542b2ecccee5751c78, type: 3}
+  m_Mesh: {fileID: 1975794111291895548, guid: 8cfe79d98f9cc4a41bc2b3e6b020ae98, type: 3}
 --- !u!23 &5630352383979077148
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -963,7 +963,7 @@ Transform:
   m_GameObject: {fileID: 7353422513978991641}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6241504, y: 1.2501144, z: 0.22218697}
+  m_LocalPosition: {x: -0.55, y: 1.2501144, z: 0.22218697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -978,7 +978,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7353422513978991641}
-  m_Mesh: {fileID: -4461170765226380788, guid: afd3d94cfddc6c542b2ecccee5751c78, type: 3}
+  m_Mesh: {fileID: 7755580603218478208, guid: 8cfe79d98f9cc4a41bc2b3e6b020ae98, type: 3}
 --- !u!23 &3156535180433703160
 MeshRenderer:
   m_ObjectHideFlags: 0
