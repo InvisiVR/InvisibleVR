@@ -70,7 +70,8 @@ public class FirstZombie : MonoBehaviour
         if (player_zombie_dist > 13.0f || Mathf.Abs(target.position.y - transform.position.y) > 2.0f)
         {
             offChasedTrigger.TriggerTriggered();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            Destroy(gameObject, 20f);
         }
     }
 

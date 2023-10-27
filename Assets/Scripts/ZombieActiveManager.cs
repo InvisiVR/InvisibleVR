@@ -51,8 +51,8 @@ public class ZombieActiveManager : MonoBehaviour
 
     private IEnumerator WaitAndActiveFirstZombie()
     {
-        yield return new WaitForSeconds(15f);
-        onChasedTrigger.TriggerTriggered();
+        yield return new WaitForSeconds(5f);
         isFirstZombieSpawnTime = true;
+        onChasedTrigger.TriggerTriggered();
     }
 }
