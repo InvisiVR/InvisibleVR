@@ -7,10 +7,13 @@ using UnityEngine.SceneManagement;
 public class FadeOut : MonoBehaviour
 {
     [SerializeField] private Image Panel;
+    [SerializeField] private AudioSource textSound;
 
     [SerializeField] private int SceneNumToGo;
-    float time = 0f;
-    [SerializeField] float F_time = 4.0f;
+
+    float time_fade = 0f;
+    float time_sound = 0f;
+    [SerializeField] float F_time;
 
     private void Awake()
     {
@@ -28,16 +31,19 @@ public class FadeOut : MonoBehaviour
         alpha.a = 0;
         Panel.gameObject.SetActive(true);
 
-        time = 0f;
         while (alpha.a < 1f)
         {
-            time += Time.deltaTime / F_time;
-            alpha.a = Mathf.Lerp(0, 1, time);
+            time_fade += Time.deltaTime / F_time;
+            alpha.a = Mathf.Lerp(0, 1, time_fade);
             Panel.color = alpha;
+
+            time_sound += Time.deltaTime / F_time;
+            textSound.volume = Mathf.Lerp(1, 0, time_sound);
+
             yield return null;
         }
 
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(2.0f);
 
         SceneManager.LoadScene(SceneNumToGo);
     }
