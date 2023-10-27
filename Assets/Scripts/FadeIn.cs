@@ -27,6 +27,8 @@ public class FadeIn : MonoBehaviour
         Panel.gameObject.SetActive(true);
 
         time = 0f;
+
+        yield return new WaitForSeconds(1.0f);
         while (alpha.a > 0f)
         {
             time += Time.deltaTime / F_time;
