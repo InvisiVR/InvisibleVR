@@ -551,8 +551,8 @@ MonoBehaviour:
   C: 0
   D: 0
   doorClips:
+  - {fileID: 8300000, guid: 6cc4537865ae1479b9e7ac12ab172909, type: 3}
   - {fileID: 8300000, guid: b88eb643c13ba4470b51a26e2823b565, type: 3}
-  - {fileID: 8300000, guid: ba0dd6d8b717e403ca0fa3bdebe97dad, type: 3}
   - {fileID: 8300000, guid: 6ed0f8509e9e44272a85f74fdc61879b, type: 3}
   - {fileID: 8300000, guid: c70d84ab81270450ca59ba4554ce5a6d, type: 3}
   - {fileID: 8300000, guid: 7eff06a76417f854fae31e35dc13d8d1, type: 3}
@@ -1184,8 +1184,8 @@ MonoBehaviour:
   C: 0
   D: 0
   doorClips:
+  - {fileID: 8300000, guid: 6cc4537865ae1479b9e7ac12ab172909, type: 3}
   - {fileID: 8300000, guid: b88eb643c13ba4470b51a26e2823b565, type: 3}
-  - {fileID: 8300000, guid: ba0dd6d8b717e403ca0fa3bdebe97dad, type: 3}
   - {fileID: 8300000, guid: 6ed0f8509e9e44272a85f74fdc61879b, type: 3}
   - {fileID: 8300000, guid: c70d84ab81270450ca59ba4554ce5a6d, type: 3}
   - {fileID: 8300000, guid: 7eff06a76417f854fae31e35dc13d8d1, type: 3}
