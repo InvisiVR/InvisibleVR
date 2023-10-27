@@ -26,7 +26,6 @@ public class FlickeringLight : MonoBehaviour
         timer = Random.Range(minTime, maxTime);
         if (light_render != null) light_render.material.EnableKeyword("_EMISSION");
         if (light_render1 != null) light_render1.material.EnableKeyword("_EMISSION");
-        if(FlickeringObjects[1] != null) FlickeringObjects[1].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
     }
 
     private void OnTriggerStay(Collider other)
@@ -69,6 +68,7 @@ public class FlickeringLight : MonoBehaviour
 
     public void LightOnOff()
     {
+        if (FlickeringObjects[1] != null) FlickeringObjects[1].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
         FlickeringObjects[0].GetComponent<Light>().color = new Color32(245, 220, 226, 255);
         FlickeringObjects[1].GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color32(191, 171, 138, 255));
         FlickeringObjects[2].GetComponent<Light>().color = new Color32(238, 233, 221, 255);
