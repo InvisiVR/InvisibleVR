@@ -17,7 +17,7 @@ public class Drawer : MonoBehaviour
 
     public int drawerNum;
 
-    private void OnObjectAttached(SelectEnterEventArgs args)
+   /* private void OnObjectAttached(SelectEnterEventArgs args)
     {
         if (args.interactableObject.transform.GetComponent<Key>().keyNum == drawerNum) DrawerUnlock(drawerNum);
     }
@@ -25,7 +25,7 @@ public class Drawer : MonoBehaviour
     private void OnObjectDetached(SelectExitEventArgs args)
     {
         Debug.Log("소켓에서 오브젝트 제거: " + args.interactableObject.transform.name);
-    }
+    }*/
 
     void Start()
     {
