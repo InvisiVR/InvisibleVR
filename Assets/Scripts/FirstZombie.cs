@@ -24,6 +24,7 @@ public class FirstZombie : MonoBehaviour
     [SerializeField] private TextTrigger offChasedTrigger;
 
     private float player_zombie_dist;
+    private float canDestroyTime = 10.0f;
 
     private bool isPlayerCatched;
 
@@ -34,6 +35,7 @@ public class FirstZombie : MonoBehaviour
         heartbeat = HeartBeatSound.GetComponent<AudioSource>();
         agent.speed = 0.5f;
         isPlayerCatched = false;
+        anim.SetInteger("mode", 0);
     }
 
     private void FixedUpdate()
@@ -43,7 +45,6 @@ public class FirstZombie : MonoBehaviour
 
         // HeartBeatSound Pitch
         heartbeat.pitch = 1.0f + 2.0f / player_zombie_dist;
-        anim.SetInteger("mode", 0);
 
         // Chase Player
         if (!isPlayerCatched)
@@ -66,8 +67,9 @@ public class FirstZombie : MonoBehaviour
             agent.enabled = false;
         }
 
+        canDestroyTime -= Time.deltaTime;
         // if Player Go To out of range, Disable This
-        if (player_zombie_dist > 13.0f || Mathf.Abs(target.position.y - transform.position.y) > 2.0f)
+        if (canDestroyTime < 0 && (player_zombie_dist > 13.0f || Mathf.Abs(target.position.y - transform.position.y) > 2.0f))
         {
             offChasedTrigger.TriggerTriggered();
             gameObject.SetActive(false);

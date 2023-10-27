@@ -5,7 +5,7 @@ using System;
 
 public class ZombieActiveManager : MonoBehaviour
 {
-    [SerializeField] private GameObject firstZombie, zombie1, zombie2, zombie3;
+    [SerializeField] private GameObject firstZombie, zombie1, zombie2;
     public bool isFirstZombieSpawnTime = false;
     public bool isZombieSpawnTime = false;
 
@@ -34,7 +34,7 @@ public class ZombieActiveManager : MonoBehaviour
         {
             zombie1.SetActive(true);
             zombie2.SetActive(true);
-            zombie3.SetActive(true);
+
             isZombieSpawnTime = false;
         }
     }
@@ -46,12 +46,18 @@ public class ZombieActiveManager : MonoBehaviour
 
     public void ActiveNormalZombie()
     {
+        StartCoroutine(WaitAndActiveNormalZombie());
+    }
+
+    private IEnumerator WaitAndActiveNormalZombie()
+    {
+        yield return new WaitForSeconds(15f);
         isZombieSpawnTime = true;
     }
 
     private IEnumerator WaitAndActiveFirstZombie()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(16f);
         isFirstZombieSpawnTime = true;
         onChasedTrigger.TriggerTriggered();
     }

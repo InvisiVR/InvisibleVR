@@ -262,7 +262,7 @@ public class Zombies : MonoBehaviour
         HeartBeatSound.SetActive(false);
         ZombieSound.SetActive(false);
 
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(30.0f);
 
         // Respawn
         //while (Vector3.Distance(curPatrolSpot, target.position) < 15.0f) curPatrolSpot = patrolSpot[Random.Range(0, 4)];
