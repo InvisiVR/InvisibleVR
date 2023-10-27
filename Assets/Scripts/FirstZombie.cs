@@ -69,10 +69,10 @@ public class FirstZombie : MonoBehaviour
 
         canDestroyTime -= Time.deltaTime;
         // if Player Go To out of range, Disable This
-        if (canDestroyTime < 0 && (player_zombie_dist > 13.0f || Mathf.Abs(target.position.y - transform.position.y) > 2.0f))
+        if (canDestroyTime < 0 && (player_zombie_dist > 20.0f || Mathf.Abs(target.position.y - transform.position.y) > 2.0f))
         {
             offChasedTrigger.TriggerTriggered();
-            gameObject.SetActive(false);
+            canDestroyTime = 9999.0f;
             Destroy(gameObject, 20f);
         }
     }
