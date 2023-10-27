@@ -13,9 +13,7 @@ public class GameManager : MonoBehaviour
     public float expectPlayTime; //초 단위 계산
 
     //진행정보 = Dialogue Proceed Num;
-    [HideInInspector]
     public int curPhaseNum = 0;
-    [HideInInspector]
     public int totalPhaseNum = 0;
 
     private void Awake()
