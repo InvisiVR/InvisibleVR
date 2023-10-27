@@ -67,7 +67,7 @@ public class FirstZombie : MonoBehaviour
         }
 
         // if Player Go To out of range, Disable This
-        if (player_zombie_dist > 8.0f || Mathf.Abs(target.position.y - transform.position.y) > 2.0f)
+        if (player_zombie_dist > 13.0f || Mathf.Abs(target.position.y - transform.position.y) > 2.0f)
         {
             offChasedTrigger.TriggerTriggered();
             Destroy(gameObject);
