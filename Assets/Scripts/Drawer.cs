@@ -15,15 +15,7 @@ public class Drawer : MonoBehaviour
     private AudioSource source;
     public AudioClip[] drawerClips;
 
-    public XRSocketInteractor socketInteractor1;
     public int drawerNum;
-
-    private void Awake()
-    {
-        // 이벤트 리스너 등록
-        socketInteractor1.selectEntered.AddListener(OnObjectAttached);
-        socketInteractor1.selectExited.AddListener(OnObjectDetached);
-    }
 
     private void OnObjectAttached(SelectEnterEventArgs args)
     {
