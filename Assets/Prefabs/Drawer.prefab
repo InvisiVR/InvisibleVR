@@ -1310,6 +1310,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d2167dda50499e04593f2e0d27e41cd0, type: 3}
   - {fileID: 8300000, guid: ba0dd6d8b717e403ca0fa3bdebe97dad, type: 3}
   - {fileID: 8300000, guid: 6ed0f8509e9e44272a85f74fdc61879b, type: 3}
+  - {fileID: 8300000, guid: 6ed0f8509e9e44272a85f74fdc61879b, type: 3}
+  - {fileID: 8300000, guid: dd532fdb2a61e4cc5bc727f3b32a69a8, type: 3}
+  - {fileID: 8300000, guid: ac85bfec96fb8214a990251398046932, type: 3}
+  - {fileID: 8300000, guid: dd532fdb2a61e4cc5bc727f3b32a69a8, type: 3}
   drawerNum: 0
 --- !u!82 &8717153109363797575
 AudioSource:
