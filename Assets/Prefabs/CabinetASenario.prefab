@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 3880701856927541016}
   - component: {fileID: 7238080163018099220}
   m_Layer: 0
-  m_Name: CabinetSenario
+  m_Name: CabinetASenario
   m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
