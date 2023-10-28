@@ -16,9 +16,6 @@ public class GameManager : MonoBehaviour
     public int curPhaseNum = 0;
     public int totalPhaseNum = 0;
 
-    [HideInInspector]
-    public List<Dictionary<string, object>> data_Dialog;
-
     private void Awake()
     {
         if (instance == null)
@@ -30,22 +27,11 @@ public class GameManager : MonoBehaviour
             Destroy(instance);
         }
         DontDestroyOnLoad(instance);
-
     }
 
-    private void Start()
+    void Start()
     {
         startTime = Time.time;
-
-        data_Dialog = CSVReader.Read("Dialogues");
-
-        for (int i = 0; i < data_Dialog.Count; i++)
-        {
-            if (data_Dialog[i]["Chain"].ToString() == "0")
-            {
-                totalPhaseNum++;
-            }
-        }
     }
 
     private void Update()
