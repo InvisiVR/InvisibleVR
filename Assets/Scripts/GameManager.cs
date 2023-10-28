@@ -56,20 +56,26 @@ public class GameManager : MonoBehaviour
         Debug.Log("현재 플레이 타임: " + currentTime + "초 / 게임 진행 시간 비율: " + currentTime / expectPlayTime * 100 + "%");
         Debug.Log("게임 진행도: " + curPhaseNum / totalPhaseNum * 100 + "%");
 
-        if(currentTime / expectPlayTime * 10 > curPhaseNum / totalPhaseNum * 100)//현재 진행비율 
-        {
+        float percentA = currentTime / expectPlayTime * 100;
+        float percentB = curPhaseNum / totalPhaseNum * 100;
 
-        }
+        float percentdiff = percentA - percentB;//최대 100, 최소 -100인 percentdiff의 값을 최대 1, 최소 0으로 변환해주는 함수 이 아래에 작성해줘
 
-        //너무 느리면 -> 쉽게 만드는 것으로 일단 설정하고, -> 후에 개발
+        float normalizedValue = NormalizePercentDiff(percentdiff);
 
-        //현재 진행 정도 -> 100%
-
-        //시간별 진행 정도 -> 0%
+        // normalizedValue를 출력하거나 다른 작업에 활용
+        Debug.Log("Normalized Value: " + normalizedValue);
     }
 
-    private void UserResponsePostProcessingControl()
+    private float NormalizePercentDiff(float percentdiff)
     {
+        // percentdiff 값을 0에서 1 사이의 범위로 변환
+        if (percentdiff > 100) percentdiff = 100;
+        if (percentdiff < -100) percentdiff = -100;
 
+        // percentdiff 값을 0에서 1 사이의 범위로 매핑
+        float normalizedValue = (percentdiff + 100) / 200;
+
+        return normalizedValue;
     }
 }
