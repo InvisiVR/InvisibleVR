@@ -17,12 +17,12 @@ GameObject:
   - component: {fileID: 4616639353162418442}
   - component: {fileID: 8400318577267995021}
   - component: {fileID: 5034055581219734521}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Toilet_partition_door
   m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5210339529525394428
 Transform:

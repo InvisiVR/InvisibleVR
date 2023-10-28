@@ -13,6 +13,7 @@ public class Toilet : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         source = GetComponent<AudioSource>();
+        animator.SetBool("open", isOpened);
     }
     public void ToiletOpenClose()
     {
