@@ -7,6 +7,7 @@ public class Drawer : MonoBehaviour
 {
     public bool[] isLocked = { false, true, true, true, true };
     public bool[] isOpened = { false, false, false, false, false };
+    public bool existInteractionObject = false;
 
     [Header("Animations")]
     Animator animator;
@@ -52,6 +53,10 @@ public class Drawer : MonoBehaviour
                 //Open
                 source.PlayOneShot(drawerClips[0]);
                 isOpened[num] = true;
+                if (existInteractionObject)
+                {
+                    SetInteractionObject();
+                }
             }
             animator.SetBool("isDrawerOpened" + num, isOpened[num]);
         }
@@ -61,5 +66,22 @@ public class Drawer : MonoBehaviour
     {
         isLocked[num] = false;
         source.PlayOneShot(drawerClips[Random.Range(5, 7)]);
+    }
+
+    [System.Obsolete]
+    public void SetInteractionObject()
+    {
+        if (this.gameObject == GameObject.Find("Drawer_Key1"))
+        {
+            GameObject.Find("InteractionObjects").transform.FindChild("Key1").gameObject.SetActive(true);
+        }
+        if (this.gameObject == GameObject.Find("Drawer_Key2"))
+        {
+            GameObject.Find("InteractionObjects").transform.FindChild("Key2").gameObject.SetActive(true);
+        }
+        if (this.gameObject == GameObject.Find("Drawer_Key3"))
+        {
+            GameObject.Find("InteractionObjects").transform.FindChild("Key3").gameObject.SetActive(true);
+        }
     }
 }

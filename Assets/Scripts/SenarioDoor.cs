@@ -13,6 +13,7 @@ public class SenarioDoor : Door
     public bool isLocker = false;
 
     public int doorNum;
+    private bool existInteractionObject = false;
 
     private void Awake()
     {
@@ -39,6 +40,7 @@ public class SenarioDoor : Door
     {
         isLocked = false;
         source.PlayOneShot(doorClips[Random.Range(5, 7)]);
+        existInteractionObject = true;
         Debug.Log("Unlock Success");
     }
 
@@ -71,6 +73,10 @@ public class SenarioDoor : Door
                     //Open
                     source.PlayOneShot(doorClips[0]);
                     isOpened = true;
+                    if (existInteractionObject)
+                    {
+                        SetInteractionObject();
+                    }
                 }
                 animator.SetBool("open", isOpened);
             }
@@ -88,6 +94,10 @@ public class SenarioDoor : Door
                     //Open
                     source.PlayOneShot(doorClips[0]);
                     isOpened = true;
+                    if (existInteractionObject)
+                    {
+                        SetInteractionObject();
+                    }
                 }
                 animator.SetBool("open", isOpened);
             }
@@ -105,6 +115,10 @@ public class SenarioDoor : Door
                     //Open
                     source.PlayOneShot(doorClips[0]);
                     isOpened = true;
+                    if (existInteractionObject)
+                    {
+                        SetInteractionObject();
+                    }
                 }
                 animator.SetBool("open", isOpened);
             }
@@ -122,6 +136,10 @@ public class SenarioDoor : Door
                     //Open
                     source.PlayOneShot(doorClips[0]);
                     isOpened = true;
+                    if (existInteractionObject)
+                    {
+                        SetInteractionObject();
+                    }
                 }
                 animator.SetBool("open", isOpened);
             }
@@ -149,6 +167,10 @@ public class SenarioDoor : Door
                 //Open
                 source.PlayOneShot(doorClips[0]);
                 isOpened = true;
+                if (existInteractionObject)
+                {
+                    SetInteractionObject();
+                }
             }
             animator.SetBool("open", isOpened);
         }
@@ -178,6 +200,10 @@ public class SenarioDoor : Door
                     //Open
                     source.PlayOneShot(doorClips[0]);
                     isOpened = true;
+                    if (existInteractionObject)
+                    {
+                        SetInteractionObject();
+                    }
                 }
             }
             else
@@ -194,11 +220,27 @@ public class SenarioDoor : Door
                     //Open
                     source.PlayOneShot(doorClips[0]);
                     isOpened = true;
+                    if (existInteractionObject)
+                    {
+                        SetInteractionObject();
+                    }
                 }
             }
 
             animator.SetBool("open", isOpened);
+        }  
+    }
+
+    [System.Obsolete]
+    public void SetInteractionObject()
+    {
+        if(this.gameObject == GameObject.FindWithTag("GunCabinet"))
+        {
+            GameObject.Find("InteractionObjects").transform.FindChild("handgun").gameObject.SetActive(true);
         }
-        
+        if (this.gameObject == GameObject.Find("Locker_door_B_Key"))
+        {
+            GameObject.Find("InteractionObjects").transform.FindChild("Key4").gameObject.SetActive(true);
+        }
     }
 }

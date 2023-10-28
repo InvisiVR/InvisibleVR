@@ -12,6 +12,7 @@ TagManager:
   - Metal
   - Zombie
   - Tile
+  - GunCabinet
   layers:
   - Default
   - TransparentFX
