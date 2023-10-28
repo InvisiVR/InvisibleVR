@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour
 
         }
 
+        //너무 느리면 -> 쉽게 만드는 것으로 일단 설정하고, -> 후에 개발
+
         //현재 진행 정도 -> 100%
 
         //시간별 진행 정도 -> 0%
