@@ -24,7 +24,6 @@ public class DialogueManager : MonoBehaviour
     WaitForSeconds FadeInWaitForSeconds;
     WaitForSeconds FadeOutWaitForSeconds;
 
-    private List<Dictionary<string, object>> data_Dialog;
 
     private void Awake()
     {
@@ -38,18 +37,8 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        data_Dialog = CSVReader.Read("Dialogues");
-
         FadeInWaitForSeconds = new WaitForSeconds(fadeInDelay);
         FadeOutWaitForSeconds = new WaitForSeconds(fadeOutDelay);
-
-        for (int i = 0; i < data_Dialog.Count; i++)
-        {
-            if(data_Dialog[i]["Chain"].ToString() == "0")
-            {
-                GameManager.instance.totalPhaseNum++;
-            }
-        }
     }
 
     public void CallDialogue(int ID)
@@ -62,7 +51,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(int ID)
     {
         curDialogueID = ID;
-        dialogueTMP.text = TMPBehavioursApplication(data_Dialog[curDialogueID]["Dialogue"].ToString(), data_Dialog[curDialogueID]["Mode"].ToString());
+        dialogueTMP.text = TMPBehavioursApplication(GameManager.instance.data_Dialog[curDialogueID]["Dialogue"].ToString(), GameManager.instance.data_Dialog[curDialogueID]["Mode"].ToString());
     }
 
     public void CallNextDialogue()
@@ -84,7 +73,7 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator NextDialogue()
     {
-        if (int.Parse(data_Dialog[curDialogueID]["Chain"].ToString()) + 1 == int.Parse(data_Dialog[curDialogueID+1]["Chain"].ToString()))
+        if (int.Parse(GameManager.instance.data_Dialog[curDialogueID]["Chain"].ToString()) + 1 == int.Parse(GameManager.instance.data_Dialog[curDialogueID+1]["Chain"].ToString()))
         {
             yield return FadeOutWaitForSeconds;
 
