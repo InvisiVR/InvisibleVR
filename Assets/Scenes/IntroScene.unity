@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -39673,6 +39673,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 22100000, guid: 7fa3fe2399dfbc54f9f838eb372ab716,
         type: 2}
+    - target: {fileID: 6721728107447172091, guid: b537dcc504bec9e4cbb4dd17dc7d1a58,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DoorOpenCloseLR
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6516562752538694915, guid: b537dcc504bec9e4cbb4dd17dc7d1a58, type: 3}
@@ -87477,6 +87482,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 22100000, guid: 7fa3fe2399dfbc54f9f838eb372ab716,
         type: 2}
+    - target: {fileID: 6721728107447172091, guid: b537dcc504bec9e4cbb4dd17dc7d1a58,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DoorOpenCloseLR
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6516562752538694915, guid: b537dcc504bec9e4cbb4dd17dc7d1a58, type: 3}
