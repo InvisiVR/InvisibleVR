@@ -24,7 +24,6 @@ public class DialogueManager : MonoBehaviour
     WaitForSeconds FadeInWaitForSeconds;
     WaitForSeconds FadeOutWaitForSeconds;
 
-
     private void Awake()
     {
         if (instance == null)

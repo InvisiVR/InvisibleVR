@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     public float expectPlayTime; //초 단위 계산
 
     //진행정보 = Dialogue Proceed Num;
-    public int curPhaseNum = 0;
-    public int totalPhaseNum = 0;
+    public float curPhaseNum = 0f;
+    public float totalPhaseNum = 0f;
 
     [HideInInspector]
     public List<Dictionary<string, object>> data_Dialog;

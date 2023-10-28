@@ -34,8 +34,6 @@ public class TextTrigger : MonoBehaviour
     {
         if (!isTriggered)
         {
-            GameManager.instance.curPhaseNum++;
-
             isTriggered = true;
 
             StartCoroutine(TriggerDelay());
