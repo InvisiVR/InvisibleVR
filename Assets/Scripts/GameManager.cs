@@ -55,5 +55,19 @@ public class GameManager : MonoBehaviour
         // 현재 경과 시간을 표시하거나 다른 작업에 활용할 수 있습니다.
         Debug.Log("현재 플레이 타임: " + currentTime + "초 / 게임 진행 시간 비율: " + currentTime / expectPlayTime * 100 + "%");
         Debug.Log("게임 진행도: " + curPhaseNum / totalPhaseNum * 100 + "%");
+
+        if(currentTime / expectPlayTime * 10 > curPhaseNum / totalPhaseNum * 100)//현재 진행비율 
+        {
+
+        }
+
+        //현재 진행 정도 -> 100%
+
+        //시간별 진행 정도 -> 0%
+    }
+
+    private void UserResponsePostProcessingControl()
+    {
+
     }
 }
