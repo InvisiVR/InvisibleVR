@@ -33,7 +33,7 @@ public class ZombieActiveManager : MonoBehaviour
         if (isZombieSpawnTime)
         {
             zombie1.SetActive(true);
-            zombie2.SetActive(true);
+            // zombie2.SetActive(true);
 
             isZombieSpawnTime = false;
         }

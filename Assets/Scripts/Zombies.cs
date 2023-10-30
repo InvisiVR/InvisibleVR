@@ -265,13 +265,12 @@ public class Zombies : MonoBehaviour
         yield return new WaitForSeconds(30.0f);
 
         // Respawn
-        //while (Vector3.Distance(curPatrolSpot, target.position) < 15.0f) curPatrolSpot = patrolSpot[Random.Range(0, 4)];
         isZombieDie = false;
         agent.enabled = true;
         HeartBeatSound.SetActive(true);
         ZombieSound.SetActive(true);
         hp = 10.0f * hpWeight;
-        transform.position = patrolSpot[Random.Range(0, 10)];
+        transform.position = patrolSpot[0];
         cur_mode = 0;
         anim.SetInteger("mode", 0);
         agent.speed = 1.0f * speedWeight;
