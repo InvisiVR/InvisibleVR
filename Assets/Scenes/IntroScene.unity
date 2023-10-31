@@ -72939,7 +72939,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 96276406085080184, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96276406085080184, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
       propertyPath: m_fontSizeMax
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 96276406085080184, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: m_fontSizeMin
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4184577798505174114, guid: 1b770307eefc7334bbcf1c0f25241e67,
@@ -73082,6 +73092,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1643992065}
+    - target: {fileID: 8829300712851998148, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
