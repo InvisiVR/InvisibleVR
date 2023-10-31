@@ -263,7 +263,7 @@ public class Zombies : MonoBehaviour
         HeartBeatSound.SetActive(false);
         ZombieSound.SetActive(false);
 
-        yield return new WaitForSeconds(150.0f);
+        yield return new WaitForSeconds(300.0f);
 
         // Respawn
         isZombieDie = false;
