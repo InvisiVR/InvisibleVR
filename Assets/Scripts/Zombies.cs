@@ -208,6 +208,7 @@ public class Zombies : MonoBehaviour
         {
             cur_mode = 999;
             hp = 999.0f;
+            anim.SetInteger("mode", 3);
             StartCoroutine(ZombieDie());
         }
 
