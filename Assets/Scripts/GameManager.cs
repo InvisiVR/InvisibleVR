@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
+
 using static SoundManager;
 
 public class GameManager : MonoBehaviour
@@ -27,12 +29,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-        else if(instance != this)
-        {
-            Destroy(instance);
-        }
         DontDestroyOnLoad(instance);
-
     }
 
     private void Start()
@@ -48,6 +45,8 @@ public class GameManager : MonoBehaviour
                 totalPhaseNum++;
             }
         }
+
+        if (SceneManager.sceneCount == 1) curPhaseNum = 0f;
     }
 
     private void Update()
@@ -62,9 +61,6 @@ public class GameManager : MonoBehaviour
         float percentdiff = percentB - percentA;
 
         float normalizedValue = NormalizePercentDiff(percentdiff);
-
-        // normalizedValue를 출력하거나 다른 작업에 활용
-        Debug.Log("Normalized Value: " + normalizedValue);
 
         userResponsePostProcessingVolume.weight = normalizedValue;
     }

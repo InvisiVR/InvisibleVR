@@ -112,7 +112,6 @@ public class NavTest : MonoBehaviour
         // Door Open / Close Event
         if (collision.gameObject.CompareTag("Door"))
         {
-            Debug.Log("Opened Door");
             agent.speed = 0.5f;
             doorOpenDelay = 0.5f;
             StartCoroutine(DelayCoroutine());
