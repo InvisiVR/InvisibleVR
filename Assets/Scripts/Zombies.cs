@@ -201,12 +201,15 @@ public class Zombies : MonoBehaviour
                 } //else agent.SetDestination(target.position);
 
                 break;
+            case 99:
+                anim.SetInteger("mode", 3);
+                break;
         }
 
         // if HP < 0, Die Animation & Respawn
         if (!isZombieDie && hp < 0)
         {
-            cur_mode = 999;
+            cur_mode = 99;
             hp = 999.0f;
             anim.SetInteger("mode", 3);
             StartCoroutine(ZombieDie());
