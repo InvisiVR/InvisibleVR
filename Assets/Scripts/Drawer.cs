@@ -74,15 +74,17 @@ public class Drawer : MonoBehaviour
     {
         if (this.gameObject == GameObject.Find("Drawer_Key1"))
         {
-            GameObject.Find("InteractionObjects").transform.FindChild("Key1").gameObject.SetActive(true);
+            GameObject.Find("Key1").transform.FindChild("sm_key_01").gameObject.SetActive(true);
+            GameObject.Find("Key1").gameObject.transform.Translate(new Vector3(0, -0.1f, 0));
         }
         if (this.gameObject == GameObject.Find("Drawer_Key2"))
         {
-            GameObject.Find("InteractionObjects").transform.FindChild("Key2").gameObject.SetActive(true);
+            GameObject.Find("Key2").transform.FindChild("sm_key_01").gameObject.SetActive(true);
+            GameObject.Find("Key2").gameObject.transform.Translate(new Vector3(0, -0.1f, 0));
         }
         if (this.gameObject == GameObject.Find("Drawer_Key3"))
         {
-            GameObject.Find("InteractionObjects").transform.FindChild("Key3").gameObject.SetActive(true);
+            GameObject.Find("Key3").transform.FindChild("sm_key_01").gameObject.SetActive(true);
         }
     }
 }

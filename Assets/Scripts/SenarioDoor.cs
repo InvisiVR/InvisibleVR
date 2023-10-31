@@ -237,6 +237,7 @@ public class SenarioDoor : Door
         if(this.gameObject == GameObject.FindWithTag("GunCabinet"))
         {
             GameObject.Find("InteractionObjects").transform.FindChild("handgun").gameObject.SetActive(true);
+            GameObject.Find("InteractionObjects").transform.FindChild("PM-40_Magazine One Attach").gameObject.SetActive(true);
         }
         if (this.gameObject == GameObject.Find("Locker_door_B_Key"))
         {
