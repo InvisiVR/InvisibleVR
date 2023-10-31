@@ -642,7 +642,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: -0.82}
 --- !u!114 &1570882488556812675
 MonoBehaviour:
@@ -1305,6 +1305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLocked: 0000
   isOpened: 0000
+  existInteractionObject: 0
   drawerClips:
   - {fileID: 8300000, guid: 4376979472cf6f7499f9d6de86d5c0bb, type: 3}
   - {fileID: 8300000, guid: d2167dda50499e04593f2e0d27e41cd0, type: 3}
@@ -1991,7 +1992,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: -0.82}
 --- !u!114 &531496573290098471
 MonoBehaviour:

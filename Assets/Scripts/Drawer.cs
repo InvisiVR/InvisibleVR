@@ -34,6 +34,7 @@ public class Drawer : MonoBehaviour
         source = GetComponent<AudioSource>();
     }
 
+    [System.Obsolete]
     public void DrawerOpenClose(int num)
     {
         if (isLocked[num])

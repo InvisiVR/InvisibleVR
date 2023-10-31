@@ -208,6 +208,7 @@ public class Zombies : MonoBehaviour
         {
             cur_mode = 999;
             hp = 999.0f;
+            anim.SetInteger("mode", 3);
             StartCoroutine(ZombieDie());
         }
 
@@ -262,7 +263,7 @@ public class Zombies : MonoBehaviour
         HeartBeatSound.SetActive(false);
         ZombieSound.SetActive(false);
 
-        yield return new WaitForSeconds(30.0f);
+        yield return new WaitForSeconds(150.0f);
 
         // Respawn
         isZombieDie = false;
