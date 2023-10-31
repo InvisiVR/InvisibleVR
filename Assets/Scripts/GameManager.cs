@@ -46,7 +46,12 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (SceneManager.sceneCount == 1) curPhaseNum = 0f;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "IntroScene") curPhaseNum = 0f;
     }
 
     private void Update()
