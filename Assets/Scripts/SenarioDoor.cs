@@ -241,7 +241,7 @@ public class SenarioDoor : Door
         }
         if (this.gameObject == GameObject.Find("Locker_door_B_Key"))
         {
-            GameObject.Find("InteractionObjects").transform.FindChild("Key4").gameObject.SetActive(true);
+            GameObject.Find("Key4").transform.FindChild("sm_key_01").gameObject.SetActive(true);
         }
     }
 }
