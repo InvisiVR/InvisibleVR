@@ -30,8 +30,6 @@ public class DialogueManager : MonoBehaviour
         {
             instance = this;
         }
-        else
-            Debug.LogError("Duplicated SoundManager", gameObject);
     }
 
     private void Start()

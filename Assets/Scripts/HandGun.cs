@@ -158,8 +158,6 @@ public class HandGun : MonoBehaviour
         var ray = new Ray(bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.forward);
         if (Physics.Raycast(ray, out hit, BulletDistance))
         {
-            Debug.Log(hit.transform.GetComponent<MeshRenderer>().material);
-            Debug.Log(hit.transform.name);
             var effect = GetImpactEffect(hit.transform.gameObject);
 
             if (effect == null) return;
