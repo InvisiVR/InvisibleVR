@@ -127,7 +127,7 @@ public class Zombies : MonoBehaviour
         rays[6] = new Ray(layPos, (transform.forward + transform.right * 0.3f).normalized);
 
         // Heard Player's Sound --> Mode 1 (Go to place of sound)
-        if (cur_mode == 0 && player_zombie_dist < hearing_dist)
+        if (!isZombieDie && cur_mode == 0 && player_zombie_dist < hearing_dist)
         {
             // if Gun Fire Sound Heard -> spd = 1.6f
             if (handGun.fiered)
@@ -201,17 +201,11 @@ public class Zombies : MonoBehaviour
                 } //else agent.SetDestination(target.position);
 
                 break;
-            case 99:
-                anim.SetInteger("mode", 3);
-                break;
         }
 
         // if HP < 0, Die Animation & Respawn
         if (!isZombieDie && hp < 0)
         {
-            cur_mode = 99;
-            hp = 999.0f;
-            anim.SetInteger("mode", 3);
             StartCoroutine(ZombieDie());
         }
 
@@ -255,19 +249,21 @@ public class Zombies : MonoBehaviour
     {
         yield return new WaitForSeconds(mode2delaytime);
         mode2delaytime = 0;
-        cur_mode = 0;
+
+        if (!isZombieDie) cur_mode = 0;
     }
 
     private IEnumerator ZombieDie()
     {
-        isZombieDie = true;
-        agent.enabled = false;
         anim.SetInteger("mode", 3);
+        isZombieDie = true;
+        hp = 999.0f * hpWeight;
+        cur_mode = 999;
+        agent.enabled = false;
         HeartBeatSound.SetActive(false);
         ZombieSound.SetActive(false);
 
         yield return new WaitForSeconds(300.0f);
-
         // Respawn
         isZombieDie = false;
         agent.enabled = true;
