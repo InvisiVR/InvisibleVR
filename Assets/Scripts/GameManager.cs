@@ -55,8 +55,6 @@ public class GameManager : MonoBehaviour
         float currentTime = Time.time - startTime;
 
         // 현재 경과 시간을 표시하거나 다른 작업에 활용할 수 있습니다.
-        Debug.Log("현재 플레이 타임: " + currentTime + "초 / 게임 진행 시간 비율: " + currentTime / expectPlayTime * 100 + "%");
-        Debug.Log("게임 진행도: " + curPhaseNum / totalPhaseNum * 100 + "%");
 
         float percentA = currentTime / expectPlayTime * 100;
         float percentB = curPhaseNum / totalPhaseNum * 100;
