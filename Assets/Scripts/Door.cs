@@ -21,6 +21,7 @@ public class Door : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         source = GetComponent<AudioSource>();
+        animator.SetBool("open", isOpened);
     }
 
     public virtual void Locker()
