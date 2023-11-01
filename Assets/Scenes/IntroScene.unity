@@ -22859,8 +22859,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTMP: {fileID: 1382959228}
   typer: {fileID: 1382959227}
-  fadeInDelay: 2
-  fadeOutDelay: 0.5
+  fadeInDelay: 4
+  fadeOutDelay: 2
 --- !u!4 &413295040
 Transform:
   m_ObjectHideFlags: 0
@@ -72939,6 +72939,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 96276406085080184, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d326e1a6d8cca5468267e115b77a9ab,
+        type: 2}
+    - target: {fileID: 96276406085080184, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
       propertyPath: m_fontStyle
       value: 0
       objectReference: {fileID: 0}
@@ -72952,16 +72958,42 @@ PrefabInstance:
       propertyPath: m_fontSizeMin
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 96276406085080184, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8130786720258761866, guid: 7d326e1a6d8cca5468267e115b77a9ab,
+        type: 2}
+    - target: {fileID: 96276406085080184, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4184577798505174114, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669257379831123540, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: defaultAppearancesTags.Array.data[0]
+      value: fade
       objectReference: {fileID: 0}
     - target: {fileID: 6451651525582229930, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: source
       value: 
       objectReference: {fileID: 1418240081}
+    - target: {fileID: 6451651525582229930, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: sounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451651525582229930, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: sounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 18a92935ab0e6234cacd2d516c169c51, type: 3}
     - target: {fileID: 7984340173796793576, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: F_time
@@ -73075,6 +73107,31 @@ PrefabInstance:
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: useTypeWriter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: waitForNewLines
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: waitForNormalChars
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: waitForLastCharacter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
+        type: 3}
+      propertyPath: avoidMultiplePunctuactionWait
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,

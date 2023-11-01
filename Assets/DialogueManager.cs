@@ -87,15 +87,17 @@ public class DialogueManager : MonoBehaviour
             case "dangle":
                 return "<dangle>" + dialog + "</dangle>";
             case "shake":
-                return "<shake a=5>" + dialog + "</shake>";
+                return "<shake a=2>" + dialog + "</shake>";
             case "wiggle":
-                return "<wiggle a=2>" + dialog + "</wiggle>";
+                return "<wiggle>" + dialog + "</wiggle>";
             case "bounce":
                 return "<bounce>" + dialog + "</bounce>";
             case "swing":
                 return "<swing>" + dialog + "</swing>";
             case "incr":
                 return "<incr>" + dialog + "</incr>";
+            case "fade":
+                return "<fade>" + dialog + "</fade>";
             case "":
             default:
                 return dialog;
