@@ -22859,7 +22859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTMP: {fileID: 1382959228}
   typer: {fileID: 1382959227}
-  fadeInDelay: 4
+  fadeInDelay: 3
   fadeOutDelay: 2
 --- !u!4 &413295040
 Transform:
@@ -72974,11 +72974,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5669257379831123540, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-      propertyPath: defaultAppearancesTags.Array.data[0]
-      value: fade
-      objectReference: {fileID: 0}
     - target: {fileID: 6451651525582229930, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: source
@@ -72993,11 +72988,11 @@ PrefabInstance:
         type: 3}
       propertyPath: sounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 18a92935ab0e6234cacd2d516c169c51, type: 3}
+      objectReference: {fileID: 8300000, guid: 3595766fa2ebd1a439e7ebdbabda248d, type: 3}
     - target: {fileID: 7984340173796793576, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: F_time
-      value: 12
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7984340173796793576, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
@@ -73107,31 +73102,6 @@ PrefabInstance:
     - target: {fileID: 8330631460191372492, guid: 1b770307eefc7334bbcf1c0f25241e67,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-      propertyPath: useTypeWriter
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-      propertyPath: waitForNewLines
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-      propertyPath: waitForNormalChars
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-      propertyPath: waitForLastCharacter
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
-        type: 3}
-      propertyPath: avoidMultiplePunctuactionWait
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8658333651265572861, guid: 1b770307eefc7334bbcf1c0f25241e67,
@@ -74742,7 +74712,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -102821,7 +102791,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

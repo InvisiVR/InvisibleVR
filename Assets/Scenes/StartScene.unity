@@ -6345,7 +6345,7 @@ MonoBehaviour:
   interruptPreviousSound: 0
   randomSequence: 0
   sounds:
-  - {fileID: 8300000, guid: eaac6ed0e6e0c2546ad64cd3f6f17202, type: 3}
+  - {fileID: 0}
 --- !u!114 &864781374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7594,7 +7594,7 @@ MonoBehaviour:
   interruptPreviousSound: 0
   randomSequence: 0
   sounds:
-  - {fileID: 8300000, guid: eaac6ed0e6e0c2546ad64cd3f6f17202, type: 3}
+  - {fileID: 0}
 --- !u!114 &996420841
 MonoBehaviour:
   m_ObjectHideFlags: 0

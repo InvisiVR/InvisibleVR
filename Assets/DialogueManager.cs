@@ -83,11 +83,11 @@ public class DialogueManager : MonoBehaviour
         switch (mode)
         {
             case "pend":
-                return "<pend a=2>" + dialog + "</pend>";
+                return "<pend>" + dialog + "</pend>";
             case "dangle":
                 return "<dangle>" + dialog + "</dangle>";
             case "shake":
-                return "<shake a=2>" + dialog + "</shake>";
+                return "<shake>" + dialog + "</shake>";
             case "wiggle":
                 return "<wiggle>" + dialog + "</wiggle>";
             case "bounce":

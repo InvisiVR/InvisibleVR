@@ -163,7 +163,7 @@ MonoBehaviour:
     type: 2}
   databaseActions: {fileID: 11400000, guid: 941c1eddbb818ea45af8cad86bb5094e, type: 2}
   defaultAppearancesTags:
-  - size
+  - fade
   defaultDisappearancesTags:
   - fade
   defaultBehaviorsTags: []
@@ -225,7 +225,7 @@ MonoBehaviour:
   onMessage:
     m_PersistentCalls:
       m_Calls: []
-  waitForNormalChars: 0.08
+  waitForNormalChars: 0.0001
   waitLong: 0.0001
   waitMiddle: 0.0001
   avoidMultiplePunctuactionWait: 0
