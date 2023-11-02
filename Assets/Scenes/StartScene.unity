@@ -14892,6 +14892,26 @@ PrefabInstance:
       propertyPath: magazine
       value: 
       objectReference: {fileID: 569731959}
+    - target: {fileID: 796366980429507022, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: leftRecoilBody
+      value: 
+      objectReference: {fileID: 50414725}
+    - target: {fileID: 796366980429507022, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: rightRecoilBody
+      value: 
+      objectReference: {fileID: 914534418}
+    - target: {fileID: 796366980429507022, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: leftRecoilBodyOfHand
+      value: 
+      objectReference: {fileID: 911646787}
+    - target: {fileID: 796366980429507022, guid: 75626972a31180e4aa78fa23a64defae,
+        type: 3}
+      propertyPath: rightRecoilBodyOfHand
+      value: 
+      objectReference: {fileID: 1223787795}
     - target: {fileID: 3421288646806945885, guid: 75626972a31180e4aa78fa23a64defae,
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
