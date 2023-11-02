@@ -77,5 +77,5 @@
 | <img src="https://avatars.githubusercontent.com/u/77566434?v=4" width=250px alt="강동현"/> | <img src="https://avatars.githubusercontent.com/u/104252195?v=4" width=250px alt="김선명"/> | <img src="https://avatars.githubusercontent.com/u/50892930?v=4" width=250px alt="이승제"/> |
 | **Team Leader(총괄)** | **Follower** | **Follower** |
 | 게임 연출 / 시나리오 / Game Client | Game Client | Game Client |
-| VR / FPS / 반응형 / Indicator System / Dialogue System | AI Chaser | 맵 / 연출 |
+| VR / FPS / 반응형 / PostProcessing 연출 / Indicator System / Dialogue System | AI Chaser | 맵 / 연출 |
 
