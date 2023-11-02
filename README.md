@@ -19,8 +19,8 @@
 <img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/8b316803-b917-4330-bb9c-c28295f07617">
 <img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/4cbe9459-7ebb-442d-bd24-912ce668e632">
 <img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/ba1cb5d1-b74a-4543-9535-1fbf4e461026">
-<img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/fb5c7cba-03fc-4d7d-b24e-01df2a256fe5">
-<img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/e5b7decd-3dc9-4b02-9571-104a811ed556">
+<img width="45%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/fb5c7cba-03fc-4d7d-b24e-01df2a256fe5">
+<img width="45%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/e5b7decd-3dc9-4b02-9571-104a811ed556">
 
 </br>
 
