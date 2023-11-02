@@ -11,31 +11,16 @@
 
 </br>
 
-## 드림학기제 (🏆 우수 프로젝트 '우수상' 선정 🏅)
-<p align="middle" >
-<img width="60%" alt="EarthDefenseCorps" src="https://github.com/hyeon23/hyeon23/assets/77566434/4bba41b3-9f2f-40dd-9597-a3d569020efc">
-</p>
-
-
--본 프로젝트는 한 학기동안 건국대학교 **드림학기제**를 통해 진행한 프로젝트입니다.
-
--**드림학기제**란 방학동안 한 학기를 학생 스스로 설계하고, 주도적으로 개발하며, 성취를 이루는 수업제도입니다.
-
--**30여개의 팀**이 참여한 본 대회에서 우수 프로젝트 **5팀(최우수 1팀/우수 2팀/장려 2팀)** 을 선정합니다.
-
--본 프로젝트는 '**우수 프로젝트 우수상**'으로 선정되었습니다.
-
-</br>
-
-## 🚩 프로젝트 목표 및 의의
-
--**1. 첫번째로,** 게임업계에서 원활히 협업하기 위해 타 분야 작업의 고충을 경험해보고, 공감하는 것입니다.
-
--**2. 두번째로,** **기획, 디자인, 개발, 퍼블리싱**의 전반적인 게임 개발의 과정을 몸소 느끼며, **나만의 게임을 완성하는 것**입니다.
-
--**3. 세번째로,** 현업에서 사용되는 기술을 적용하고, 수익 구조를 형성하며, 퀄리티 있는 작품을 만드는 것입니다.
-
-**-위 모든 과정을 통해 협업 및 공감 능력의 향상, 개발 실력의 향상, 게임 설계의 감을 높이는 것울 목표로 합니다.**
+## 🚩 프로젝트 사진(임시)
+<img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/a1fcfe24-f14e-4e6f-b311-fb5de6b9d13c">
+<img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/7d1a34de-e8cc-4376-868a-e0b03e3c95f8">
+<img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/b31667e1-ead0-4e40-abc9-1d03a7e1c6c0">
+<img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/a9dd8c8d-65ea-4e9f-ad83-ab3beb32d99e">
+<img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/8b316803-b917-4330-bb9c-c28295f07617">
+<img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/4cbe9459-7ebb-442d-bd24-912ce668e632">
+<img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/ba1cb5d1-b74a-4543-9535-1fbf4e461026">
+<img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/fb5c7cba-03fc-4d7d-b24e-01df2a256fe5">
+<img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/e5b7decd-3dc9-4b02-9571-104a811ed556">
 
 </br>
 
