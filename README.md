@@ -1,5 +1,5 @@
 # 👻 RESIGN
-**게임 개발 완료... git 수정 중... 트레일러 제작 중...**
+**게임 개발 완료... git 수정 중... 게임 트레일러 제작 중...**
 <p align="middle" >
 <img width="60%" alt="InVisibleVR2" src="https://github.com/hyeon23/hyeon23/assets/77566434/509f86dd-ce33-4afd-aaae-e641720522cb">
 </p>
