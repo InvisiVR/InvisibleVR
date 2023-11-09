@@ -206,6 +206,9 @@ public class Zombies : MonoBehaviour
         // if HP < 0, Die Animation & Respawn
         if (!isZombieDie && hp < 0)
         {
+            float weight = GameObject.Find("GameManager").GetComponent<GameManager>().normalizedValue;
+            hpWeight = 1 + weight;
+            speedWeight = 1 + weight;
             StartCoroutine(ZombieDie());
         }
 
@@ -263,7 +266,7 @@ public class Zombies : MonoBehaviour
         HeartBeatSound.SetActive(false);
         ZombieSound.SetActive(false);
 
-        yield return new WaitForSeconds(300.0f);
+        yield return new WaitForSeconds(30.0f);
         // Respawn
         isZombieDie = false;
         agent.enabled = true;
