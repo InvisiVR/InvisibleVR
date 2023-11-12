@@ -72,7 +72,7 @@
 </br>
 
 ## 👥 참여 인원 및 역할 분담 👥
-|[강동현](https://github.com/hyeon23) | [김선명](https://github.com/smk8753) | [노준영](https://github.com/gus6615) |
+|[강동현](https://github.com/hyeon23) | [김선명](https://github.com/smk8753) | [이승제](https://github.com/lsjsos) |
 |:------------:|:------------:|:------------:|
 | <img src="https://avatars.githubusercontent.com/u/77566434?v=4" width=250px alt="강동현"/> | <img src="https://avatars.githubusercontent.com/u/104252195?v=4" width=250px alt="김선명"/> | <img src="https://avatars.githubusercontent.com/u/50892930?v=4" width=250px alt="이승제"/> |
 | **Team Leader(총괄)** | **Follower** | **Follower** |
