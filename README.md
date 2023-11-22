@@ -91,7 +91,7 @@
 |[강동현](https://github.com/hyeon23) | [김선명](https://github.com/smk8753) | [이승제](https://github.com/lsjsos) |
 |:------------:|:------------:|:------------:|
 | <img src="https://avatars.githubusercontent.com/u/77566434?v=4" width=250px alt="강동현"/> | <img src="https://avatars.githubusercontent.com/u/104252195?v=4" width=250px alt="김선명"/> | <img src="https://avatars.githubusercontent.com/u/50892930?v=4" width=250px alt="이승제"/> |
-| **Team Leader(총괄)** | **Follower** | **Follower** |
+| **Team Leader(팀장/총괄)** | **Follower** | **Follower** |
 | 게임 연출 / 시나리오 / Game Client | Game Client | Game Client |
 | VR, FPS, 반응형, Indicator, Dialogue System / PostProcessing 연출 | AI Chaser / 점프 스퀘어 | 맵 / 공포 기믹 연출 |
 
