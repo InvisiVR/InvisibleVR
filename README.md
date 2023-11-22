@@ -1,13 +1,29 @@
-# 👻 RESIGN
-**게임 개발 완료... git 수정 중... 게임 트레일러 제작 중...**
+# 👁️‍🗨️ RESIGN 💉
 <p align="middle" >
-<img width="60%" alt="InVisibleVR2" src="https://github.com/hyeon23/hyeon23/assets/77566434/509f86dd-ce33-4afd-aaae-e641720522cb">
+<img width="38%" alt="InVisibleVR2" src="https://github.com/hyeon23/hyeon23/assets/77566434/509f86dd-ce33-4afd-aaae-e641720522cb">
+<img width="35%" alt="EarthDefenseCorps" src="https://github.com/hyeon23/hyeon23/assets/77566434/4b2a48a6-f201-4356-9345-412f2c3fcdf2">
 </p>
 <p align="middle" >
 <img src="https://img.shields.io/badge/Unity-000000?style=flat&logo=Unity&logoColor=white"/>
 <img src="https://img.shields.io/badge/C Sharp-6600FF?style=flat&logo=CSharp&logoColor=white"/>
 
 </p>
+
+</br>
+
+## KU SW 경진대회 (🏆 '대상(1등상)' 수상 🏅)
+<p align="middle" >
+<img width="40%" alt="EarthDefenseCorps" src="https://github.com/hyeon23/hyeon23/assets/77566434/14c675f4-015f-4b11-a5d1-389eecebc339">
+<img width="50%" alt="EarthDefenseCorps" src="https://github.com/hyeon23/hyeon23/assets/77566434/3ad138fa-d456-40cf-9053-2a8d73093168">
+</p>
+
+-**KU SW 경진대회**란 건국대학교의 SW/IT/공학 관련 모든 학과 및 외부인의 작품과 졸업작품을 신청받아 성과를 겨루는 대회입니다.
+
+-**200여개의 팀**이 참가한 **KU SW 경진 대회**에서 **7팀(대상 1팀/ 최우수 3팀/우수 3팀)** 을 선정합니다.
+
+**졸업프로젝트**를 통해 **한학기**동안 제작한 **Resign**을 출품했습니다.
+
+-본 대회에서 **Invisible VR** 팀의 **Resign 프로젝트**는 **대상(최우수 1팀)** 으로 선정되었습니다.
 
 </br>
 
