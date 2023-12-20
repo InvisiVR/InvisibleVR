@@ -26,11 +26,11 @@
 
 </br>
 
-## 🎞 Resign Trailer
+## 🎞 RESIGN Trailer
 <div align="center">
-
-[![InvisibleVR-Trailer](http://img.youtube.com/vi/poh06MwXx4Q/2.jpg)](https://youtu.be/poh06MwXx4Q=0s) 
-
+  
+[![InvisibleVR-Trailer](http://img.youtube.com/vi/poh06MwXx4Q/0.jpg)](https://youtu.be/poh06MwXx4Q=0s)</br>
+click here
 </div>
 
 </br>
@@ -65,14 +65,44 @@
 
 ## 📖 게임 스토리
 
--1. **우주 해적**들이 연구를 위해 지구의 여러 물체를 흡수해가고, 연구가 끝나면 쓸모가 없어져 다시 지구에 버립니다.
+-1. **직장 내 괴롭힘**과 **따돌림**을 받고 있는 **플레이어**
 
--2. 우주 해적들을 막기 위해 **지구 방위대 조직**이 구성되었고, 지구 방위대원들은 우주인들이 지구로 버리는 **우주 쓰레기(블록)** 들을 처리합니다.
+-2. **심한 스트레스**로 **플레이어**는 그만 자리에서 정신을 잃게 된다.
 
--3. 우주 해적들을 추적해 싸우고, 해치웁니다.
+-3. 정신을 차리고 보니, 밤이 되어있고, 퇴근하려하지만, 문이 잠겨있다.
 
--4. **우주 해적선(BOSS)** 을 격파해, 우주 해적들을 물리치며, 각 행성을, 더 나아가 우주를 점령하는 스토리입니다.
+-4. 열쇠를 찾기 위해 사장실로 가는 도중 **괴생물체**를 발견한다.
 
+-4-1. **플레이어**는 지나친 스트레스로 정신 착란 증세가 와 직장 동료들이 플레이어에게 공포를 주는 괴생물체로 보인다.
+
+-5. 괴생물체에 대항할 수단을 찾기 위해 **B1 창고**에 가서 **총**을 획득한다.
+
+-5-1. **B1**에서 **서랍**을 열고, **총기 캐비넷 열쇠**를 획득한다.
+
+-5-2. 총기 캐비넷 열쇠를 통해 총기 캐비넷을 열고, **총기**를 획득한다.
+
+-6. **사장실**에 가지만 **사장실 문**은 닫혀있다.
+
+-6-1. **회의실 화이트 보드**에 적힌 **2F**하는 단서를 보고, **2층 사무실**에 들어가 **사장실 열쇠**를 발견한다.
+
+-7. **열쇠**로 **사장실 문**을 열고 **서랍**에서 **단서1**를 발견한다.
+
+Rambo, employee, suffered the relentless office ostracism. mentally, </br>
+Revenge engaged, scheming to rectify office offenses mastering </br>
+Ruthless endeavors, seizing the reign of office, manipulating. </br>
+
+-8 단서에서 **RESTROOM**을 발견하고, **화장실**로 가 **단서2**를 발견한다.
+
+1. RAMBO STOLE HIS KEY.  
+2. Related with the CABI FIND THIS WORD
+
+-8-1. **단서1**과 **단서2-1**를 조합해, **자신(Rambo)**의 자리에서 **Cabinet(사장)**의 **캐비넷 열쇠**를 획득한다.
+
+-8-2. **단서2-2**를 통해 **화이트보드**에 적힌 **Cabinet Cabinet** 단서를 획득한다.
+
+-9. 사장의 캐비넷을 열어 **최종 탈출구 열쇠**를 획득한다.
+
+-10. 최종 탈출구로 탈출하며 게임이 끝난다.
 </br>
 
 </br>
@@ -109,7 +139,7 @@
 
 </br>
 
-## 🎲 인게임 플레이
+## 🎲 인게임 플레이 영상
 
 <img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/a1fcfe24-f14e-4e6f-b311-fb5de6b9d13c">
 <img width="40%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/7d1a34de-e8cc-4376-868a-e0b03e3c95f8">
