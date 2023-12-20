@@ -3,6 +3,7 @@
 <img width="50%" alt="InVisibleVR2" src="https://github.com/hyeon23/hyeon23/assets/77566434/509f86dd-ce33-4afd-aaae-e641720522cb">
 </p>
 <p align="middle" >
+  
 <img src="https://img.shields.io/badge/Unity-000000?style=flat&logo=Unity&logoColor=white"/>
 <img src="https://img.shields.io/badge/C Sharp-6600FF?style=flat&logo=CSharp&logoColor=white"/>
 
@@ -12,8 +13,10 @@
 
 ## KU SW 경진대회 (🏆 '대상(1등상)' 수상 🏅)
 <p align="middle" >
+  
 <img width="40%" alt="EarthDefenseCorps" src="https://github.com/hyeon23/hyeon23/assets/77566434/14c675f4-015f-4b11-a5d1-389eecebc339">
 <img width="50%" alt="EarthDefenseCorps" src="https://github.com/hyeon23/hyeon23/assets/77566434/3ad138fa-d456-40cf-9053-2a8d73093168">
+
 </p>
 
 -**KU SW 경진대회**란 건국대학교의 SW/IT/공학 관련 모든 학과 및 외부인의 작품과 졸업작품을 신청받아 성과를 겨루는 대회입니다.
@@ -166,5 +169,5 @@ Ruthless endeavors, seizing the reign of office, manipulating. </br>
 | <img src="https://avatars.githubusercontent.com/u/77566434?v=4" width=250px alt="강동현"/> | <img src="https://avatars.githubusercontent.com/u/104252195?v=4" width=250px alt="김선명"/> | <img src="https://avatars.githubusercontent.com/u/50892930?v=4" width=250px alt="이승제"/> |
 | **Team Leader(팀장/총괄)** | **Follower** | **Follower** |
 | 게임 연출 / 시나리오 / Game Client | Game Client | Game Client |
-| VR 시스템, FPS 시스템, 사용자 반응형 시스템, </br> Indicator 시스템, Dialogue 시스템, PostProcessing 연출 | AI Chaser / 점프 스퀘어 | 맵 / 공포 기믹 연출 |
+| VR System, FPS System </br> User Response System, Indicator System </br> Dialogue System, PostProcessing Production | AI Chaser / 점프 스퀘어 | 맵 / 공포 기믹 연출 |
 
