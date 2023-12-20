@@ -145,9 +145,10 @@ Ruthless endeavors, seizing the reign of office, manipulating. </br>
 
 ## 🎲 인게임 플레이 영상
 
-<img width="100%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/eaea51e0-8af9-4f6d-8bc3-5fd750137815c">
-<img width="100%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/4cddcb4a-08de-402a-b120-ef689ff60d25">
-<img width="100%" alt="Images" src="https://github.com/hyeon23/hyeon23/assets/77566434/8a82823c-982e-4751-9634-940b676abea4">
+![전체 사진1](https://github.com/hyeon23/hyeon23/assets/77566434/8a82823c-982e-4751-9634-940b676abea4)
+![전체 사진2](https://github.com/hyeon23/hyeon23/assets/77566434/4cddcb4a-08de-402a-b120-ef689ff60d25)
+![전체 사진3](https://github.com/hyeon23/hyeon23/assets/77566434/eaea51e0-8af9-4f6d-8bc3-5fd750137815c)
+
 
 </br>
 
