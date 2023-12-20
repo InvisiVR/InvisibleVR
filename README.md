@@ -136,6 +136,7 @@ Ruthless endeavors, seizing the reign of office, manipulating. </br>
 </br>
 
 ## 🧩 세부기능
+-세부 기능은 [wiki]()에서 확인하실 수 있습니다.
 
 </br>
 
