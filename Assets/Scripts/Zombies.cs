@@ -149,22 +149,12 @@ public class Zombies : MonoBehaviour
                 // 범위 7.0f 내에서 플레이어 소리 감지 --> Mode 1 (Go to the sound location)
                 if (player_zombie_dist < hearing_dist)
                 {
-                    // if Gun Fire Sound Heard -> spd = 1.6f
-                    if (handGun.fiered)
+                    if (HearingSound())
                     {
                         cur_mode = 1;
-                        curPatrolSpot = target.position;
-                        agent.speed = 1.6f * speedWeight;
-                    }
-                    // if Walking Sound Heard -> spd = 1.4f
-                    else if (footStep.isFootSoundPlaying)
-                    {
-                        cur_mode = 1;
-                        curPatrolSpot = target.position;
-                        agent.speed = 1.4f * speedWeight;
-                    }
 
-                    return;
+                        return;
+                    }
                 }
 
                 // 현재 탐색 지점에 도달할 때까지 플레이어 발견 못하면, 다음 탐색 지점 설정.
@@ -194,20 +184,7 @@ public class Zombies : MonoBehaviour
                 // 범위 7.0f 내에서 또 다른 플레이어 소리 감지 시, 목표 지점 및 속도 변경
                 if (player_zombie_dist < hearing_dist)
                 {
-                    // if Gun Fire Sound Heard -> spd = 1.6f
-                    if (handGun.fiered)
-                    {
-                        curPatrolSpot = target.position;
-                        agent.speed = 1.6f * speedWeight;
-                    }
-                    // if Walking Sound Heard -> spd = 1.4f
-                    else if (footStep.isFootSoundPlaying)
-                    {
-                        curPatrolSpot = target.position;
-                        agent.speed = 1.4f * speedWeight;
-                    }
-
-                    return;
+                    if (HearingSound()) return;
                 }
 
                 // 소리 난 지점 탐색 종료 시, MODE 0으로 돌아간 후 다음 탐색 지점 설정.
@@ -236,20 +213,9 @@ public class Zombies : MonoBehaviour
                     mode2delayCURtime = 0.0f;
                     return;
                 }
+                // 발견하지 못하는 상태에서, 플레이어가 5초간 좀비 추격 범위에서 벗어남 --> MODE 0 (Patrol Mode)
+                else CountToMode2Off();
 
-                // 플레이어가 5초간 좀비 추격 범위에서 벗어남 --> MODE 1 (Patrol Mode)
-                if (player_zombie_dist > mustChase_dist) mode2delayCURtime += Time.deltaTime;
-                else mode2delayCURtime = 0.0f;
-
-                if (mode2delayCURtime > mode2delayMAXtime)
-                {
-                    cur_mode = 0;
-                    agent.speed = 1.0f * speedWeight;
-                    mode2delayCURtime = 0.0f;
-
-                    return;
-                }
-                
                 break;
             /*********************************************************/
 
@@ -301,7 +267,7 @@ public class Zombies : MonoBehaviour
     }
     */
 
-    /******************** Ray를 기반으로 플레이어 발견 시 true 반환 함수 ********************/
+    /******************** Ray를 기반으로, 플레이어 발견 여부를 반환하는 함수 ********************/
     private bool FindingPlayerForRay()
     {
         layPos = transform.position + new Vector3(0, 1.3f, 0);
@@ -323,8 +289,63 @@ public class Zombies : MonoBehaviour
         if (Physics.Raycast(rays[6], out hit7, ray_dist) && hit7.collider.gameObject.tag == "Player") return true;
 
         return false;
+
+        /* < 반환값 : bool >
+         * true  : 플레이어를 감지함
+         * false : 플레이어 감지 못함 */
     }
     /********************************************************************************/
+
+
+    /******************** 플레이어 소리 감지 시, 목표 지점 및 속도 변경 함수  ********************/
+    private bool HearingSound()
+    {
+        // if 'Gun Fire Sound' Heard -> spd = 1.6f
+        if (handGun.fiered)
+        {
+            curPatrolSpot = target.position;
+            agent.speed = 1.6f * speedWeight;
+            return true;
+        }
+
+        // if 'Footstep Sound' Heard -> spd = 1.4f
+        if (footStep.isFootSoundPlaying)
+        {
+            curPatrolSpot = target.position;
+            agent.speed = 1.4f * speedWeight;
+            return true;
+        }
+
+        return false;
+
+        /* < 반환값 : bool >
+         * true  : 소리를 감지함
+         * false : 소리 감지 못함 */
+    }
+    /*********************************************************************************/
+
+
+    /******************** 추격 범위에서 벗어난 채로 5초가 되면 MODE 0으로 되돌리는 함수  ********************/
+    private void CountToMode2Off()
+    {
+        if (player_zombie_dist > mustChase_dist) mode2delayCURtime += Time.deltaTime;
+        else {
+            mode2delayCURtime = 0.0f;
+            return;
+        }
+
+        // Ray와 추격 범위 모두 벗어난 채로 5초가 되면, MODE 0으로 되돌아감
+        if (mode2delayCURtime > mode2delayMAXtime)
+        {
+            cur_mode = 0;
+            agent.speed = 1.0f * speedWeight;
+            mode2delayCURtime = 0.0f;
+
+            return;
+        }
+        else return;
+    }
+    /*********************************************************************************************/
 
 
     /******************** 좀비가 죽었을 때의 실행 함수 ********************/
