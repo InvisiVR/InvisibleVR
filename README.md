@@ -39,7 +39,7 @@ click here
 </br>
 
 
-## 🎞 RESIGN Play Video
+## 📼 RESIGN Play Video
 <div align="center">
   
 [![InvisibleVR-PlayVideo](http://img.youtube.com/vi/xWjxK82wULk/0.jpg)](https://youtu.be/xWjxK82wULk=qs)</br>
