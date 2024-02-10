@@ -38,6 +38,16 @@ click here
 
 </br>
 
+
+## 🎞 RESIGN Play Video
+<div align="center">
+  
+[![InvisibleVR-PlayVideo](http://img.youtube.com/vi/xWjxK82wULk/0.jpg)](https://youtu.be/xWjxK82wULk=qs)</br>
+click here
+</div>
+
+</br>
+
 ## 🚩 프로젝트 목표 및 의의
 
 -**1.** 플레이어가 가장 생동감을 느낄 수 있는 게임 개발
