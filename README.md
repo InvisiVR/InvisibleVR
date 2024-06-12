@@ -179,6 +179,6 @@ Ruthless endeavors, seizing the reign of office, manipulating. </br>
 |:------------:|:------------:|:------------:|
 | <img src="https://avatars.githubusercontent.com/u/77566434?v=4" width=250px alt="강동현"/> | <img src="https://avatars.githubusercontent.com/u/104252195?v=4" width=250px alt="김선명"/> | <img src="https://avatars.githubusercontent.com/u/50892930?v=4" width=250px alt="이승제"/> |
 | **Team Leader(팀장/총괄)** | **Follower** | **Follower** |
-| 게임 연출 / 시나리오 / Game Client | Game Client | Game Client |
+| 게임 연출 / Game Client | Game Client | Game Client |
 | VR System, FPS System </br> User Response System, Indicator System </br> Dialogue System, PostProcessing Production | AI Chaser / 점프 스퀘어 | 맵 / 공포 기믹 연출 |
 
